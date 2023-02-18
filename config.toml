@@ -1,0 +1,13 @@
+baseURL = 'https://leandevops.ru/'
+languageCode = 'ru-RU'
+title = 'Lean DevOps'
+theme = 'archie'
+
+paginate = 20
+
+[params]
+  favicon = '/favicon.png'
+  useCDN = false
+  subtitle = "Перевод книги [Lean DevOps: A Practical Guide to On-Demand Delivery](https://www.leandevops.com/)."
+  mathjax = true
+  katex = true
