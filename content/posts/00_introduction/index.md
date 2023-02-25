@@ -4,45 +4,15 @@ date: '2023-02-27'
 draft: false
 ---
 
-Delivering on-demand services well is never easy. Your success hinges on having
-both the capability and capacity to deliver what your customer needs while doing
-so at high speed with the consistency, reliability, security, privacy, and cost
-effectiveness that they expect. This is just as true whether you are providing
-an IT service or a more traditional courier or electric utility service.
+Предоставление услуг по требованию - дело непростое. Ваш успех зависит от наличия возможностей и потенциала для предоставления того, что нужно вашему клиенту, при этом делая это на высокой скорости, с последовательностью, надежностью, безопасностью, конфиденциальностью и экономичностью, которые он ожидает. Это в равной степени относится как к ИТ-услугам, так и к более традиционным курьерским или коммунальным услугам.
 
-However, unlike more traditional services, IT service providers are far less
-restricted by organizational size or physical location. With so many quickly
-deployable tools and cloud capabilities available, even the smallest IT service
-providers can now instantly scale to address nearly any identified market need
-globally.
+Однако, в отличие от более традиционных услуг, поставщики ИТ-услуг гораздо меньше ограничены размером организации или физическим местоположением. С таким количеством быстро доступных инструментов и облачных возможностей даже самые маленькие поставщики ИТ-услуг могут мгновенно масштабироваться для удовлетворения практически любых выявленных потребностей рынка.
 
-Where IT service delivery providers do struggle is predictably and reliably
-delivering services that match customer expectations. This, of course, matters.
-No one wants the frustration and disappointment of a service that falls short of
-what is needed. What makes this particularly frustrating is that such shortfalls
-are not caused by misunderstanding the market need or the functionality
-customers are looking for. If anything, IT is flooded by tools and techniques
-that allow businesses to analyze and validate ideas quickly. Instead, the
-problems arise from awareness gaps caused by the way organizations deliver and
-manage the services themselves.
+В чем поставщики ИТ-услуг действительно испытывают трудности, так это в предсказуемости и надежности предоставления услуг, которые соответствуют ожиданиям клиентов. Это, конечно же, важно. Никому не хочется испытывать разочарование и досаду от того, что услуги не соответствуют требованиям. Особенно неприятно то, что такие недостатки вызваны не непониманием потребностей рынка или функциональности, которую ищут клиенты. Если уж на то пошло, ИТ-сфера наводнена инструментами и методами, которые позволяют компаниям быстро анализировать и проверять идеи. Вместо этого проблемы возникают из-за пробелов в осведомленности, вызванных тем, как организации сами предоставляют услуги и управляют ими.
 
-As IT service stacks grow in complexity, it becomes far more difficult to
-determine, let alone ensure, that the dynamics between service components and
-the delivery ecosystem match what the customer expected. Rather than put
-measures in place to improve their awareness and understanding of these
-dynamics, delivery teams have focused on other factors like delivering more
-faster, using the latest cloud technologies and architectural approaches, or
-adopting the process or methodology most in fashion. Unfortunately, in the
-process the delivery teams unknowingly create further disconnects that fragment
-the information flow and context necessary to understand those dynamics.
+По мере усложнения стеков ИТ-услуг становится все труднее определить, а тем более обеспечить соответствие динамики между компонентами услуги и экосистемой доставки тому, что ожидал заказчик. Вместо того, чтобы принять меры по улучшению осведомленности и понимания этой динамики, команды доставки сосредоточились на других факторах, таких как более быстрая доставка, использование новейших облачных технологий и архитектурных подходов или внедрение процесса или методологии, которые сейчас в моде. К сожалению, в этом процессе команды доставки неосознанно создают дополнительные разрывы, которые фрагментируют поток информации и контекст, необходимые для понимания этой динамики.
 
-As the resulting gap between what delivery teams *believe* they are providing
-and what is *actually* delivered grows, the team's ability to maintain
-sufficient context to make effective decisions steadily degrades. Even when
-disconnects are found, organizations often double down on more processes and
-misunderstood tooling that do little to effectively bridge the gaps. This
-creates a vicious loop that creates more frustration as the team drifts further
-away from being able to deliver to meet customer expectations.
+По мере того, как увеличивается разрыв между тем, что, по мнению команд доставки, они предоставляют, и тем, что фактически поставляется, способность команды поддерживать достаточный контекст для принятия эффективных решений неуклонно снижается. Даже когда обнаруживается несоответствие, организации часто удваивают количество процессов и непонятных инструментов, которые мало помогают эффективно устранить разрыв. Это создает замкнутый круг, который приводит к еще большему разочарованию, поскольку команда все больше отдаляется от возможности обеспечить соответствие ожиданиям клиентов.
 
 ## Learning How to See
 
