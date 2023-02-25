@@ -32,58 +32,22 @@ draft: false
 
 Мышление и методы, изложенные в этой книге, являются частью более широкого подхода к достижению результатов Mobius, с которым вы можете ознакомиться на сайте <https://mobiusloop.com>. Mobius был разработан сообществом, стремящимся использовать силу инноваций и совершенства исполнения для более эффективного достижения значимых результатов.
 
-## How to Use This Book
+## Как пользоваться книгой
 
-This book can be divided into three parts. The first part introduces the key
-dynamics that underlie the service delivery challenge. It sets the scene for how
-those of us in IT service delivery are constantly in danger of focusing far too
-much on removing delivery friction or reducing perceived delivery risk, often at
-the cost of maintaining situational awareness and ensuring teams have the
-ability to learn and improve.
+Книга разделенна на три главы. В первой главе представлены ключевые аспекты, составляющие основную массу проблем в сфере предоставления услуг. В ней рассказывается о том, как те из нас, кто занимается предоставлением ИТ-услуг, постоянно подвергаются опасности уделить слишком много внимания на устранении трудностей при оказании услуг или снижении предполагаемых рисков, причем часто за счет поддержания ситуационной информированности и обеспечения командам возможности учиться и совершенствоваться.
 
-Understanding these dynamics is important for any IT service delivery
-organization, and especially for those that wish to pursue the promise of
-DevOps. Overlooking them and missing their effects are what causes so many who
-pursue DevOps and Agile delivery approaches to fail to meet their promise from
-the start. This lack of awareness and appreciation of the way they can distort
-how we perceive the delivery ecosystem is also where many automation tooling and
-artificial intelligence/machine learning (AI/ML) approaches so often fail.
+Понимание этих аспектов важно для любой организации, предоставляющей ИТ-услуги, и особенно для тех, кто хочет реализовать DevOps потенциал. Игнорирование или отсутствие влияния на данные аспекты является причиной того, что многие из тех, кто использует DevOps и Agile подходы к реализации проектов не оправдывают возложенных на них надежд с самого начала. Недостаток осведомленности и понимания того, как они могут деформировать проект мы воспринимаем как систему предоставления услуг, также является причиной того, что многие инструменты автоматизации и искусственного интеллекта/машинного обучения (ИИ/МО) часто терпят неудачу.
 
-The second part of the book dives into each of the key elements and the role
-they play in service delivery. It explores their importance, how they are so
-often misapplied, and the repercussions to service delivery and the team. I
-personally feel that this is the most important part of the book, and the one
-that is so often missing from most guides out there.
+Во второй главе подробно рассматривается каждый из ключевых элементов и роль, которую они играют в предоставлении услуг. В ней описывается их важность, то, как часто они неправильно применяются, а также каковы последствия для предоставления услуг и команды. Лично я считаю, что это самая важная часть книги, и именно она так часто отсутствует в большинстве руководств.
 
-The third and last part of the book is a practical guide to help you improve
-your own service delivery effectiveness. It includes ways to determine the
-maturity of your team to ensure you have the key elements in place to deliver
-consistently and effectively. It also has a number of suggestions for how to
-organize and manage the flow of work, build and deploy instrumentation and
-automation solutions, and deal with governance associated with internal controls
-and those required to meet legal and regulatory requirements.
+Третья и последняя глава представляет собой практическое руководство, которое поможет Вам повысить эффективность предоставления услуг. Она включает в себя способы определения зрелости Вашей команды, чтобы убедиться, что у Вас есть ключевые элементы, необходимые для последовательного и эффективного оказания услуг. В книге также есть ряд предложений о том, как организовать и управлять потоком работ, создавать и внедрять инструменты и решения по автоматизации, а также по управлению, связанному с внутренним контроля, необходимого для выполнения законодательных и нормативных требований.
 
-## My Own Journey
+## Мое личное исследование
 
-This book draws from my own journey working in the trenches as an individual
-contributor and, later, a technical leader to build great IT services and
-improve the effectiveness of the teams delivering them. I know from firsthand
-experience that every ecosystem has different challenges, and what I have
-learned from my own missteps along the way have kept me level-headed and
-practical. More than anything, I want this book to be a useful addition to your
-bookshelf for a long time. This is why the focus of this book is to help you
-better understand your circumstances so that you and your organization can
-deliver more effectively, not to talk about some specific process or set of
-technology that will quickly be supplanted by the next big fad.
+Эта книга основана на моем собственном опыте работы в качестве самостоятельного сотрудника, а затем и технического руководителя для создать качественных ИТ-услуги для
+повышения эффективности команд, предоставляющих их. Я знаю из первых уст, что каждая система имеет свои проблемы, и то, чему я научился основываясь на своих собственных ошибок на этом пути, помогло мне сохранить здравомыслие и практичность. Больше всего на свете я хочу, чтобы эта книга стала полезным дополнением к Вашей
+книжной полке на долгое время. Именно поэтому основное внимание в этой книге уделяется тому, чтобы помочь Вам лучше понять задачи, чтобы Ваша организация могла
+более эффективно осуществлять оказание услуг, а не рассказывать о каком-то конкретном процессе или наборе технологий, которые быстро будут вытеснены следующим нововедением.
 
-I have been blessed throughout my career to have met and worked alongside a
-number of people far smarter than I am who early on in my career exposed me to
-revolutionary concepts and ways of working. Some had worked alongside John
-Boyd's "Fighter Mafia." Others were Training Within Industry (TWI) veterans, or
-had to come up with ways to deliver highly reliable services long before the
-existence of concepts like cloud computing or continuous delivery. Only later
-did I realize that what I learned along the way is what has allowed me to
-quickly cut through delivery ecosystem noise to help teams overcome seemingly
-intractable problems. At times it has felt like a superpower, one that I hope I
-can share to help you reduce your own delivery pain and frustration to secure
-success.
+На протяжении всей моей карьеры я был счастлив работать с людьми гораздо умнее меня, которые на ранних этапах моей карьеры познакомили меня с
+революционными концепциями и методами работы. Некоторые из них работали вместе с Джоном Бойда "Бойцовская мафия". Другие были ветеранами Training Within Industry (TWI) или им приходилось придумывать способы предоставления высоконадежных услуг задолго  до появления таких понятий, как "облачные вычисления" или "непрерывная доставка". Только позже я понял, что то, чему я научился на этом пути, позволило мне быстро пробиваться сквозь шум системы оказания услуг и помогать командам преодолевать кажущиеся неразрешимые проблемы. Временами это было похоже на суперспособность, которой, я надеюсь, я могу поделиться с Вами, чтобы помочь уменьшить боль и разочарование в процессе осуществления услуг и обеспечить успех.
