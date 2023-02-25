@@ -16,63 +16,21 @@ draft: false
 
 ## Learning How to See
 
-It is not inevitable that delivery teams have to fall into such a dysfunctional
-spiral. To break the cycle, you first need to understand the many ways you can
-lose your situational awareness, from deeply entrenched bad habits that fragment
-information flow to biases and perceptions that distort your understanding of a
-situation and what is important. Only then can you begin to put measures in
-place to counteract these tendencies and improve everyone's situational
-awareness.
+Попадание команд доставки в такую дисфункциональную спираль не является неизбежным. Чтобы разорвать этот замкнутый круг, сначала нужно понять, как можно потерять ситуационную осведомленность: от глубоко укоренившихся вредных привычек, фрагментирующих поток информации, до предубеждений и представлений, искажающих ваше понимание ситуации и того, что важно. Только после этого вы сможете начать принимать меры по противодействию этим тенденциям и улучшению ситуационной осведомленности каждого.
 
-Sharpening your situational awareness is like gaining a new sense or superpower
-you never knew you had. I like to think of it as learning how to see.
+Повышение уровня ситуационной осведомленности - это как обретение нового чувства или сверхспособностей, о которых вы даже не подозревали. Мне нравится думать об этом как о том, что вы учитесь видеть.
 
-The primary objective of this book is to help you on that journey so that you
-and your organization can close the awareness gap and deliver services that your
-customers can use to reach their target outcomes. This book is geared primarily
-for two audiences. The first comprises the individual contributors, like
-software developers and IT Operations staff, who are in the trenches delivering
-the services. The other key audience comprises the managers and leaders who are
-responsible for building and directing those delivery teams.
+Основная цель этой книги - помочь вам на этом пути, чтобы вы и ваша организация смогли устранить пробел в осведомленности и предоставлять услуги, которые ваши клиенты смогут использовать для достижения своих целевых результатов. Эта книга предназначена в основном для двух аудиторий. Первая включает в себя индивидуальных участников, таких как разработчики программного обеспечения и операционный персонал ИТ-отдела, которые занимаются предоставлением услуг. Другая ключевая аудитория - это менеджеры и лидеры, которые отвечают за создание и руководство командами по предоставлению услуг.
 
-For individual contributors the journey begins by looking at the delivery
-process itself. The first step is how you determine the objective of the work
-you are performing. Can it be used to check how well what is delivered aligns
-with the target outcomes of the customer, or are the measures more
-output-focused, such as the number of features or service uptime? Then there are
-the ways you acquire, understand, learn, and improve your ability to deliver.
-There are a number of misperceptions that inject flaws into our decision making,
-and ultimately the effectiveness of our actions.
+Для индивидуальных исполнителей путь начинается с рассмотрения самого процесса выполнения работы. Первый шаг заключается в том, как вы определяете цель выполняемой работы. Можно ли с ее помощью проверить, насколько хорошо поставленная работа соответствует целевым результатам клиента, или же показатели больше ориентированы на результат, например, количество функций или время безотказной работы сервиса? Кроме того, существуют способы приобретения, понимания, изучения и улучшения способности предоставлять услуги. Существует ряд неверных представлений, которые вносят изъяны в процесс принятия решений и, в конечном счете, в эффективность наших действий.
 
-To break this cycle, in this book you will find various techniques to help you
-measure and improve your situational awareness and the quality of information
-flow across your organization so that you are able to make better delivery
-decisions that move your services closer toward meeting your customer's target
-outcomes. Along the way many of the excuses people make for not changing their
-behavior and way of working, from managing work to governance procedures, will
-be debunked so that you and the team can continue to make progress.
+Чтобы разорвать этот замкнутый круг, в этой книге вы найдете различные методы, которые помогут вам измерить и улучшить вашу ситуационную осведомленность и качество информационных потоков в вашей организации, чтобы вы могли принимать более эффективные решения по предоставлению услуг, которые приблизят ваши услуги к достижению целевых результатов ваших клиентов. Попутно будут развенчаны многие оправдания, которые люди приводят, чтобы не менять свое поведение и методы работы, от управления работой до процедур управления, чтобы вы и команда могли продолжать добиваться прогресса.
 
-Here, managers and delivery leadership will find strategies to help delivery
-teams spot and eliminate awareness gaps and misalignments that hinder effective
-delivery. This begins by identifying the various problems that arise from many
-of the management styles, requirements management techniques, processes,
-communication styles, and incentive structures that have traditionally be relied
-upon to direct and control people. These lead to poor decision making, conflict,
-reduced learning and improvement, and ultimately failure to deliver in a way
-that meets customer expectations. You will also learn about the power of Mission
-Command, as well as ways to communicate, inspire, and support the members of
-your team to effectively deliver to the organization's vision and the outcomes
-customers are trying to achieve.
+Здесь менеджеры и руководители служб доставки найдут стратегии, которые помогут командам доставки обнаружить и устранить пробелы в осведомленности и несоответствия, мешающие эффективной доставке. Это начинается с определения различных проблем, возникающих из-за многих стилей управления, методов управления требованиями, процессов, стилей общения и структур стимулирования, которые традиционно полагались на руководство и контроль над людьми. Это приводит к неправильному принятию решений, конфликтам, снижению уровня обучения и совершенствования, и, в конечном счете, к неспособности выполнить работу так, чтобы она соответствовала ожиданиям клиентов. Вы также узнаете о силе командования миссией, а также о способах общения, вдохновения и поддержки членов вашей команды для эффективной реализации видения организации и результатов, которых пытаются достичь клиенты.
 
-Those who do not fit neatly in one of the two audiences described likely will
-also find value within these pages. For example, you might uncover and correct
-your own misperceptions about service delivery. This can help you better
-understand and more effectively interact with service delivery teams.
+Те, кто не вписывается ни в одну из двух описанных аудиторий, вероятно, также найдут для себя полезное на этих страницах. Например, вы можете обнаружить и исправить свои собственные неверные представления о предоставлении услуг. Это поможет вам лучше понять и более эффективно взаимодействовать с командами по предоставлению услуг.
 
-The thinking and techniques in this book are part of the larger Mobius outcome
-delivery approach, which you can find at <https://mobiusloop.com>. Mobius has
-been developed by a community dedicated to harnessing the power of innovation
-and delivery excellence to more effectively achieve the outcomes that matter.
+Мышление и методы, изложенные в этой книге, являются частью более широкого подхода к достижению результатов Mobius, с которым вы можете ознакомиться на сайте <https://mobiusloop.com>. Mobius был разработан сообществом, стремящимся использовать силу инноваций и совершенства исполнения для более эффективного достижения значимых результатов.
 
 ## How to Use This Book
 
