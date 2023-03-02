@@ -5,110 +5,449 @@ date: '2023-03-04'
 draft: false
 ---
 
-# Title 1
+In the fast-moving hypercompetitive world of today, innovation is as crucial
+as it is hard. People want ever better solutions faster. This requires pushing
+the envelope, taking chances into the new and unknown. While such bets do
+not always succeed, playing it safe risks a slide into irrelevance.
 
-Anim et voluptate elit laborum id voluptate velit exercitation id commodo
-excepteur. Elit tempor irure eu esse Lorem voluptate ex consequat laboris velit
-velit aliquip. Exercitation duis anim dolor exercitation est reprehenderit sit
-aute nostrud dolore laborum. Nisi enim aliqua ipsum do sunt quis nulla mollit.
-Dolore anim sint aliquip anim esse ea nostrud. Irure et ut excepteur et et
-voluptate in mollit nulla duis ex. Elit amet elit proident. Ut id elit labore
-dolore magna exercitation magna.
+**September 23, 2010**: Blockbuster Entertainment filed for Chapter 11
+bankruptcy protection after suffering from challenging losses due to
+strong competition from Netflix and other video on-demand services.
+Despite having a commanding lead in home video rentals and an offer
+to enter the video on demand business as early as 1999, Blockbuster
+failed to foresee the growing popularity of mail-order and streaming
+movie services.
 
-## Title 2
+Few industries face expectations for innovation as high as those the IT
+industry faces. From smartphones and the applications and services that
+bring new capabilities instantly to our fingertips, to the advanced analytics
+engines that help us understand ourselves and the universe around us ever
+faster and more accurately, we have grown to expect a continuous stream of
+revolutionary breakthroughs that both titillate and improve the quality of
+our lives.
+But this increasingly rapid flow has hardly been cost free.
 
-Occaecat Lorem tempor culpa laboris irure consequat nisi excepteur do
-exercitation exercitation voluptate pariatur cupidatat anim. Cillum in mollit
-consequat in dolore exercitation. Aliqua excepteur laboris exercitation ex minim
-officia proident commodo sit consequat aliquip aliquip cupidatat velit. Esse eu
-labore nisi sunt est adipisicing consequat dolore excepteur id ad amet quis qui.
+**January 3, 2018**: Security vulnerabilities Meltdown and Spectre were
+revealed to the world. Each exploits weaknesses in the speculative
+execution features found on most modern microprocessors, allowing an
+attacker to reveal and extract targeted private data. Being at the
+hardware level, these vectors thwarted both system and virtualization
+security protections. This created particularly damaging risks to cloud
+service providers and their customers. IT providers dependent upon
+legacy software were left with the choice of painful upgrades and
+patches or remaining vulnerable. To make matters worse, many of the
+initial firmware, operating system, and virtualization patches were
+haphazardly created and rolled out. These created instability, unwanted
+reboots, and occasional bricking of systems. Patches also degraded
+system performance between 2 and 19 percent.[^1]
 
-## Title 2
+[^1]: “Speculative Execution Exploit Performance Impacts - Describing the performance impacts to
+security patches for CVE-2017-5754 CVE-2017-5753 and CVE-2017-5715,” Red Hat:
+https://access.redhat.com/articles/3307751
 
-Incididunt eu ea sint nisi tempor. Et id culpa mollit dolore voluptate
-consequat. Veniam culpa ea tempor reprehenderit aliqua aute exercitation
-voluptate id officia non laborum ad. Anim qui incididunt eiusmod ea consequat
-et. Ullamco culpa occaecat nisi aliquip mollit nisi consequat ea ullamco id ex
-et elit. Reprehenderit sit eiusmod incididunt. Irure ea eiusmod do ex sint
-tempor amet labore ut officia nulla ullamco enim minim anim.
+Each innovation brings with it additional layers of technology, increasing
+the level of complexity in the operating stack. With so many moving parts
+produced by an ever growing list of providers, it is difficult for any one
+person to definitively know everything there is to know about an IT stack
+they rely upon or are responsible for. Like a building with an unknown
+foundation, this complexity creates a level of uncertainty that makes
+innovation more difficult. It also threatens to add fragility that drives up the
+likelihood of failure.
 
-Voluptate excepteur duis excepteur sunt nisi in occaecat tempor. Enim eiusmod
-aliqua exercitation fugiat cillum tempor nisi incididunt aute est velit
-incididunt. Cupidatat nulla sunt nulla fugiat aute sunt qui magna velit labore
-aliquip laborum. Commodo qui laborum sint non ad anim consectetur ut irure
-fugiat excepteur.
+At the same time that technical stacks have increased in complexity,
+customer patience for failure has eroded. As demands for using IT solutions
+to solve problems have grown, IT has become deeply embedded into nearly
+every aspect of our lives, large and small. Now everything from our
+household appliances and cars to banks and emergency services relies upon
+an increasingly intricate web of software and IT hosted services to function.
+Any one failure can cascade into something both crippling and costly for
+both the user community and the provider. What constitutes a failure has
+also expanded to include not just faults and broken functionality but also
+poor usability and missed expectations.
 
-## Title 2
+**August 1, 2012**: The major market maker Knight Capital Group
+suffered from an error in its SMARS algorithmic router software that
+led to a $460 million trading loss over the course of 45 minutes. This
+exceeded the total assets of the firm, eventually pushing the company to
+be acquired.
 
-Eiusmod ad incididunt in nostrud id consequat minim incididunt adipisicing
-deserunt aliqua est cillum exercitation. Id elit irure id Lorem. Id do laborum
-sit. Laborum nisi cillum excepteur officia ad reprehenderit commodo. Eiusmod est
-ex eiusmod adipisicing ut reprehenderit exercitation minim ea quis culpa sint
-incididunt. Aliqua velit quis amet tempor irure amet minim est velit.
+Solving for innovation speed, reliability, and expectations matching has
+kicked off a competition between two approaches: reducing delivery
+friction and managing service delivery risk. This competition is important
+as it affects how organizations approach DevOps, and ultimately its chances
+for success. However, while each approach does address some important
+factors, each also contains a number of serious flaws. These not only cause
+frustrating delivery problems themselves, but can actually hinder the
+organization from achieving the single most important aspect of service
+delivery: effectively helping customers reach their target outcomes.
 
-Est non irure quis adipisicing eiusmod ipsum qui veniam irure magna. Ea non
-ullamco tempor. Minim sunt ad consequat mollit cillum exercitation excepteur
-eiusmod est irure id. Labore ullamco irure in non enim et officia nostrud
-laborum eu est. Consequat laborum nisi aliquip sunt officia eu do adipisicing.
+## Approach #1: Reduce Delivery Friction
 
-Laborum quis pariatur enim duis sint occaecat nulla mollit id esse sit eiusmod.
-Ullamco fugiat elit dolor dolore laborum ipsum excepteur Lorem occaecat proident
-cupidatat labore veniam excepteur labore. Incididunt id sunt id pariatur. Ut
-sunt id duis minim eiusmod elit ipsum reprehenderit. Sint anim sint excepteur
-exercitation consectetur velit ut dolore. Duis consequat amet excepteur. Fugiat
-nostrud tempor velit do velit veniam consequat.
+**September 7, 2017**: Credit reporting agency Equifax announced that
+hackers broke in and stole the personal information of up to 143 million
+American consumers. The break-in was reported to have occurred
+sometime in May through an exploit of a previously reported Apache
+Struts vulnerability. Despite a patch being readily available since March
+that fixed the problem, Equifax appears to not have taken the necessary
+precautions to remove the vulnerability until well after the breach.
+Unnamed sources claim that the decision to delay might have occurred
+due to resource contention with other software development activities.
 
-Cupidatat aliquip esse irure ea deserunt culpa proident. Eiusmod minim ut magna
-Lorem dolore ullamco irure dolor exercitation et. Cupidatat enim veniam irure
-nulla exercitation cillum do nisi. Ipsum occaecat dolor incididunt pariatur
-minim fugiat consectetur. Magna tempor laboris nulla consequat nostrud laborum
-laborum ad voluptate in veniam occaecat nulla duis. Amet sint cillum Lorem enim
-amet esse laboris adipisicing magna. Quis voluptate tempor proident velit sunt
-minim duis aute laboris.
+Being perceived as too slow to respond to events, regardless of whether it is
+fixing a new bug or vulnerability or addressing some new customer demand
+or regulatory requirement, can be not only embarrassing but fatal to a
+business. It undermines trust and confidence in an organization’s
+competence.
 
-Magna minim tempor mollit aliqua incididunt eu quis amet nulla ut excepteur.
-Sunt eu pariatur nostrud deserunt id nisi sit veniam. Non consequat eiusmod
-deserunt eu. Est fugiat exercitation est nulla enim ipsum fugiat ut non qui.
-Esse sint commodo reprehenderit elit excepteur deserunt voluptate ullamco veniam
-voluptate.
+What is worse, speed is not only a matter of how many minutes or hours are
+needed to respond, but also whether the organization responds more quickly
+than its competitors. With it becoming increasingly easier to find and
+change to a new supplier, such perceptions can lead to a rapid loss of
+market share.
 
-Aliqua quis culpa deserunt. Nostrud excepteur labore minim. Id duis nisi
-excepteur sunt pariatur irure mollit. Nulla pariatur nulla anim ipsum officia
-sit consectetur. Eiusmod aute magna nulla consectetur dolor nostrud anim in nisi
-ex sunt nulla exercitation consequat.
+This desire to increase speed and agility has, not surprisingly, kicked off a
+rush to optimize delivery response. The most obvious place for delivery
+teams to start has been to look for any sources of delivery friction in the
+environment that can be eliminated.
 
-Proident exercitation nulla fugiat magna quis qui consectetur. Tempor ea non
-consectetur deserunt proident pariatur ea consectetur aliqua fugiat ullamco
-fugiat minim qui tempor. Occaecat commodo exercitation nostrud quis quis labore.
-Nisi tempor eu mollit occaecat et pariatur quis nostrud et. Labore excepteur ea
-irure ex consequat nostrud commodo deserunt veniam est anim labore. Consectetur
-aliqua occaecat aliqua culpa irure voluptate Lorem ea est ut. Pariatur nisi
-minim non ipsum fugiat in sit dolore.
+Delivery friction is anything that reduces delivery speed, throughput, or
+responsiveness. As there are real gains that can be achieved by eliminating
+delivery friction, the industry has been flooded with solutions.
 
-Duis pariatur aliquip sunt elit consequat consectetur ipsum labore do pariatur
-cillum aute labore labore Lorem. Eiusmod ullamco ullamco amet pariatur minim qui
-nostrud. Duis dolore consectetur anim. Aute ut ut irure eu fugiat consectetur id
-ut magna consequat. Sunt non in laboris culpa officia enim sunt. Sit mollit id
-aliqua nulla nisi commodo sit dolore sint nulla magna irure in. Mollit laborum
-exercitation aliquip.
+For instance, Agile methodologies like Scrum and Kanban target the
+traditionally long delivery cycles that make changing delivery priorities and
+getting solutions to market slow and cumbersome. Breaking work into
+small batches as these methodologies prescribe also has the added benefit of
+gaining feedback more quickly, which can help reduce the waste caused by
+misunderstood or misaligned requirements.
 
-Voluptate aliquip enim consequat sunt excepteur deserunt voluptate eu magna.
-Voluptate qui aliqua cillum fugiat labore in nisi do labore et esse cupidatat
-anim nostrud adipisicing. Incididunt tempor adipisicing culpa Lorem esse enim
-laborum. Ad velit ex cupidatat ipsum aliquip irure cupidatat. Ad dolore occaecat
-laboris sit irure ea non amet quis in irure.
+Likewise, the coding practices and release engineering tooling
+improvements that accompany DevOps continuous integration/continuous
+delivery initiatives often push developers toward more frequent code checkins 
+into less complicated code repository structures. These together with
+more rapid build, integration, and testing cycles increase the amount of
+feedback developers get during delivery. This allows problems to be spotted
+and addressed far more quickly while context is still fresh in people’s
+minds. Pair programming, unit tests, and code reviews also help developers
+write more elegant code while improving the knowledge of the code base
+across the team.
 
-Adipisicing sunt non dolore nulla. Aliquip adipisicing in exercitation duis
-cillum minim id amet. Excepteur elit labore consectetur sint aliqua laborum
-magna Lorem sunt do nulla. Pariatur incididunt elit proident deserunt aliquip
-elit qui aute minim exercitation eu dolore. Exercitation culpa duis est duis et
-duis consectetur elit. Velit mollit consectetur deserunt tempor esse aliquip
-sint ut incididunt amet incididunt. Culpa adipisicing ea proident non irure aute
-excepteur excepteur occaecat deserunt.
+The move away from architectural monoliths to more self-contained
+modular services running on cloud instances that can be spun up and down
+nearly instantly makes the process of scaling and changing out aging and no
+longer suitable components potentially much faster and less daunting.
+Platform-as-a-Service (PaaS) and open source software solutions allow
+developers to share and borrow solutions to common problems, further
+speeding up the time it takes to get solutions to market. Configuration and
+orchestration automation tools like Puppet and Kubernetes allow thousands
+of service instances to be managed globally by a handful or tens of
+engineers.
 
-Elit pariatur ex sit nisi nisi ut laboris voluptate. Eu est sit fugiat labore
-minim cillum dolore. Esse esse elit qui excepteur eiusmod anim Lorem irure Lorem
-nisi. Culpa aliquip aliquip est adipisicing. Sint officia aliquip occaecat.
-Proident ut ipsum ad. Non sint amet consequat est consequat enim velit ipsum
-aliquip anim magna labore consectetur. Anim fugiat laboris dolor duis anim est
-do exercitation velit labore qui.
+All of these friction reduction improvements sound great. However, they
+can have a number of dark sides that few openly acknowledge, let alone
+fully understand. These not only create headaches for people in the delivery
+organization, they also get in the way of delivering the outcomes that
+customers care about.
+
+## The Downsides of Targeting Delivery Friction
+
+The first challenge with fixating on eliminating delivery friction is that it is
+easy for delivery teams to focus on building as much as they can as quickly
+as they can rather than on trying to understand what the customer is trying
+to accomplish and how their solution might help them achieve it. Some
+believe that by simply delivering more you will eventually deliver
+something customers find useful. Others who have been influenced by
+traditional financial accounting often translate building more assets while
+expending the same number of man hours as a financial win regardless of
+their utility. Both are incredibly wasteful and count on success being little
+more than a matter of chance.
+
+This cycle of producing as much as you can as fast as possible is often
+reinforced by delivery teams being evaluated on how much they can deliver
+in a period of time. At first glance this might not seem like much of a
+problem, but if you feel that your throughput is falling below expectations,
+it can be extremely tempting to push friction elimination to the extreme by
+cutting corners and take on unnecessary risks for the benefit of speed.
+
+**March 22, 2016**: Open source developer Azer Koçulu unpublished
+more than 250 of his own modules from the NPM package manager due
+to a trademark disagreement. One of those, left-pad, was a mindlessly
+simple module used to pad out the lefthand side of strings with zeroes or
+spaces. Despite being only five lines long, left-pad became a critical
+dependency for tens of thousands of projects, including widely used
+Node and Babel. Its disappearance caused development and deployment
+activities worldwide to fall over, exposing the brittleness of the NPM
+system.
+
+This push to release faster has also been far from inclusive. The
+development-centric nature means that most improvements have focused on
+making the lives of developers easier, often to the exclusion of others. QA,
+and especially operational teams, often find themselves being pushed or
+worked around for the sake of increasing delivery speed. As these groups
+are usually measured by metrics such as service uptime and the frequency
+and severity of production problems, they feel that this rushing is against
+their best interests, jeopardizing their ability to perform their jobs
+effectively. It also doesn’t help that many developers only have limited
+awareness of, and often little interest in, the technology stack they are
+deploying into. This increases the odds of something going wrong.
+
+**January 31, 2017**: Source code hosting service Gitlab.com experienced
+a major service outage due to the accidental removal of data from their
+primary database server. While troubleshooting a production problem
+on a secondary server, an engineer accidentally wiped the data in the
+primary server’s database. None of the backups were in a state to be
+sufficiently useful to restore all lost data. In the end it is estimated that 6
+hours of data, including 4979 comments and 707 user accounts, were
+lost in 5037 projects.
+
+Operationally focused teams have pushed back. While they are not opposed
+to reducing friction, they favor actions that minimize problems arising in
+the first place. This has given birth to our second approach, managing
+service delivery risk.
+
+## Approach #2: Managing Service Delivery Risk
+
+**February 29, 2012**: Microsoft Azure suffered a massive 36-hour outage
+due to a leap year bug in the SSL transfer certificate handling code that
+manages communications between host agents and their virtual guest
+agents. Certificates were given invalid dates that created errors that
+ultimately caused entire clusters to error out and go offline. This
+problem was made worse by a code rollback attempt that failed due to
+incompatibility problems between the rollback code and newer
+networking plugins. This created further complications that extended
+the length of the outage.
+
+Being able to respond quickly to failure is great. But service support and IT
+Operations teams know that failure can be costly, often in ways that others
+fail to understand until it is too late. It not only consumes massive amounts
+of support resources to respond and deal with production problems, it also
+damages trust with the customer. It is better to try to avoid failure in the
+first place.
+
+Teams that feel this way instead favor trying to manage service delivery risk
+directly. Anything that is unknown, poorly documented, or insufficiently
+understood is an unmanaged danger that puts the organization at risk of
+failure.
+
+To mitigate such dangers, teams that prioritize risk management attempt to
+make all risks knowable up-front. Because undocumented variation is
+considered the largest source of unmanaged danger, such organizations
+typically begin by mandating that all delivery activities follow standardized
+“best practices”. These practices are heavily documented and include most
+day-to-day activities spanning from maintenance and troubleshooting to
+making infrastructure and service changes. The idea is that the danger of
+undocumented variation can be minimized by forcing everything to follow
+a heavily documented standard.
+
+Knowing that not all needed changes can be completely standardized,
+nonstandard changes are put through a process that attempts to make them
+known enough that the risks they might create can be captured and
+assessed. This is done by documenting details about the changes, how they
+will be performed, and their potential impact, and then submitting them
+through a governance review and controls process where they can be
+reviewed by responsible parties to determine whether any potential risks
+from the proposed changes are acceptable. If they are not, the party wanting
+to make the change needs to abandon the change or make modifications to
+it to make it acceptable.
+
+Documenting every possible standard practice is both tedious and time
+consuming. Rather than coming up with all of these processes themselves,
+most organizations adopt them from one of the many popular IT service
+management frameworks such as ITIL [^2]. These frameworks have the benefit
+of being known as industry best practices full of lots of easy-to-use
+templates and procedures that many IT organizations are familiar with.
+
+They are also widely recognized by auditors for legal and regulatory
+compliance.
+
+[^2]: “What is ITIL,” https://www.itgovernance.co.uk/itil
+
+## The Downsides of Targeting Service Delivery Risk
+
+Implementing an industry best practice to minimize unknown variation and
+enable responsible parties to review nonstandard changes before they are
+pushed live sounds like a good idea. While all the extra processing might
+introduce additional delivery friction, it seems like the sort that might help
+the organization deliver more effectively. Isn’t having a service that
+performs as expected a critical part of what a customer needs?
+
+The problem with this approach begins with the fact that it makes four
+flawed assumptions:
++ Work will be predictable.
++ People will correctly follow a documented process.
++ People in authority are capable of making effective decisions.
++ Industry-certified frameworks are less risky than noncertified or lesserknown approaches.
+
+The first assumption is that the vast majority of work needing to be
+performed in production will necessarily be predictable enough that all
+necessary steps to get to a satisfactory result can be documented beforehand
+without any need for variation.
+
+This leads us to the second assumption, which is the belief that everyone
+will follow all documented processes exactly without any variation. Even
+though service management frameworks demand an audit trail, the vast
+majority accept the change script and checklist that engineers follow as
+sufficient evidence without any real programmatic means to ensure that
+someone hasn’t miskeyed an action, done something out of order, or taken
+shortcuts along the way.
+
+There is also the reliance on “responsible parties” chosen to sit on a Change
+Advisory Board (CAB) to review changes to determine whether the risks
+they pose are acceptable. The members of these CABs are usually selected
+from managers, heads of functions, and key stakeholders of areas affected
+by the change. While CABs usually can catch such problems as scheduling
+conflicts and communication gaps, they are usually far enough away from
+the day-to-day details that it is difficult for them to have enough awareness
+and understanding of the potential risks the changes pose to the ecosystem
+and the dangers they might have for the customer.
+
+The final problem with this approach is that it silently makes the
+assumption that the current state is by default somehow less risky than any
+nonstandard one. Not only is that not necessarily true, inaction can actually
+increase the risk to the organization. I have personally seen organizations
+get caught in this trap a number of times. Sometimes it is a critical customer
+threatening to leave, or demands from some regulatory body under the
+threat of major fines and legal action, if a particular change they absolutely
+had to have was not made by a certain date. Other times a dangerous defect
+has been found in a critical service, usually one involving some commercial
+third party, that requires an extended downtime window to fix. In such
+cases it can be extremely difficult to push through a change quickly, even
+when not doing so can jeopardize the future existence of the organization.
+
+## The Essence of Delivery
+
+The customer inevitably finds themselves stuck in the middle of this
+conflict between those who try to optimize for delivery speed and attempt
+to manage risk. Naturally, customers want both quick delivery and no
+faults. They simply do not understand why they cannot have both.
+Meanwhile, each team thinks their approach is right and their goals should
+be prioritized. Do the IT Operations staff not understand the time and
+innovation pressures in the market? Is the work of the delivery team as
+risky as is being implied? They both seem to care deeply about the success
+of the company. How can these two technical teams have such opposing
+views?
+
+Can DevOps be a solution?
+
+Before answering those questions, it is worthwhile to first consider the
+purpose for why we are doing IT delivery in the first place.
+
+At the most basic level, delivery is nothing more than a chain of interrelated
+decisions. Like any decision, they are made to reach some sort of preferred,
+or at least less bad, state than the current trajectory. In the context of service
+delivery, they are made for the purpose of helping customers achieve their
+target outcome.
+
+A target outcome is a set of desirable or otherwise important conditions that
+the customer wants to reach. Delivering to achieve a target outcome is more
+than simply delivering an output or meeting a promise of a service
+reliability level. Reaching a target outcome means functionally satisfying a
+need, whether it is to solve an existing problem, minimize or prevent one
+from occurring, exploit an opportunity, or to otherwise improve the current
+condition.
+
+The connection between an outcome and the tool or service attempting to
+deliver it can be straightforward (“I want to stay informed about today’s
+weather so that I know if I need to alter what I wear”), complex with many
+solutions (“I want better global weather and market information so that I
+can choose the best crop to farm”), nested (“I want better climate
+information to design buildings that have a lower carbon footprint but stay
+comfortable for its inhabitants”), or even part of an aspirational journey (“I
+want to reduce man’s impact on the environment worldwide”). The target
+outcome provides us with a direction or purpose to deliver toward.
+
+In order to reach an outcome, you need to have some idea of current
+conditions. What is the size of the gap between the current state and the
+desired state? What are the means available that can be used to attempt to
+close that gap, what obstacles might get in the way that need to be avoided
+or overcome along the way, and how can we tell if we are making material
+progress toward the target outcome? The answers together are what we call
+our situational awareness, the idea that we know what is going on around
+us to make better decisions more rapidly.
+
+Any good decision maker reflects on the impact of the decisions they make.
+Did they result in the changes we were expecting, and did those changes
+result in progress toward the target outcome? Understanding what did and
+did not go well and why helps us learn and improve our decision making,
+and thereby our ability to deliver more effectively, in the future.
+
+## Beginning the DevOps Journey
+
+**March 2015**: Woolworths Australia completed a 6-year project to
+replace a 30-year-old in-house ERP system with SAP. The project’s lack
+of understanding of day-to-day business procedures quickly led to the
+breakdown in the company’s supply chain. Shelves quickly became bare
+while suppliers and stores struggled to get orders through the new
+system. Store managers lost the ability to get profit and loss reports for
+18 months, limiting their ability to manage profitability at the store
+level. These failures contributed to a $766 million loss and the layoff of
+hundreds of employees.[^3]
+
+[^3]:  “Three ERP failure case studies and what you can learn from them,” ERP Focus,
+https://www.erpfocus.com/erp-failure-case-studies.html
+
+Unfortunately, in emphasizing outputs and uptime we assume but do not
+check that we are actually delivering solutions that help customers get to
+their target outcomes. The reason for this comes back to how we have
+become accustomed to working. It would seem odd to most people working
+in delivery to be expected to figure out themselves what the customer is
+trying to achieve and how to deliver it to them. We instead expect to be told
+what features or requirements need to be delivered. This removes a lot of
+ambiguity, and eliminates the need for any direct customer contact.
+
+Having trackable lists of requirements also makes it far clearer how we will
+be evaluated. Managers can simply measure delivery outputs like how
+much work was done and how well it aligns to what was asked for.
+
+While unambiguous and easy to manage, measuring the delivery of outputs
+provides little incentive for workers to check that customers are able to use
+what was delivered to reach their target outcomes. The fact that managers
+tend to be measured on their ability to deliver requirements on time and on
+budget only compounds this problem. It is as if any gap between what was
+asked for and what the customer needs is the customer’s problem. This is
+far from a sustainable strategy for any business.
+
+Being disconnected from target outcomes also changes what factors are
+considered when making delivery decisions. With evaluation metrics taking
+center stage, focus turns to any actions that can turn them favorable. Teams
+soon learn how to quickly game measures such as velocity (by breaking up
+jobs into many small tasks), bug counts (closing, deprioritizing, or
+reclassifying them as “features”), and code coverage (creating poorly
+constructed unit tests that do little to test the underlying code), undercutting
+their intended value.
+
+So what does all this have to do with DevOps?
+
+To be truly successful, a DevOps implementation has to remove all the
+barriers and disincentives that prevent the delivery organization from
+helping customers reach their target outcomes. This takes systematically
+moving away from traditional beliefs, habits, and approaches about IT
+service delivery and establishing a more situationally aware, outcomebased, and continually learning and improving approach.
+
+As you will see, this transition is incredibly difficult to do. Habits and
+beliefs are hard to break with. This takes a lot of convincing, especially
+when it challenges traditional systems used to assess people and work
+product performance.
+
+The best way to take people on this journey is to begin with making the
+dysfunction visible. The best approach is to strip the delivery process back
+to its core, the decision.
+
+One person, a US Air Force pilot and military strategist named John Boyd,
+pursued such a search in order to understand what is necessary to optimize
+the decision-making process. As you will see, his journey provides a useful
+lens to better understand the decision-making process itself and how
+improving your decision making can help you deliver the target outcomes
+that matter.
+
+## Summary
+
+IT service delivery organizations commonly feel that they must choose
+between optimizing for output and speed by targeting delivery friction, and
+managing risk by minimizing unknown variation through defined practices
+and review processes. Not only are such approaches flawed, they cause
+teams to lose sight of the fact that service delivery is about delivering
+solutions that help customers achieve their target outcomes.
+To deliver more effectively, teams should instead think of service delivery
+as a decision-making process. By understanding how decisions are made,
+decision-making can be improved to deliver the target outcomes that matter.
