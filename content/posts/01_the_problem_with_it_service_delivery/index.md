@@ -81,73 +81,69 @@ frustrating delivery problems themselves, but can actually hinder the
 organization from achieving the single most important aspect of service
 delivery: effectively helping customers reach their target outcomes.
 
-## Approach #1: Reduce Delivery Friction
+## Метод #1: Сокращение трудностей при доставке
 
-**September 7, 2017**: Credit reporting agency Equifax announced that
-hackers broke in and stole the personal information of up to 143 million
-American consumers. The break-in was reported to have occurred
-sometime in May through an exploit of a previously reported Apache
-Struts vulnerability. Despite a patch being readily available since March
-that fixed the problem, Equifax appears to not have taken the necessary
-precautions to remove the vulnerability until well after the breach.
-Unnamed sources claim that the decision to delay might have occurred
-due to resource contention with other software development activities.
+**Сентябрь 7, 2017**: Агенство кредитной истории Equifax объвило, что хакеры
+взломали и украли персональную информацию до 143 миллионов американских
+потребителей. Взлом, как сообщается, произошел приблизительно в мае через 
+эксплойт ранее сообщенной уязвимости Apache Struts. Несмотря на то, что патч, 
+устранявший проблемму, был доступен с марта, Equifax, по-видимому, не предприняла
+необходимых мер предосторожности для устранения уязвимости до тех пор, пока не
+произошел взлом. Неназванные источники утверждают, что решение об отсрочке могло
+быть принято из-за нехватки ресурсов для других мероприятий по разработке
+программного обеспечения.
 
-Being perceived as too slow to respond to events, regardless of whether it is
-fixing a new bug or vulnerability or addressing some new customer demand
-or regulatory requirement, can be not only embarrassing but fatal to a
-business. It undermines trust and confidence in an organization’s
-competence.
+Восприятие того, что вы слишком медленно реагируете на события, независимо от
+того, исправляется ли это новая ошибка или уязвимость, или удовлетворяется
+какой-то новый потребительский спрос или нормативное требование, может быть не
+только неприятным, но и фатальным для бизнеса. Это подрывает доверие и 
+уверенность в компетенцию организации.
 
-What is worse, speed is not only a matter of how many minutes or hours are
-needed to respond, but also whether the organization responds more quickly
-than its competitors. With it becoming increasingly easier to find and
-change to a new supplier, such perceptions can lead to a rapid loss of
-market share.
+Хуже того, скорость зависит не только от количества минут или часов, необходимых
+для реагирования, но и от того, реагирует ли организация быстрее, чем ее
+конкуренты. Поскольку найти и перейти к новому поставщику становится все проще
+такое восприятие может привести к быстрой потере доли рынка.
 
-This desire to increase speed and agility has, not surprisingly, kicked off a
-rush to optimize delivery response. The most obvious place for delivery
-teams to start has been to look for any sources of delivery friction in the
-environment that can be eliminated.
+Это стремление к увеличению скорости и оперативности дало старт в гонке
+оптимизации доставки ответов, что в прочем не удивительно. Наиболее очевидным для
+команд доставки было начать искать любые источники разногласий при доставке в
+окружающей среде, которые можно устранить.
 
-Delivery friction is anything that reduces delivery speed, throughput, or
-responsiveness. As there are real gains that can be achieved by eliminating
-delivery friction, the industry has been flooded with solutions.
+Разногласия при доставке - это все, что снижает скорость доставки, пропускную
+способность или оперативность реагирования. Поскольку существуют реальные 
+выгоды, которых можно достичь, устранив разногласия при доставке, отрасль
+наводнена решениями.
 
-For instance, Agile methodologies like Scrum and Kanban target the
-traditionally long delivery cycles that make changing delivery priorities and
-getting solutions to market slow and cumbersome. Breaking work into
-small batches as these methodologies prescribe also has the added benefit of
-gaining feedback more quickly, which can help reduce the waste caused by
-misunderstood or misaligned requirements.
+Для примера, Agile методологии Scrum и Kanban ориентиррованны на традиционно
+длиные циклы доставки что делает изменение приоритетов доставки и вывод решений
+на рынок медленным и громоздким. Разделение работы на небольшие части, как
+предписывают эти методологии, также имеет дополнительное преимущество в более
+быстром получении обратной связи, что может помочь сократить потери, вызванные
+неправильным пониманием или несогласованностью требований.
 
-Likewise, the coding practices and release engineering tooling
-improvements that accompany DevOps continuous integration/continuous
-delivery initiatives often push developers toward more frequent code checkins 
-into less complicated code repository structures. These together with
-more rapid build, integration, and testing cycles increase the amount of
-feedback developers get during delivery. This allows problems to be spotted
-and addressed far more quickly while context is still fresh in people’s
-minds. Pair programming, unit tests, and code reviews also help developers
-write more elegant code while improving the knowledge of the code base
-across the team.
+Аналогичным образом, методы кодирования и усовершенствования инструментария
+разработки релизов, которые сопровождают инициативы DevOps по непрерывной
+интеграции/доставке, подталкивают разработчиков к более частым проверкам
+кода в менее сложных структурах репозитория кода. Это, вместе с более быстрыми
+циклами сборки, интеграции и тестирования, увеличивает количество
+отзывов, которые разработчики получают во время доставки. Это позволяет
+гораздо быстрее выявлять проблемы и решать их, пока контекст еще свеж в
+сознании людей. Парное программирование, unit тесты и код ревью также помогают
+разработчикам писать более элегантный код, одновременно улучшая знания кодовой
+базы всей команды.
 
-The move away from architectural monoliths to more self-contained
-modular services running on cloud instances that can be spun up and down
-nearly instantly makes the process of scaling and changing out aging and no
-longer suitable components potentially much faster and less daunting.
-Platform-as-a-Service (PaaS) and open source software solutions allow
-developers to share and borrow solutions to common problems, further
-speeding up the time it takes to get solutions to market. Configuration and
-orchestration automation tools like Puppet and Kubernetes allow thousands
-of service instances to be managed globally by a handful or tens of
-engineers.
+Переход от монолитных архитектур к более автономным модульным сервисам,
+работающим на облачных экземплярах, которые можно запускать практически
+мгновенно, потенциально значительно ускоряет процесс масштабирования и замены
+устаревших и непригодных компонентов. Платформа-как-услуга (PaaS) и программные
+решения с открытым исходным кодом позволяют разработчикам делиться решениями
+общих проблем и заимствовать их, что еще ускоряет время, необходимое для вывода
+решений на рынок.
 
-All of these friction reduction improvements sound great. However, they
-can have a number of dark sides that few openly acknowledge, let alone
-fully understand. These not only create headaches for people in the delivery
-organization, they also get in the way of delivering the outcomes that
-customers care about.
+Все эти улучшения по уменьшению разногласий звучат великолепно. Однако они имеют
+ряд темных сторон, что немногие признают открыто, не говоря уже о том, чтобы
+полностью их понимать. Это не только создает головную боль для сотрудников
+организации доставки, но и мешает доставлять результаты, что беспокоит клиентов.
 
 ## The Downsides of Targeting Delivery Friction
 
