@@ -1,7 +1,7 @@
 ---
 title: 'Friction'
 date: '2023-03-25'
-draft: false
+draft: true
 ---
 
 # Title 1
