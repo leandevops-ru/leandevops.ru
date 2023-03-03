@@ -1,7 +1,7 @@
 ---
 title: 'Automation'
 date: '2023-05-06'
-draft: false
+draft: true
 ---
 
 # Title 1
