@@ -145,61 +145,60 @@ delivery: effectively helping customers reach their target outcomes.
 полностью их понимать. Это не только создает головную боль для сотрудников
 организации доставки, но и мешает доставлять результаты, что беспокоит клиентов.
 
-## The Downsides of Targeting Delivery Friction
+## Обнаружение проблем при доставке
 
-The first challenge with fixating on eliminating delivery friction is that it is
-easy for delivery teams to focus on building as much as they can as quickly
-as they can rather than on trying to understand what the customer is trying
-to accomplish and how their solution might help them achieve it. Some
-believe that by simply delivering more you will eventually deliver
-something customers find useful. Others who have been influenced by
-traditional financial accounting often translate building more assets while
-expending the same number of man hours as a financial win regardless of
-their utility. Both are incredibly wasteful and count on success being little
-more than a matter of chance.
+Первая проблема, связанная с устранением затруднений при доставке, заключается в
+том, что группам доставки легче сосредоточиться на доставке наибольшего
+количества продукта и как можно быстрее, чем постараться понять, чего пытается
+достичь клиент и как их решение может помочь ему в этом. Некоторые считают, что
+если просто поставлять больше, то в конечном итоге получится что-то полезное для
+клиентов. Другие, находящиеся под влиянием традиционного финансового учета,
+часто оценивают производство большего количества поставок при затрате того же
+количества человеко-часов как финансовую победу, независимо от их полезности.
+Оба варианта невероятно расточительны и рассчитывают на то, что успех - не более
+чем дело случая. 
 
-This cycle of producing as much as you can as fast as possible is often
-reinforced by delivery teams being evaluated on how much they can deliver
-in a period of time. At first glance this might not seem like much of a
-problem, but if you feel that your throughput is falling below expectations,
-it can be extremely tempting to push friction elimination to the extreme by
-cutting corners and take on unnecessary risks for the benefit of speed.
+Этот цикл производства поставок как можно в большем количестве и как можно
+быстрее часто усиливается тем, что команды доставки оцениваются по тому, сколько
+они могут поставить за определенный период времени. На первый взгляд это может
+показаться не такой уж большой проблемой, но если вы чувствуете, что пропускная
+способность вашей команды не соответствует ожиданиям, может возникнуть огромный
+соблазн довести устранение проблем поставок до крайности, принимая на себя
+ненужные риски во благо увеличения скорости.  
 
-**March 22, 2016**: Open source developer Azer Koçulu unpublished
-more than 250 of his own modules from the NPM package manager due
-to a trademark disagreement. One of those, left-pad, was a mindlessly
-simple module used to pad out the lefthand side of strings with zeroes or
-spaces. Despite being only five lines long, left-pad became a critical
-dependency for tens of thousands of projects, including widely used
-Node and Babel. Its disappearance caused development and deployment
-activities worldwide to fall over, exposing the brittleness of the NPM
-system.
+**22 марта 2016 года**: Разработчик Азер Кочулу из-за разногласий по поводу торговой
+марки оставил более 250 собственных модулей из менеджера пакетов NPM
+неопубликованными. Один из них, left-pad, был бездумно простым модулем,
+используемым для заполнения левой стороны строк нулями или пробелами. Несмотря
+на то, что left-pad состоял всего из пяти строк, он стал неотъемлемой частью для
+десятков тысяч проектов, включая широко используемые Node и Babel. Его
+исчезновение привело к тому, что вся разработка по всему миру пошла под откос,
+обнажив хрупкость системы NPM. 
 
-This push to release faster has also been far from inclusive. The
-development-centric nature means that most improvements have focused on
-making the lives of developers easier, often to the exclusion of others. QA,
-and especially operational teams, often find themselves being pushed or
-worked around for the sake of increasing delivery speed. As these groups
-are usually measured by metrics such as service uptime and the frequency
-and severity of production problems, they feel that this rushing is against
-their best interests, jeopardizing their ability to perform their jobs
-effectively. It also doesn’t help that many developers only have limited
-awareness of, and often little interest in, the technology stack they are
-deploying into. This increases the odds of something going wrong.
+Это стремление к более быстрому выпуску продукта также далеко не всегда было
+всеобъемлющим. Ориентированность на разработку означает, что большинство
+улучшений направлено на облегчение жизни разработчиков, и чаще всего в ущерб
+другим. Про QA, и особенно оперативные группы, часто забывают ради увеличения
+скорости доставки. Поскольку эти группы обычно оцениваются по таким показателям,
+как время безотказной работы сервиса, частота и серьезность производственных
+проблем, они чувствуют, что такая спешка противоречит их интересам и ставит под
+вопрос их способность эффективно выполнять свою работу. Не помогает и то, что
+многие разработчики имеют лишь ограниченное представление о технологическом
+стеке, который они внедряют, и зачастую мало интересуются им. Это в свою очередь
+увеличивает вероятность того, что что-то пойдет не так.  
 
-**January 31, 2017**: Source code hosting service Gitlab.com experienced
-a major service outage due to the accidental removal of data from their
-primary database server. While troubleshooting a production problem
-on a secondary server, an engineer accidentally wiped the data in the
-primary server’s database. None of the backups were in a state to be
-sufficiently useful to restore all lost data. In the end it is estimated that 6
-hours of data, including 4979 comments and 707 user accounts, were
-lost in 5037 projects.
+**31 января 2017 года**: Служба хостинга исходного кода Gitlab.com пережила
+крупный кризис в обслуживании из-за случайного удаления данных с основного
+сервера базы данных. Во время устранения производственной проблемы на вторичном
+сервере инженер случайно стер данные в базе данных первичного сервера. Ни одна
+из резервных копий не была в состоянии, достаточном для восстановления всех
+потерянных данных. В итоге, по оценкам, в 5037 проектах было потеряно 6 часов
+данных, включая 4979 комментариев и 707 учетных записей пользователей.
 
-Operationally focused teams have pushed back. While they are not opposed
-to reducing friction, they favor actions that minimize problems arising in
-the first place. This has given birth to our second approach, managing
-service delivery risk.
+Команды, ориентирующиеся на оперативную деятельность, выступили
+против. Хотя они не против устранения проблем, они предпочитают действия,
+которые минимизируют возникновение последних. Это породило наш второй подход -
+управление риском предоставления услуг.
 
 ## Метод #2: Управление риском предоставления услуг
 
