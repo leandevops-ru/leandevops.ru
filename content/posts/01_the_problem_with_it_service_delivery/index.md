@@ -310,62 +310,58 @@ third party, that requires an extended downtime window to fix. In such
 cases it can be extremely difficult to push through a change quickly, even
 when not doing so can jeopardize the future existence of the organization.
 
-## The Essence of Delivery
+## Основы доставки
 
-The customer inevitably finds themselves stuck in the middle of this
-conflict between those who try to optimize for delivery speed and attempt
-to manage risk. Naturally, customers want both quick delivery and no
-faults. They simply do not understand why they cannot have both.
-Meanwhile, each team thinks their approach is right and their goals should
-be prioritized. Do the IT Operations staff not understand the time and
-innovation pressures in the market? Is the work of the delivery team as
-risky as is being implied? They both seem to care deeply about the success
-of the company. How can these two technical teams have such opposing
-views?
+Клиент неизбежно оказывается втянутым в конфликт между теми, кто пытается
+оптимизировать скорость доставки, и теми, кто пытается управлять рисками.
+Естественно, клиенты хотят как быстрой доставки, так и отсутствия
+неисправностей. Они просто не понимают, почему у них не может быть и того, и
+другого. В это время, каждая команда считает, что их подход правильный, и их
+цели должны быть приоритетными. Неужели ИТ-специалисты не понимают, какое
+давление оказывают время и потребность в инновациях на рынке? Действительно ли
+работа команды доставки настолько рискованна? Кажется, что обе команды, крайне
+озабочены успехом компании. Как же тогда у этих двух технических команд могут
+быть такие противоположные взгляды?
 
-Can DevOps be a solution?
+Может ли DevOps стать решением?
 
-Before answering those questions, it is worthwhile to first consider the
-purpose for why we are doing IT delivery in the first place.
+Перед тем как отвечать на эти вопросы, стоит понять, почему мы вообще
+занимаемся доставкой каких-то решений в сфере информационных технологий.
 
-At the most basic level, delivery is nothing more than a chain of interrelated
-decisions. Like any decision, they are made to reach some sort of preferred,
-or at least less bad, state than the current trajectory. In the context of service
-delivery, they are made for the purpose of helping customers achieve their
-target outcome.
+Доставка --- это не что иное, как цепочка взаимосвязанных решений. Как и все
+решения, они принимаются для достижения предпочтительной или хотя бы менее
+печальной траектории развития. В контексте предоставления услуг, они создаются
+с целью помочь клиентам достичь желаемого результата.
 
-A target outcome is a set of desirable or otherwise important conditions that
-the customer wants to reach. Delivering to achieve a target outcome is more
-than simply delivering an output or meeting a promise of a service
-reliability level. Reaching a target outcome means functionally satisfying a
-need, whether it is to solve an existing problem, minimize or prevent one
-from occurring, exploit an opportunity, or to otherwise improve the current
-condition.
+Обеспечение достижения желаемого результата --- это нечто большее, чем просто
+предоставление результата или достижение обещанного уровня надежности.
+Достижение целевого результата означает функциональное удовлетворение
+потребности, будь то решение существующей проблемы, сведение к минимуму или
+предотвращение ее возникновения.
 
-The connection between an outcome and the tool or service attempting to
-deliver it can be straightforward (“I want to stay informed about today’s
-weather so that I know if I need to alter what I wear”), complex with many
-solutions (“I want better global weather and market information so that I
-can choose the best crop to farm”), nested (“I want better climate
-information to design buildings that have a lower carbon footprint but stay
-comfortable for its inhabitants”), or even part of an aspirational journey (“I
-want to reduce man’s impact on the environment worldwide”). The target
-outcome provides us with a direction or purpose to deliver toward.
+Связь между результатом и инструментом или услугой, пытающимися его обеспечить,
+может быть простой (<<Я хочу быть в курсе сегодняшней погоды, чтобы знать, что
+надеть>>) или сложной, включающей множество решений (<<Я хочу получить
+точнейшую информацию о погоде и рынке, чтобы я мог выбрать лучшие семена для
+выращивания>>), вложенной (<<Я хочу получить точнейшую информацию о климате,
+чтобы проектировать здания с меньшими выбросами углерода, которые всё ещё будут
+комфортными для жильцов>>). Желаемый результат задаёт направление или цель, к
+которой мы должны стремиться.
 
-In order to reach an outcome, you need to have some idea of current
-conditions. What is the size of the gap between the current state and the
-desired state? What are the means available that can be used to attempt to
-close that gap, what obstacles might get in the way that need to be avoided
-or overcome along the way, and how can we tell if we are making material
-progress toward the target outcome? The answers together are what we call
-our situational awareness, the idea that we know what is going on around
-us to make better decisions more rapidly.
+Чтобы достичь результата, вам нужно иметь некоторое представление о текущих
+условиях. Как далеко текущее состояние от желаемого? Какие доступные средства
+можно использовать, чтобы ликвидировать этот разрыв, какие препятствия могут
+возникнуть на пути и как мы можем определить, добиваемся ли мы существенного
+прогресса в достижении желаемого результата? Ответы на эти вопросы --- это то,
+что мы называем нашей ситуационной осведомленностью, что мы знаем о
+происходящем вокруг нас, чтобы быстрее принимать правильные решения.
 
-Any good decision maker reflects on the impact of the decisions they make.
-Did they result in the changes we were expecting, and did those changes
-result in progress toward the target outcome? Understanding what did and
-did not go well and why helps us learn and improve our decision making,
-and thereby our ability to deliver more effectively, in the future.
+Любой человек, умеющий принимать решения, размышляет о последствиях своих
+решений. Привели ли они к ожидаемым изменениям, и привели ли эти изменения к
+прогрессу в достижении желаемого результата? Понимание того, что пошло хорошо,
+а что нет и почему, помогает нам учиться и совершенствовать процесс принятия
+решений, а значит, и нашу способность более эффективно добиваться результатов в
+будущем.
 
 ## Начало пути DevOps
 
@@ -378,8 +374,8 @@ and thereby our ability to deliver more effectively, in the future.
 > управлении доходностью на уровне магазина. Эти неудачи привели к убыткам в
 > размере 766 миллионов долларов и увольнению сотен сотрудников [^3].
 
-[^3]:  “Three ERP failure case studies and what you can learn from them,” ERP Focus,
-https://www.erpfocus.com/erp-failure-case-studies.html
+[^3]:  “Three ERP failure case studies and what you can learn from them,” ERP
+  Focus, https://www.erpfocus.com/erp-failure-case-studies.html
 
 К сожалению, делая акцент на результатах и времени работы, мы предполагаем, но
 не проверяем, действительно ли мы предоставляем решения, которые помогают
@@ -451,3 +447,4 @@ https://www.erpfocus.com/erp-failure-case-studies.html
 должны рассматривать предоставление услуг как процесс принятия решений. Понимая,
 как принимаются решения, можно улучшить этот процесс для достижения
 целевых показателей, которые имеют значение.
+
