@@ -5,81 +5,79 @@ date: '2023-03-04'
 draft: false
 ---
 
-In the fast-moving hypercompetitive world of today, innovation is as crucial
-as it is hard. People want ever better solutions faster. This requires pushing
-the envelope, taking chances into the new and unknown. While such bets do
-not always succeed, playing it safe risks a slide into irrelevance.
+> _Расскажи мне, и я забуду. Научи меня, и запомню. Вовлеки меня, и действительно
+> научусь._
+>
+> Бенджамин Франклин
 
-**September 23, 2010**: Blockbuster Entertainment filed for Chapter 11
-bankruptcy protection after suffering from challenging losses due to
-strong competition from Netflix and other video on-demand services.
-Despite having a commanding lead in home video rentals and an offer
-to enter the video on demand business as early as 1999, Blockbuster
-failed to foresee the growing popularity of mail-order and streaming
-movie services.
+Современный мир развивается безумно быстро. Сегодня инновации важны как никогда.
+Люди хотят наилучшие решения и побыстрее. Чтобы добиться этого приходится
+сталкиваться с новым и неизвестным, а это всегда рискованно. Но другого пути и
+нет, без риска можно создавать только посредственные продукты, которые не
+произведут никакого впечатления на пользователей.
 
-Few industries face expectations for innovation as high as those the IT
-industry faces. From smartphones and the applications and services that
-bring new capabilities instantly to our fingertips, to the advanced analytics
-engines that help us understand ourselves and the universe around us ever
-faster and more accurately, we have grown to expect a continuous stream of
-revolutionary breakthroughs that both titillate and improve the quality of
-our lives.
-But this increasingly rapid flow has hardly been cost free.
+> **23 сентября 2010**: Blockbuster Entertainment подала заявку на защиту от
+> банкротства после того, как понесла значительные убытки из-за сильной
+> конкуренции со стороны Netflix и других видео сервисов. Несмотря на
+> лидирующие позиции в прокате домашнего видео и предложение войти в бизнес
+> стримминга видео ещё в 1999 году, Blockbuster не смогла предвидеть растущую
+> популярность стримминговых сервисов.
 
-**January 3, 2018**: Security vulnerabilities Meltdown and Spectre were
-revealed to the world. Each exploits weaknesses in the speculative
-execution features found on most modern microprocessors, allowing an
-attacker to reveal and extract targeted private data. Being at the
-hardware level, these vectors thwarted both system and virtualization
-security protections. This created particularly damaging risks to cloud
-service providers and their customers. IT providers dependent upon
-legacy software were left with the choice of painful upgrades and
-patches or remaining vulnerable. To make matters worse, many of the
-initial firmware, operating system, and virtualization patches were
-haphazardly created and rolled out. These created instability, unwanted
-reboots, and occasional bricking of systems. Patches also degraded
-system performance between 2 and 19 percent.[^1]
+Немногие индустрии развиваются также быстро, как информационные технологии. От
+самих телефонов до программного обеспечения, которое на них работает. Но
+такой стремительный рост приносит и огромное количество проблем.
 
-[^1]: “Speculative Execution Exploit Performance Impacts - Describing the performance impacts to
-security patches for CVE-2017-5754 CVE-2017-5753 and CVE-2017-5715,” Red Hat:
-https://access.redhat.com/articles/3307751
+> **3 января 2018**: Миру были раскрыты уязвимости в системах безопасности
+> Meltdown и Spectre. Каждая из них использует слабые места в функциях
+> спекулятивного выполнения, имеющихся в большинстве современных
+> микропроцессоров, позволяя злоумышленнику извлекать личные данные. Находясь
+> на аппаратном уровне, эти уязвимости препятствовали защите как системы, так и
+> виртуализации. Это создало особенно серьезные риски для поставщиков облачных
+> услуг и их клиентов. ИТ-провайдеры, зависящие от устаревшего программного
+> обеспечения, были поставлены перед выбором болезненных обновлений и
+> исправления или остаться уязвимыми. Что еще хуже, многие из первоначальных
+> исправлений для микропрограммного обеспечения, операционной системы и
+> виртуализации были созданы и внедрены насильно. Это создавало нестабильность,
+> нежелательные перезагрузки и случайные сбои в работе систем. Исправления
+> также снизили производительность некоторых систем вплоть до 19%.[^1]
 
-Each innovation brings with it additional layers of technology, increasing
-the level of complexity in the operating stack. With so many moving parts
-produced by an ever growing list of providers, it is difficult for any one
-person to definitively know everything there is to know about an IT stack
-they rely upon or are responsible for. Like a building with an unknown
-foundation, this complexity creates a level of uncertainty that makes
-innovation more difficult. It also threatens to add fragility that drives up the
-likelihood of failure.
+[^1]: “Speculative Execution Exploit Performance Impacts --- Describing the
+  performance impacts to security patches for CVE-2017-5754 CVE-2017-5753 and
+  CVE-2017-5715,” Red Hat: https://access.redhat.com/articles/3307751
 
-At the same time that technical stacks have increased in complexity,
-customer patience for failure has eroded. As demands for using IT solutions
-to solve problems have grown, IT has become deeply embedded into nearly
-every aspect of our lives, large and small. Now everything from our
-household appliances and cars to banks and emergency services relies upon
-an increasingly intricate web of software and IT hosted services to function.
-Any one failure can cascade into something both crippling and costly for
-both the user community and the provider. What constitutes a failure has
-also expanded to include not just faults and broken functionality but also
-poor usability and missed expectations.
+Каждая инновация приносит с собой новые уровни технологии, повышая сложность
+системы. С таким количеством движущихся частей, производимых постоянно растущим
+списком поставщиков, любому человеку трудно знать об используемом стеке все,
+что нужно. Подобно зданию с неизвестным фундаментом, эта сложность создает
+неопределенность, которая затрудняет внедрение инноваций. Это также добавляет
+хрупкости, увеличивает вероятность неудачи.
 
-**August 1, 2012**: The major market maker Knight Capital Group
-suffered from an error in its SMARS algorithmic router software that
-led to a $460 million trading loss over the course of 45 minutes. This
-exceeded the total assets of the firm, eventually pushing the company to
-be acquired.
+В то же время, когда технологии усложнились, терпение клиентов к неудачам
+иссякло. По мере того как рос спрос на ИТ-решения, они глубоко укоренились
+практически во всех аспектах нашей жизни. Теперь все, от нашей бытовой техники,
+автомобилей и банков до служб экстренной помощи, зависит от функционирования
+все более сложной сети программного обеспечения. Любой единичный сбой может
+каскадом перерасти во что-то разрушительное и дорогостоящее как для сообщества
+пользователей, так и для поставщика. Теперь к сбою может привести не только
+ошибка в реализации функционала, но и неправильное использование, а также
+ошибочные ожидания.
 
-Solving for innovation speed, reliability, and expectations matching has
-kicked off a competition between two approaches: reducing delivery
-friction and managing service delivery risk. This competition is important
-as it affects how organizations approach DevOps, and ultimately its chances
-for success. However, while each approach does address some important
-factors, each also contains a number of serious flaws. These not only cause
-frustrating delivery problems themselves, but can actually hinder the
-organization from achieving the single most important aspect of service
-delivery: effectively helping customers reach their target outcomes.
+> **1 августа 2012 года**: Крупный маркет-мейкер Knight Capital Group пострадал
+> от ошибки в своем программном обеспечении алгоритмического маршрутизатора
+> SMARS, которая привела к убыткам в размере 460 миллионов долларов в течение 45
+> минут. Это превысило совокупные активы фирмы, что в конечном итоге привело к
+> поглощению другой компанией.
+
+Решение задач, связанных с инновациями, скоростью, надежностью и соответствием
+ожиданиям, положило начало конкуренции между двумя подходами: снижением трений
+при доставке и управлением рисками при предоставлении услуг. Это соревнование
+важно, поскольку оно влияет на то, как организации относятся к DevOps, и, в
+конечном счете, на их шансы на успех. Однако, хотя каждый подход учитывает
+некоторые важные факторы, каждый из них также содержит ряд серьёзных
+недостатков. Это не только само по себе вызывает неприятные проблемы с
+доставкой, но и может фактически помешать организации достичь единственного
+наиболее важного аспекта доставки: эффективного оказания помощи клиентам в
+достижении их целевых результатов.
 
 ## Метод #1: Сокращение трудностей при доставке
 
