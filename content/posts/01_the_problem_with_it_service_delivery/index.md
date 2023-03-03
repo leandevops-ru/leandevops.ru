@@ -87,11 +87,11 @@ delivery: effectively helping customers reach their target outcomes.
 взломали и украли персональную информацию до 143 миллионов американских
 потребителей. Взлом, как сообщается, произошел приблизительно в мае через 
 эксплойт ранее сообщенной уязвимости Apache Struts. Несмотря на то, что патч, 
-устранявший проблемму, был доступен с марта, Equifax, по-видимому, не предприняла
-необходимых мер предосторожности для устранения уязвимости до тех пор, пока не
-произошел взлом. Неназванные источники утверждают, что решение об отсрочке могло
-быть принято из-за нехватки ресурсов для других мероприятий по разработке
-программного обеспечения.
+устранявший проблемму, был доступен с марта, Equifax, по-видимому, не 
+предприняла необходимых мер предосторожности для устранения уязвимости до тех
+пор, пока не произошел взлом. Неназванные источники утверждают, что решение об
+отсрочке могло быть принято из-за нехватки ресурсов для других мероприятий по
+разработке программного обеспечения.
 
 Восприятие того, что вы слишком медленно реагируете на события, независимо от
 того, исправляется ли это новая ошибка или уязвимость, или удовлетворяется
@@ -105,9 +105,9 @@ delivery: effectively helping customers reach their target outcomes.
 такое восприятие может привести к быстрой потере доли рынка.
 
 Это стремление к увеличению скорости и оперативности дало старт в гонке
-оптимизации доставки ответов, что в прочем не удивительно. Наиболее очевидным для
-команд доставки было начать искать любые источники разногласий при доставке в
-окружающей среде, которые можно устранить.
+оптимизации доставки ответов, что в прочем не удивительно. Наиболее очевидным 
+для команд доставки было начать искать любые источники разногласий при доставке
+в окружающей среде, которые можно устранить.
 
 Разногласия при доставке - это все, что снижает скорость доставки, пропускную
 способность или оперативность реагирования. Поскольку существуют реальные 
@@ -201,60 +201,62 @@ to reducing friction, they favor actions that minimize problems arising in
 the first place. This has given birth to our second approach, managing
 service delivery risk.
 
-## Approach #2: Managing Service Delivery Risk
+## Метод #2: Управление риском предоставления услуг
 
-**February 29, 2012**: Microsoft Azure suffered a massive 36-hour outage
-due to a leap year bug in the SSL transfer certificate handling code that
-manages communications between host agents and their virtual guest
-agents. Certificates were given invalid dates that created errors that
-ultimately caused entire clusters to error out and go offline. This
-problem was made worse by a code rollback attempt that failed due to
-incompatibility problems between the rollback code and newer
-networking plugins. This created further complications that extended
-the length of the outage.
+**Февраль 29, 2012**: В Microsoft Azure произошел массовый 36-часовой сбой из-за
+ошибки високосного года в коде обработки сертификатов передачи SSL, который
+управляет обменом данными между агентами хоста и их виртуальными гостевыми
+агентами. Сертификатам были присвоены недопустимые даты, что привело к ошибкам,
+которые в конечном итоге привели к сбою целых кластеров и переходу в автономный
+режим. Эта проблема усугубилась попыткой отката кода, которая завершилась
+неудачей из-за проблем несовместимости между кодом отката и более новыми
+сетевыми плагинами. Это создало дополнительные осложнения, которые увеличили
+продолжительность отключения.
 
-Being able to respond quickly to failure is great. But service support and IT
-Operations teams know that failure can be costly, often in ways that others
-fail to understand until it is too late. It not only consumes massive amounts
-of support resources to respond and deal with production problems, it also
-damages trust with the customer. It is better to try to avoid failure in the
-first place.
+Способность быстро реагировать на неудачу - это здорово. Но служба поддержки и
+ИТ-операционные группы знают, что сбой может быть дорогостоящим, часто таким
+образом, что другие не могут понять, пока не становится слишком поздно. Это не
+только отнимает огромное количество ресурсов службы поддержки для реагирования
+на производственные проблемы и решения их, но и подрывает доверие к заказчику
+Лучше постараться избежать неудачи в первую очередь.
 
-Teams that feel this way instead favor trying to manage service delivery risk
-directly. Anything that is unknown, poorly documented, or insufficiently
-understood is an unmanaged danger that puts the organization at risk of
-failure.
+Команды, которые придерживаются такого мнения, вместо этого предпочитают пытаться
+напрямую управлять рисками при предоставлении услуг. Все, что неизвестно, плохо
+документировано или недостаточно понято, представляет собой неуправляемую
+опасность, которая подвергает организацию риску неудачи.
 
-To mitigate such dangers, teams that prioritize risk management attempt to
-make all risks knowable up-front. Because undocumented variation is
-considered the largest source of unmanaged danger, such organizations
-typically begin by mandating that all delivery activities follow standardized
-“best practices”. These practices are heavily documented and include most
-day-to-day activities spanning from maintenance and troubleshooting to
-making infrastructure and service changes. The idea is that the danger of
-undocumented variation can be minimized by forcing everything to follow
-a heavily documented standard.
+Чтобы смягчить такие опасности, команды, которые уделяют приоритезируют
+управление рисками, пытаются заранее определить все риски. Поскольку
+недокументированные отклонения считаются крупнейшим источником неуправляемой
+опасности, такие организации обычно начинают с того, что предписывают, чтобы все
+действия по доставке осуществлялись в соответствии со стандартными <<лучшими
+практиками>>. Эти практики тщательно документированы и включают в себя большинство
+повседневных действий, охватывающих от технического обслуживания и устранения
+неполадок до внесения изменений в инфраструктуру и сервис. Идея заключается в
+том, что опасность недокументированных изменений можно свести к минимуму,
+заставив все следовать строго документированному стандарту.
 
-Knowing that not all needed changes can be completely standardized,
-nonstandard changes are put through a process that attempts to make them
-known enough that the risks they might create can be captured and
-assessed. This is done by documenting details about the changes, how they
-will be performed, and their potential impact, and then submitting them
-through a governance review and controls process where they can be
-reviewed by responsible parties to determine whether any potential risks
-from the proposed changes are acceptable. If they are not, the party wanting
-to make the change needs to abandon the change or make modifications to
-it to make it acceptable.
+Зная, что не все необходимые изменения могут быть полностью стандартизированы,
+нестандартные изменения проходят через процесс, который пытается сделать их
+достаточно известными, чтобы можно было уловить и оценить риски, которые они
+могут создать. Это делается путем документирования подробностей об изменениях, о
+том, как они будут выполняться, и об их потенциальном воздействии, а затем
+представления их в рамках процесса управленческого анализа и контроля, где они
+могут быть рассмотрены ответственными сторонами, чтобы определить, приемлемы ли
+какие-либо потенциальные риски, связанные с предлагаемыми изменениями. Если это
+не так, то стороне, желающая чтобы внести изменение, необходимо отказаться от
+него или внести в него изменения, чтобы сделать его приемлемым.
 
-Documenting every possible standard practice is both tedious and time
-consuming. Rather than coming up with all of these processes themselves,
-most organizations adopt them from one of the many popular IT service
-management frameworks such as ITIL [^2]. These frameworks have the benefit
-of being known as industry best practices full of lots of easy-to-use
-templates and procedures that many IT organizations are familiar with.
+Документирование всех возможных стандартных практик является одновременно
+утомительным и отнимающим много времени. Вместо того, чтобы разрабатывать все
+эти процессы самостоятельно, большинство организаций перенимают их у одной из
+многих популярных платформ управления ИТ-сервисами, таких как ITIL [^2].
+Преимущество этих фреймворков в том, что они известны как лучшие отраслевые
+практики, содержащие множество простых в использовании шаблонов и процедур, с
+которыми знакомы многие ИТ-организации.
 
-They are also widely recognized by auditors for legal and regulatory
-compliance.
+Они также широко признаны аудиторами за соответствие законодательству и 
+нормативным актам.
 
 [^2]: “What is ITIL,” https://www.itgovernance.co.uk/itil
 
