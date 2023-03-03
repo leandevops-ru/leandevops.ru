@@ -1,7 +1,7 @@
 ---
 title: 'Mission Command'
 date: '2023-03-18'
-draft: false
+draft: true
 ---
 
 # Title 1
