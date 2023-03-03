@@ -369,83 +369,87 @@ result in progress toward the target outcome? Understanding what did and
 did not go well and why helps us learn and improve our decision making,
 and thereby our ability to deliver more effectively, in the future.
 
-## Beginning the DevOps Journey
+## Начало пути DevOps
 
-**March 2015**: Woolworths Australia completed a 6-year project to
-replace a 30-year-old in-house ERP system with SAP. The project’s lack
-of understanding of day-to-day business procedures quickly led to the
-breakdown in the company’s supply chain. Shelves quickly became bare
-while suppliers and stores struggled to get orders through the new
-system. Store managers lost the ability to get profit and loss reports for
-18 months, limiting their ability to manage profitability at the store
-level. These failures contributed to a $766 million loss and the layoff of
-hundreds of employees.[^3]
+**Март 2015**: Компания Woolworths Australia завершила шестилетний проект по
+замене тридцатилетней собственной ERP-системы на SAP. У проекта отсутствовало 
+понимание ежедневных бизнес-процессов, что быстро привело к сбою в цепочке 
+поставок компании. Полки быстро опустели, пока поставщики и магазины пытались 
+провести заказы через новую систему. Менеджеры магазинов потеряли возможность 
+получать отчеты о прибылях и убытках за 18 месяцев, что ограничило их в 
+управлении доходностью на уровне магазина. Эти неудачи привели к убыткам в 
+размере 766 миллионов долларов и увольнению сотен сотрудников [^3].
 
 [^3]:  “Three ERP failure case studies and what you can learn from them,” ERP Focus,
 https://www.erpfocus.com/erp-failure-case-studies.html
 
-Unfortunately, in emphasizing outputs and uptime we assume but do not
-check that we are actually delivering solutions that help customers get to
-their target outcomes. The reason for this comes back to how we have
-become accustomed to working. It would seem odd to most people working
-in delivery to be expected to figure out themselves what the customer is
-trying to achieve and how to deliver it to them. We instead expect to be told
-what features or requirements need to be delivered. This removes a lot of
-ambiguity, and eliminates the need for any direct customer contact.
+К сожалению, делая акцент на результатах и времени работы, мы предполагаем, но 
+не проверяем, действительно ли мы предоставляем решения, которые помогают 
+клиентам достичь целевых показателей. Причина этого кроется в том, как мы 
+привыкли работать. Большинству людей, работающих в команде разработчиков, 
+кажется странным, что от них ожидают, что они сами будут выяснять, чего хочет
+добиться заказчик и как ему это предоставить. Вместо этого мы ожидаем, что нам 
+скажут, какие функции или требования должны быть предоставлены. Это устраняет 
+множество двусмысленностей и избавляет от необходимости прямого контакта с 
+клиентом.
 
-Having trackable lists of requirements also makes it far clearer how we will
-be evaluated. Managers can simply measure delivery outputs like how
-much work was done and how well it aligns to what was asked for.
+Наличие отслеживаемых списков требований также делает гораздо более понятным 
+процесс того, как нас будут оценивать. Менеджеры могут просто отследить 
+результаты работы, например, сколько работы было сделано и насколько она 
+соответствует тому, что было запрошено.
 
-While unambiguous and easy to manage, measuring the delivery of outputs
-provides little incentive for workers to check that customers are able to use
-what was delivered to reach their target outcomes. The fact that managers
-tend to be measured on their ability to deliver requirements on time and on
-budget only compounds this problem. It is as if any gap between what was
-asked for and what the customer needs is the customer’s problem. This is
-far from a sustainable strategy for any business.
+Несмотря на однозначность и простоту управления, отслеживание результатов дает 
+мало стимулов работникам для проверки того, что клиенты могут использовать то, 
+что было предоставлено для достижения целевых показателей. Тот факт, что 
+менеджеров обычно оценивают по их способности выполнить требования в срок и в 
+рамках бюджета, только усугубляет эту проблему. Создается впечатление, что любой
+разрыв между тем, что было запрошено, и тем, что нужно клиенту, является 
+проблемой клиента. Это далеко не устойчивая стратегия для любого бизнеса.
 
-Being disconnected from target outcomes also changes what factors are
-considered when making delivery decisions. With evaluation metrics taking
-center stage, focus turns to any actions that can turn them favorable. Teams
-soon learn how to quickly game measures such as velocity (by breaking up
-jobs into many small tasks), bug counts (closing, deprioritizing, or
-reclassifying them as “features”), and code coverage (creating poorly
-constructed unit tests that do little to test the underlying code), undercutting
-their intended value.
+Отсутствие связи с целевыми показателями также меняет факторы, которые 
+учитываются при принятии решений. Когда на первый план выходят оценочные
+показатели, внимание переключается на любые действия, которые могут 
+изменить их в лучшую сторону. Команды вскоре учатся быстро варьировать такими 
+показателями, как скорость (разбивая работу на множество мелких заданий), 
+количество ошибок (закрывая, деприоритизируя или переклассифицируя их в 
+"особенности") и покрытие кода (создавая плохо построенные unit тесты, 
+которые мало что делают для проверки основного кода), что снижает их целевую 
+ценность. 
 
-So what does all this have to do with DevOps?
+Так какое отношение все это имеет к DevOps?
 
-To be truly successful, a DevOps implementation has to remove all the
-barriers and disincentives that prevent the delivery organization from
-helping customers reach their target outcomes. This takes systematically
-moving away from traditional beliefs, habits, and approaches about IT
-service delivery and establishing a more situationally aware, outcomebased, and continually learning and improving approach.
+Чтобы быть действительно успешным, внедрение DevOps должно устранить все 
+барьеры и стимулы, которые мешают организации, предоставляющей услуги, помогать 
+клиентам достигать целевых показателей. Для этого необходимо систематически 
+отказываться от традиционных убеждений, привычек и подходов к предоставлению 
+ИТ-услуг и применять более ситуационный, ориентированный на результат, постоянно 
+обучающийся и совершенствующийся подход.
 
-As you will see, this transition is incredibly difficult to do. Habits and
-beliefs are hard to break with. This takes a lot of convincing, especially
-when it challenges traditional systems used to assess people and work
-product performance.
+Как вы увидите, этот переход невероятно трудно осуществить. С привычками и 
+убеждениями трудно расстаться. Для этого нужно много убеждать, особенно когда 
+это бросает вызов традиционным системам, используемым для оценки работы людей и 
+продуктов труда.
 
-The best way to take people on this journey is to begin with making the
-dysfunction visible. The best approach is to strip the delivery process back
-to its core, the decision.
+Лучший способ увлечь людей в это путешествие --- начать с того, чтобы сделать 
+проблему видимой. Наилучший подход заключается в сведении командного процесса к 
+его сути, к решению.
 
-One person, a US Air Force pilot and military strategist named John Boyd,
-pursued such a search in order to understand what is necessary to optimize
-the decision-making process. As you will see, his journey provides a useful
-lens to better understand the decision-making process itself and how
-improving your decision making can help you deliver the target outcomes
-that matter.
+Один человек, пилот ВВС США и военный стратег по имени Джон Бойд, провел 
+исследование, чтобы понять, что необходимо для оптимизации процесса принятия 
+решений. Как вы увидите, его исследование дает практическое определение
+для лучшего понимания самого процесса принятия решений и того, как улучшение 
+этого процесса может помочь вам достичь целевых показателей, которые имеют 
+значение.
 
-## Summary
+## Резюме
 
-IT service delivery organizations commonly feel that they must choose
-between optimizing for output and speed by targeting delivery friction, and
-managing risk by minimizing unknown variation through defined practices
-and review processes. Not only are such approaches flawed, they cause
-teams to lose sight of the fact that service delivery is about delivering
-solutions that help customers achieve their target outcomes.
-To deliver more effectively, teams should instead think of service delivery
-as a decision-making process. By understanding how decisions are made,
-decision-making can be improved to deliver the target outcomes that matter.
+Организации, предоставляющие ИТ-услуги, обычно считают, что они должны 
+осуществлять выбор между оптимизацией производства и скоростью устранения трений
+в команде разработчиков и управлением рисками путем минимизации неизвестных 
+вариаций с помощью определенных практик и процессов проверки. Такие подходы не
+только ошибочны, но и заставляют команды упускать из виду тот факт, что 
+сфера предоставления услуг --- это предоставление решений, которые помогают
+клиентам достичь целевых показателей. Для более эффективной работы команды  
+должны рассматривать предоставление услуг как процесс принятия решений. Понимая, 
+как принимаются решения, можно улучшить этот процесс для достижения 
+целевых показателей, которые имеют значение.
