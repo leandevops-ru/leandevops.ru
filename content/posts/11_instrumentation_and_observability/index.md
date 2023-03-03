@@ -1,7 +1,7 @@
 ---
 title: 'Instrumentation and Observability'
 date: '2023-05-13'
-draft: false
+draft: true
 ---
 
 # Title 1

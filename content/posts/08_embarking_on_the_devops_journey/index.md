@@ -1,7 +1,7 @@
 ---
 title: 'Embarking on the DevOps Journey'
 date: '2023-04-22'
-draft: false
+draft: true
 ---
 
 # Title 1
