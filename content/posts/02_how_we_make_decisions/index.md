@@ -1,7 +1,7 @@
 ---
 title: 'How We Make Decisions'
 date: '2023-03-11'
-draft: false
+draft: true
 ---
 
 # Title 1
