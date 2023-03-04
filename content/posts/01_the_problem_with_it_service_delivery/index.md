@@ -258,57 +258,63 @@ draft: true
 
 [^2]: “What is ITIL”, https://www.itgovernance.co.uk/itil
 
-## The Downsides of Targeting Service Delivery Risk
+## Обратная сторона рисков целеноправленной доставки
 
-Implementing an industry best practice to minimize unknown variation and enable
-responsible parties to review nonstandard changes before they are pushed live
-sounds like a good idea. While all the extra processing might introduce
-additional delivery friction, it seems like the sort that might help the
-organization deliver more effectively. Isn’t having a service that performs as
-expected a critical part of what a customer needs?
+Внедрение передовой отраслевой практики для минимизации неизвестных изменений и
+предоставления ответственным сторонам возможности просматривать нестандартные 
+изменения до того, как они будут внедрены в жизнь, звучит как хорошая идея.
+Несмотря на то, что вся дополнительная обработка может привести к дополнительным
+сложностям при доставке, похоже, что это может помочь организации выполнять 
+работу более эффективно. Разве наличие сервиса, который работает должным 
+образом, не является важной частью того, что нужно клиенту?
 
-The problem with this approach begins with the fact that it makes four flawed
-assumptions:
-- Work will be predictable.
-- People will correctly follow a documented process.
-- People in authority are capable of making effective decisions.
-- Industry-certified frameworks are less risky than noncertified or lesserknown
-  approaches.
+Проблема с этим подходом начинается с того факта, что он делает четыре ошибочных
+предположения:
+- Работа должна быть предсказуема.
+- Люди будут корректно следовать задокументированному процессу.
+- Люди, облеченные властью, способны принимать эффективные решения.
+- Сертифицированные в отрасли фреймворки менее рискованны, чем
+несертифицированные или менее известные подходы.
 
-The first assumption is that the vast majority of work needing to be performed
-in production will necessarily be predictable enough that all necessary steps
-to get to a satisfactory result can be documented beforehand without any need
-for variation.
+Первое предположение заключается в том, что подавляющее большинство работ,
+которые необходимо выполнить на производстве, обязательно будут достаточно
+предсказуемыми, чтобы все необходимые шаги для достижения удовлетворительного
+результата могли быть задокументированы заранее без какой-либо необходимости
+внесения изменений.
 
-This leads us to the second assumption, which is the belief that everyone will
-follow all documented processes exactly without any variation. Even though
-service management frameworks demand an audit trail, the vast majority accept
-the change script and checklist that engineers follow as sufficient evidence
-without any real programmatic means to ensure that someone hasn’t miskeyed an
-action, done something out of order, or taken shortcuts along the way.
+Это подводит нас ко второму предположению, которое заключается в убеждении,
+что каждый будет точно следовать всем документированным процессам без каких-либо
+изменений. Несмотря на то, что фреймворки управления сервисами требуют ведения 
+журнала аудита, подавляющее большинство принимает сценарий изменений и 
+контрольный список, которым следуют инженеры, в качестве достаточных
+доказательств без каких-либо реальных программных средств, гарантирующих, что 
+кто-то не ошибся в выборе действия, не сделал что-то не так или не использовал
+короткие пути.
 
-There is also the reliance on “responsible parties” chosen to sit on a Change
-Advisory Board (CAB) to review changes to determine whether the risks they pose
-are acceptable. The members of these CABs are usually selected from managers,
-heads of functions, and key stakeholders of areas affected by the change. While
-CABs usually can catch such problems as scheduling conflicts and communication
-gaps, they are usually far enough away from the day-to-day details that it is
-difficult for them to have enough awareness and understanding of the potential
-risks the changes pose to the ecosystem and the dangers they might have for the
-customer.
+Существует также зависимость от <<ответственных сторон>>, выбранных для участия
+в Консультативном совете по изменениям (КСИ) для рассмотрения изменений, чтобы
+определить, являются ли риски, которые они представляют, приемлемыми. Члены этих
+КСИ обычно выбираются из числа менеджеров, руководителей функциональных 
+подразделений и ключевых заинтересованных сторон в областях, затронутых
+изменениями. Хотя КСИ обычно могут выявить такие проблемы, как конфликты в
+расписании и пробелы в коммуникации, они обычно достаточно далеки от
+повседневных деталей,из-за им трудно иметь достаточную осведомленность и
+понимание потенциальных рисков, которые вносят изменения для экосистемы, и
+опасностей, которые они могут представлять для клиента.
 
-The final problem with this approach is that it silently makes the assumption
-that the current state is by default somehow less risky than any nonstandard
-one. Not only is that not necessarily true, inaction can actually increase the
-risk to the organization. I have personally seen organizations get caught in
-this trap a number of times. Sometimes it is a critical customer threatening to
-leave, or demands from some regulatory body under the threat of major fines and
-legal action, if a particular change they absolutely had to have was not made
-by a certain date. Other times a dangerous defect has been found in a critical
-service, usually one involving some commercial third party, that requires an
-extended downtime window to fix. In such cases it can be extremely difficult to
-push through a change quickly, even when not doing so can jeopardize the future
-existence of the organization.
+Последняя проблема с этим подходом заключается в том, что он молчаливо делает
+предположение, что текущее состояние по умолчанию каким-то образом менее
+рискованно, чем любое нестандартное. Это не только не всегда верно, но и в
+действии может фактически увеличить риск для организации. Я лично несколько раз
+видел, как организации попадали в эту ловушку. Иногда это критичный клиент,
+угрожающий уйти, или требования от какого-либо регулирующего органа под угрозой
+крупных штрафов и судебного иска, если конкретное изменение, которое им
+абсолютно необходимо, не будет внесено к определенной дате. В других случаях в
+критически важной службе обнаруживают опасный дефект, обычно связанный с
+какой-либо коммерческой третьей стороной, для устранения которого требуется
+длительный период простоя. В таких случаях может быть чрезвычайно трудно быстро
+провести изменения, даже если бездействие может поставить под угрозу будущее
+существование организации.
 
 ## Основы доставки
 
