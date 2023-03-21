@@ -498,90 +498,96 @@ Overproduction occurs when something is produced that has no paying customer.
  ### Waste 4: Overspecialization
 
  **Figure 4.6**\
- Bill misinterpreted when they told him that his specialization would take him
- to high places.
+ Билл несовсем правильно понял тот момент, когда ему сказали, что его 
+ специализация позволит занять ему высокие посты.
 
- When you face very deep and complex problems, having specialized expertise
- available to help can be very useful. Likewise, becoming the trusted go-to
- person for certain types of problems can even be ego-boosting. Acquiring those
- skills takes time and practice, with more difficult or rare skill sets often
- commanding premium compensation rates. This encourages people to specialize.
+ Когда вы сталкиваетесь с достаточно глубокими и сложными проблемами, наличие 
+ специализированных знаний и опыта может быть очень полезным. Кроме того, процесс 
+ становления <<полезным>> человеком в решении определенных типов проблем может 
+ даже повысить самооценку. Приобретение таких навыков требует времени и практики, 
+ а более сложные или редкие наборы навыков часто сопровождаются и повышенной 
+ оплатой. Это побуждает людей к становлению специалистом более узкого профиля.
 
- So what could possibly be wrong with this?
+ Так что же здесь может быть не так?
 
- The problem begins with how specialists are deployed. When the skills are rare
- or expensive, many companies look to maximize their investment. They single out
- specialists, funneling all work requiring that expertise toward them. This
- creates problems that ultimately degrade situational awareness and weaken
- organizational trust and learning.
+ Проблема начинается с того, как используются специалисты. Если их навыки 
+ являются редкими или дорогими, многие компании стремятся обеспечить максимальную
+ эффективность своих инвестиций. Они уделяют самое пристальное внимание таким 
+ специалистам и предоставляют им всю работу, требующую данного опыта. Это создает
+ проблемы, которые в конечном итоге ухудшают ситуационную осведомленность и 
+ ослабляют организационное доверие и обучение.
 
- One such problem is the risk of separating work from its overall context.
- Specialists spend so much time working on tasks that fit their specialty that
- they often get left out of what is happening in the larger ecosystem, and with
- it the overall objective of the work. Similarly, those outside the specialty do
- not get enough of a view to understand what the specialist has done and why.
- This degrades feelings of ownership for everyone across the lifecycle, creating
- fertile ground for finger-pointing and blame.
+ Одной из таких проблем является риск отрыва работы от общего контекста. 
+ Специалисты проводят так много времени, работая над задачами, которые 
+ соответствуют исключительно их специализации, что часто остаются в стороне от 
+ того, что происходит в более крупной экосистеме, а вместе с ней и от общей цели 
+ работы. Аналогичным образом, работники, находящиеся за пределами таких 
+ специальностей, не имеют достаточного представления того, что сделал специалист 
+ и почему. Это уменьшает чувство сопричастности для всех участников жизненного 
+ цикла, создавая благодатную почву для перекладывания ответственности и обвинений.
 
- Another such problem is the issue that the worker's identity and value often
- become associated with their skill type rather than their ability to help the
- company achieve its target outcomes. The worker's specialization is currency,
- and the rarer it is, the more the worker is worth. This disincentivizes
- specialists from sharing what they are doing with others for fear of
- endangering their value.
+ Другая проблема заключается в том, что личность работника и его ценность часто
+ ассоциируются с типом его навыка, а не с его способностью помочь компании 
+ достичь целевых результатов. Специализация работника --- это валюта, и чем реже 
+ она встречается, тем больше стоит работник. Это лишает специалистов стимула 
+ делиться своими знаниями с другими, тем самым опасаясь поставить под угрозу свою 
+ ценность.
 
- It is important to note that larger organizations are the most vulnerable to
- the specialization problem. The reasons are myriad:
+ Важно отметить, что крупные организации наиболее подвержены проблеме 
+ специализации. Причин тому множество:
 
- - **Skill-focused hiring:** Specializations are far easier to define as a need
- and hire as a position, making managers easily tempted to organize teams by\
- specializations. Being narrowly scoped, work must then be passed from silo to
- silo to be completed. Hiring approaches that put applicants through specific
- tests that follow a narrow band of acceptable solutions often bias toward
- like-minded people. This makes teams more susceptible to tunnel vision and
- specialization "not invented here" groupthink.
+ - **Наём, ориентированный на навыки:** Специализацию гораздо легче определить как 
+ потребность и нанять на должность, поэтому у менеджеров легко возникает соблазн
+ организовать команды по определенным признакам специализации. 
+ Узкоспециализированная работа должна передаваться из одного подразделения в 
+ другое, чтобы быть завершенной. Подходы к найму, при которых кандидаты проходят 
+ специальные тесты, соответствующие узкому диапазону допустимых решений, часто 
+ смещены в сторону аналогично мыслящих людей. Это делает команды более 
+ восприимчивыми к <<туннельному зрению>> и политики <<не здесь придумано>>.
 
- - **Lack of ownership and insufficient understanding of the work:** When there
- is an insufficient understanding of the work and the lack of ownership of the
- larger ecosystem awareness and responsiveness often fragment further. Work
- easily loses meaningful priority as it bottlenecks at handoff points between
- silos. Teams optimize based upon what is most expedient to them, even if it is
- at the expense of suboptimizing the larger organization. Temptation for
- finger-pointing and blame inevitably builds as work becomes blocked and
- problems that cross disciplines arise.
+ - **Отсутствие сопричастности и недостаточное понимание работы:** При недостаточном 
+ понимании работы и отсутствии сопричастности к более крупной экосистеме 
+ осведомленность и отзывчивость часто еще больше фрагментируются. Работа легко 
+ теряет значимый приоритет. Команды оптимизируют свою работу на основе того, что 
+ им наиболее выгодно, даже если это происходит за счет недооптимизации более 
+ крупной организации. По мере блокирования работы и возникновения 
+ междисциплинарных проблем неизбежно возникает соблазн перекладывания вины и 
+ обвинений.
 
- - **Fight against obsolescence:** Rapid technology or strategy changes can
- render specialized skills obsolete. Incumbent specialists who see work shifting
- away
+ - **Борьба с процессом устаревания:** Быстрые изменения в технологиях или стратегиях
+ могут привести к устареванию специализированных навыков. Действующие специалисты, 
+ которые видят, что работа переходит из их области компетенции в иную область, 
+ могут попытаться затормозить или сорвать перемены, препятствуя возможности  
+ организации к адаптации.
 
- from their area of expertise may attempt to stall or derail change, hindering
- an organization's ability to adapt.
+ - **Отсутствие личной вовлеченности и заинтересованности:** Разделение обязанностей 
+ создает жесткую и менее стимулирующую рабочую среду. Отсутствие ощущения 
+ совместного участия в решении поставленных задач может ограничить творческий 
+ потенциал и внедрение новых технологий и решений. Ограниченное понимание 
+ руководством этих основополагающих факторов может еще больше замедлить 
+ деятельность организации.
 
- - **Lack of personal engagement and buy-in:** The compartmentalization of
- duties creates a rigid and less stimulating workplace environment. Not feeling
- like a collaborative part of solving for an outcome can limit creativity and
- the adoption of new technologies and solutions. Limited management\
- understanding of these underlying dynamics can further slow organizational
- responsiveness.
+ Лучший решением для организации служит постоянный поиск возможностей для 
+ минимизации потребности в специализации. Один из таких способов --- избегать 
+ слишком сложных решений, требующих глубокой специализации. Другой способ --- 
+ ротация ролей, а также поиск творческих путей для регулярной помощи членам 
+ команды в обучении друг друга.
 
- The best way for an organization to free itself of this waste is to
- continuously look for opportunities to minimize the need for specialization.
- One way is to avoid overly complex solutions that need deep specialization
- skills. Another is to rotate roles as well as find creative ways to regularly
- help members of the team cross-train each other.
+ Там, где специализированная работа неизбежна, есть способы перестроить роли 
+ специалистов и команды, чтобы минимизировать влияние возможных недостатков. 
+ Лучше всего внедрить специалистов в качестве профильных экспертов в команды, 
+ которые владеют всем жизненным циклом. Эта модель схожа с подходом Spotify 
+ <<отряды и гильдии>>. Вместо того чтобы выполнять всю работу самостоятельно, 
+ специалисты могут консультировать и обучать других, чтобы обеспечить правильное 
+ выполнение действий. Это не только повышает гибкость за счет увеличения размера 
+ и надлежащей квалификации персонала, но и создает привлекательный стимул для 
+ сотрудников постоянно приобретать новые навыки. Специалисты могут продолжать 
+ оттачивать свои навыки, погружаясь в более глубокие проблемы и обмениваясь 
+ опытом с другими экспертами в более широкой группе по интересам. 
+ Более широкий круг общения помогает людям стать экспертами, обладающими 
+ глубокими специальными знаниями как минимум в одной области, а также имеющими
+ широкую компетенцию во многих других областях.
 
- Where specialized work is unavoidable, there are ways to reshape specialist
- roles and teams to minimize its drawbacks. The best is to embed specialists as
- subject matter experts in teams that own the end-to-end lifecycle. This model
- is similar to Spotify's squads and guilds approach. Rather than performing all
- the specialist work themselves, the specialists can advise and train others to
- help ensure activities are done right. This not only improves flexibility by
- improving the size and liquidity of the pool of staff skill sets, but it
- creates an attractive incentive for employees to continually learn new skills.
- Specialists can still hone their skills, jumping into deeper challenges and
- sharing with other experts in a wider interest group. The wider exposure helps
- people become "T-shaped," with both deep specialist knowledge in one area and
- broad competency across many others.
 
 > #### Overspecializing Dysfunction  
 > I frequently encounter companies that over-rely on specialists for frequent
