@@ -495,9 +495,9 @@ Overproduction occurs when something is produced that has no paying customer.
 > teams to take down, update, and bring back up such services together in a
 > resource-heavy coordinated fashion.
 
- ### Waste 4: Overspecialization
+ ### Упущение 4: Чрезмерная специализация
 
- **Figure 4.6**\
+ **Рисунок 4.6**\
  Билл несовсем правильно понял тот момент, когда ему сказали, что его 
  специализация позволит занять ему высокие посты.
 
