@@ -591,66 +591,72 @@ Overproduction occurs when something is produced that has no paying customer.
  широкую компетенцию во многих других областях.
 
 
-> #### Overspecializing Dysfunction  
-> I frequently encounter companies that over-rely on specialists for frequent
-> activities, creating all sorts of bottlenecks that hinder the ability of other
-> teams to get work done. The three most common are database administrators
-> (DBAs), network engineers, and IT security specialists.
->
-> Being a specialist or having specialists in a delivery team isn't necessarily
-> bad. I often recommend having some. When they are part of a diverse and
-> skilled team they can help everyone make better technical decisions. They can
-> also help coach others to code and perform maintenance tasks using better
-> approaches, and can tackle those hard problems that can otherwise limit your
-> ability to meet customer needs.
+> - **Дисфункция чрезмерной специализации**  
+> Я часто сталкиваюсь с компаниями, которые слишком полагаются на специалистов 
+> при выполнении определенной деятельности, создавая всевозможные препятствия, 
+> которые мешают другим командам выполнять свою работу. Три наиболее 
+> распространенные группы - это администраторы баз данных (DBA), сетевые 
+> инженеры и специалисты по информационной безопасности.
 > 
-> However, specialists themselves need to be regularly challenged and\
-> stretched so that they can stay interested and grow with the team. When they
-> are not, they often place all of their worth to the team on what work they
-> alone can perform. This inevitably makes them act overly possessive of their
-> area to the point where they become a single point of failure.
+> Быть таким специалистом или иметь таких специалистов в команде разработчиков 
+> не обязательно плохо. Я часто рекомендую их присутствие. Когда они являются 
+> частью разнообразной и квалифицированной команды, они могут помочь в принятии 
+> более оптимальных техническиx решений. Они могут также обучить других кодировать 
+> и выполнять задачи по обслуживанию, используя лучшие подходы, а также могут 
+> решать те сложные проблемы, которые в противном случае могут ограничить вашу
+> способность в удовлетворение потребностей клиентов.
 > 
-> I had this very problem at one company with DBAs and network engineers. There
-> had been a policy that all database work required a DBA, while on the network
-> side most access was controlled by access control lists (ACLs) that needed to
-> be signed off and then performed by a network engineer. Both policies made
-> changes and deployments painfully slow. While DBAs and network engineers liked
-> the respect and feeling of importance, the pressure on them was high and the
-> work was both tedious and uninteresting.
+> Однако сами специалисты нуждаются в регулярных задачах и вызовах, чтобы они 
+> могли оставаться заинтересованными и расти вместе с командой. Когда этого 
+> не происходит, они часто ставят свою ценность для команды в зависимость от 
+> того, какую работу они могут выполнить в одиночку. Это неизбежно заставляет
+> их вести себя слишком навязчиво по отношению к своей рабочей области, до 
+> такой степени, что это становится единственной точкой отказа.
 > 
-> So I changed around the dynamic, starting with the DBAs.
+> У меня была подобная проблема в одной компании с администраторами DBA и 
+> сетевыми инженерами. Там существовала политика, согласно которой для всех работ
+> с базой данных требовался администратор, а со стороны сети большая часть 
+> доступа контролировалась списками контроля доступа (ACL), которые должны были 
+> быть подписаны, а затем выполнены сетевым инженером.  Обе политики делали
+> изменения и установку очень медленно. Хотя администраторам баз данных и 
+> сетевым инженерам нравилось чувство уважения и ощущение важности к себе, 
+> давление на них было велико, а работа была утомительной и неинтересной.
 > 
-> I sat down with some of the top DBAs in the organization. They were extremely
-> talented, and arguably some of the best I have ever worked with. I was keen to
-> make the bottlenecks go away. But I also valued their knowledge and wanted
-> them to feel that they were being challenged and were growing.
->
-> I proposed that they come up with tools and other ways that would allow others
-> to perform simple, low risk tasks. Alongside, we created a point system that
-> allowed for engineers who showed that they could responsibly perform them to
-> steadily gain more privileges to perform other, slightly riskier tasks. Those
-> who could not would lose points, and with it their privileges.
+> Поэтому я изменил всю структуру, начав с DBA.
 > 
-> I then created a Database Engineering (DBE) discipline that would be in charge
-> of future database architectural decisions, research new promising
-> technologies and data optimization strategies, as well as work with\
-> developers to improve coding and data structure practices. As with the
-> engineers, the DBAs were given a point system. Those who created and improved
-> tools and practices that enabled work to be handed off would be given the
-> ability to become a DBE and drive their interest area. Those who were not
-> interested would stay working on database administrative tasks but might find
-> themselves working for the very engineers that they were slowing down.
+> Я сел c некоторыми из лучших DBA в компании. Они были чрезвычайно талантливы, 
+> и, возможно, одними из лучших, с кем я когда-либо работал. Я очень хотел 
+> устранить все <<узкие места>>. Но я также ценил их знания и хотел, чтобы
+> чтобы они понимали, что им бросают вызов и при это они совершенствуются. 
 > 
-> The approach was extremely popular, and in a short time the bottlenecks had
-> mostly melted away. We also had a big win in that our best DBEs were now
-> tackling some of the latest technological problems, allowing our capabilities
-> to leapfrog over many of our competitors.
+> Я предложил им придумать инструменты и другие методы, которые позволят другим 
+> людям выполнять простые задачи с минимальным риском. Наряду с этим мы создали 
+> систему баллов, которая позволяла инженерам, показавшим, что они могут 
+> ответственно выполнять эти задачи, получать больше привилегий для выполнения 
+> других, более рискованных задач. А те, которые не справлялись, теряли баллы,
+> а вместе с ними и свои привилегии.
+>  
+> Затем я создал подразделение Database Engineering (DBE), которое должно было 
+> отвечать за будущие архитектурные решения баз данных, исследовать новые 
+> перспективные технологии и стратегии оптимизации данных, а также работать с 
+> разработчиками над улучшением практики кодирования и структуры данных. Как и 
+> в случае с инженерами, для DBA была разработана система баллов. Те, кто создавал 
+> и совершенствовал инструменты и методики, позволяющие выполнять работу, 
+> получали возможность стать DBE и развивать свою сферу интересов. А те, кому это 
+> было неинтересно, продолжали работать над административными задачами баз данных,
+> но они могли оказаться на месте тех самых инженеров, которые тормозили рабочий 
+> процесс.
 > 
-> I took a similar approach with network engineering. The team soon found ways
-> to throw out the network ACLs and replace them with  technologies that
-> eventually formed much of the backbone of software-defined networks (SDN).
-> This enabled delivery teams more flexibility while still ensuring that the
-> networks remained both secure and performant.
+> Этот подход оказался чрезвычайно популярным, и за короткое время почти все 
+> <<узкие места>> исчезли. Мы также добились выигрыша в том, что наши лучшие DBE 
+> теперь решали некоторые новейшие технологические проблемы, что позволило 
+> нам обогнать многих наших конкурентов.
+> 
+> Я использовал аналогичный подход и в сетевой инженерии. Вскоре команда нашла 
+> способы отказаться от сетевых ACL и заменить их технологиями, которые в конечном итоге 
+> составили основу программно-определяемых сетей (SDN). Это позволило командам 
+> разработчиков повысить гибкость, обеспечив при этом безопасность и 
+> производительность сетей.
 
  ### Waste 5: Handoffs
 
