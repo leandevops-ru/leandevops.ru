@@ -919,7 +919,8 @@ Overproduction occurs when something is produced that has no paying customer.
 
  ## Muri (Overburden)
 
- **Figure 4.12**\
+![](images/4.6.png)
+ **Рисунок 4.12**\
  "Surely there is room for just one more package in the release!"
 
  Not every form of problematic friction is a form of "pure waste." One such form
