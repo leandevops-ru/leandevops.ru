@@ -769,50 +769,39 @@ Overproduction occurs when something is produced that has no paying customer.
 
  One such common bad habit is our next waste: task switching.
 
- ### Waste 7: Task Switching
+ ### Упущение 7: Переключение между задачами
 
  **Figure 4.10**\
  Task switching
 
- Whether you are building, testing, or operating services, IT work requires a
- lot of deep concentration and building up context. Interruptions are hazardous
- for both. Yet in the desire to maximize output, we willingly accept frequent
- task switching as normal, whether in the form of interruptive fault
- troubleshooting or the sudden reprioritization of work.
+ Независимо от того, занимаетесь ли вы созданием, тестированием или эксплуатацией сервисов, работа в сфере информационных
+ технологий требует глубокой концентрации и создания контекста. Прерывания опасны и для того, и для другого. Тем не менее, 
+ стремясь к максимальной производительности, мы охотно принимаем частое переключение задач как нормальное явление, будь то
+ прерванный поиск неисправностей или внезапное перераспределения приоритетов в работе.
 
- It is easy to fall for task switching, and it often goes hand in hand with
- partially done work. Some love the thrill of racing off to be the hero in an
- outage firefight.
+ Легко поддаться переключению задач, и оно часто идет рука об руку с частично выполненной работой. Некоторые любят острые
+ ощущения, когда они мчатся наперегонки, чтобы стать героем в перестрелке с аварийной ситуацией. Другие считают, что, 
+ занимаясь несколькими делами одновременно, они становятся более незаменимыми для организации. Часто организация
+ особенно плохо расставляет приоритеты и отслеживает работу, и каждая задача становится возможностью для кого-то усиленно
+ лоббировать необходимость ее немедленного выполнения.
 
- Others feel that by having several activities on the go at the same time they
- are somehow more indispensable to the organization. Often an organization is
- particularly bad at prioritizing and tracking work, and every task becomes an
- opportunity for someone to lobby hard for it to be done immediately.
+ Переключение между задачами не просто отвлекает, оно разрывает контекст, что замедляет наш прогресс и снижает эффективность,
+ поскольку частично выполненная работа накапливается в очереди. Переключение между задачами также снижает нашу осведомленность
+ о ситуации, нашу способность выявлять закономерности и, в конечном счете, способность учиться и совершенствоваться. Мы не
+ только теряем контроль над происходящим, но и рискуем потерять связь с результатами, которых нам необходимо достичь. В лучшем
+ случае это может привести к тому, что более приоритетные задачи откладываются или игнорируются. В худшем случае - наша способность
+ принимать разумные решения.
 
- Switching between tasks is not just distracting, it fractures context, which
- slows our progress and degrades efficiency as partially done work builds up in
- the queue. Task switching also erodes our situational awareness, our ability to
- spot patterns, and ultimately our ability to learn and improve. Not only do we
- end up losing track of what is going on, but we risk losing touch with the
- outcomes that we need to accomplish. At best this can result in higher-priority
- items being delayed or neglected. At worst our ability to make sensible
- decisions fails.
+ Многие ИТ-команды, особенно те, в которых много операционной поддержки, смиряются с повсеместным переключением задач. Легко
+ поверить, что это просто такая природа работы, но, как мы продемонстрируем позже на примере роли Роль мастера очереди, 
+ реструктуризация того, как работа попадает в команду, может значительно сократить количество срывов. Будучи точкой входа
+ для работы, мастер очереди также может видеть всю экосистему, замечать закономерности и в конечном итоге помогать команде учиться.
 
- Many IT teams, especially those with a heavy operational support element,
- resign themselves to widespread task switching. It is easy to believe that it
- is simply the nature of the job, but, as we will demonstrate later with the
- Queue Master role, restructuring the way that work hits the team can greatly
- reduce disruption. By being the entrance point for work, the Queue Master also
- can see across the ecosystem, noticing patterns and ultimately helping the team
- learn.
-
- Workflow visualization techniques can also help uncover task switching,\
- including lingering tasks and a build-up of work in progress. It is also
- important to actively look for and reduce the number of sources of task
- switching. As discussed in Chapter 13, "Queue Master," I encourage Queue
- Masters to help the team investigate ways of restructuring long-running
- people-intensive tasks, as well as work that seems to flow in circles between
- teams or requires a great deal of back and forth.
+ Методы визуализации рабочего процесса также могут помочь выявить переключение задач, включая затянувшиеся задачи и накопление
+ незавершенной работы. Также важно активно искать и сокращать количество источников переключения задач. Как уже говорилось в
+ главе 13 "Мастер очереди", я призываю мастеров очередей помочь команде изучить способы реструктуризации длительных задач,
+ требующих большого количества людей, а также работу, которая, кажется, течет по кругу между командами или требует большого количества
+ хождения туда-сюда.
 
  ### Waste 8: Excessive Processes
 
