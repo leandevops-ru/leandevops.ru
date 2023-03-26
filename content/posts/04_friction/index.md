@@ -1063,51 +1063,41 @@ Overproduction occurs when something is produced that has no paying customer.
  promotes the very awareness and learning needed to make better decisions and
  achieve our target outcomes.
 
- ## Mura (Fluctuation and Irregularity)
+ ## Mura (Колебания и Нерегулярность)
 
  **Figure 4.13**\
- *"*Well, this isn't much fun!"
+ *"*Ну, это не очень весело!"
 
- *Mura* means unevenness, irregularity, or lack of uniformity in Japanese. For
- manufacturing, unexpected shifts in customer demand, uncontrolled variability
- in products, unreliable equipment, and poor training can cause irregularity or
- fluctuation that can lead to organizational stress, quality problems, unhappy
- customers, and waste.
+*Mura* в переводе с японского означает неровность, неравномерность или отсутствие однородности. Для
+производства неожиданные изменения в спросе клиентов, неконтролируемая изменчивость в продукции, 
+енадежное оборудование и плохое обучение могут вызвать неравномерность или колебания, которые могут
+привести к организационному стрессу, проблемам с качеством, недовольным клиентам и отходам.
 
- IT also suffers from a variety of forms of fluctuation and irregularity, from
- sudden demand spikes to unexplained loading and configuration drift that
- hinders service delivery function and performance. This has become an even
- greater problem as IT services have become more demand based. Not only have
- service stacks become far more complex, potentially causing delivery and
- operational workload fluctuations, they are also shared, meaning that problems
- that once
+ИТ также страдает от различных форм колебаний и нерегулярности, от внезапных всплесков спроса до
+необъяснимой загрузки и дрейфа конфигурации, который мешает функции предоставления услуг и производительности.
+Это стало еще более серьезной проблемой, поскольку ИТ-услуги становятся все более ориентированными на спрос.
+Мало того, что стеки услуг стали намного сложнее, что потенциально может привести к перепадам в доставке и
+колебаниям рабочей нагрузки, они также стали общими, что означает, что проблемы, которые раньше были
+локальными, например, неправильная конфигурация или отказ экземпляра, могут иметь повсеместный эффект.
+Кроме того, при совместном использовании пользовательское восприятие и модели использования могут соединяться
+уникальным образом. Это может привести к резким колебаниям нагрузки, которые могут произойти практически без
+предупреждения. Это может вызвать большие, сложные проблемы, которые могут вывести из строя сервис, и их сложно устранить.
 
- were localized, such as misconfigurations or instance failures, can have a
- widespread effect. Also, with shared usage, user uptake and usage patterns can
- compound in unique ways. This can lead to wild load fluctuations that can occur
- with little to no warning. These can cause large, complicated problems that can
- cripple a service and be challenging to rectify.
+Самая большая ошибка, которую совершают люди, заключается в том, что они считают *Mura* неизбежной. Это не так.
+*Mura* сама по себе вызвана недостатком ситуационной осведомленности, взаимодействующей с точками трения в
+экосистеме. Эта неизвестность может быть вызвана чем угодно - от спроса извне до нарушений в самой
+самой экосистемы. Неожиданное колебание или нерегулярность приводит к возникновению заметной проблемы только тогда,
+когда она задевает одну или несколько точек трения, с которыми она сталкивается на своем пути.
 
- The biggest mistake that people make is believing mura is both inevitable and
- unavoidable. It is not. Mura itself is caused by a situational awareness gap
- interacting with friction points in the ecosystem. This unknown can be caused
- by anything from an externally driven demand to an irregularity within the\
- ecosystem itself. The unexpected fluctuation or irregularity only causes a
- discernable problem when it catches on one or more friction points it
- encounters along the way.
+Другим интересным аспектом *Mura* является то, что то, как мы реагируем на проблему, может сильно повлиять
+на серьезность выхода из вариации. Фактически, это одно из наиболее распространенных мест, где наша инстинктивная
+реакция на проблему может вызвать дальнейший каскад неравномерностей и трений, которые могут усугубить ущерб.
 
- Another interesting aspect of mura is that the way we respond to the problem
- can heavily influence the severity of the outfall from the variation. In fact,
- it is one of the most common places where our instinctive reaction to the
- problem is likely to cause a further cascade of irregularity and friction that
- can compound the damage caused.
+Как мы увидим, лучшим способом устранения *Mura* является агрессивный поиск и устранение пробелов в ситуационной
+осведомленности везде, где это возможно, при одновременном моделировании.
 
- As we will see, the best way to eliminate mura is to aggressively find and
- close situational awareness gaps wherever possible, all while simultaneously
- removing friction points and exploiting bottlenecks in the ecosystem.
-
- To better understand, let's take a deeper look at the two most common patterns:
- *unexpected demand variability* and *unmanaged variability*.
+Чтобы лучше понять, давайте подробнее рассмотрим две наиболее распространенные модели:
+*неожиданная изменчивость спроса* и *неуправляемая изменчивость*.
 
  ### Unexpected Demand Variability
 
