@@ -3,46 +3,41 @@ title: 'Friction'
 date: '2023-03-25'
 draft: true
 ---
-> *Only three things happen naturally in organizations: friction, confusion, and
-> underperformance. Everything else requires leadership.*
->
-> --- Peter Drucker
+> *В организациях естественным образом происходят только три вещи: трение, путаница
+> и неэффективная работа. Все остальное требует лидерства.*
+> --- Питер Дракер
 
- When it comes to service delivery, most of us equate friction with those
- elements that hinder our delivery speed and throughput. It is what drives so
- many of us to automate our builds and deployments, purchase cloud services, and
- adopt various Agile practices. But thinking about friction so narrowly can
- cause us to suboptimize, or worse overlook, everything else that is getting in
- our way of achieving the desired outcomes.
+ Когда речь заходит о предоставлении услуг, большинство из нас приравнивает трение к тем
+ элементами, которые препятствуют скорости и пропускной способности нашей доставки. Именно
+ это заставляет многих из нас автоматизировать сборку и развертывание, приобретать облачные
+ сервисы и внедрять различные Agile-практики. Однако столь узкое представление о трении может
+ привести нас к неоптимизации или, что еще хуже, к упущению всего остального, что стоит на пути
+ на пути к достижению желаемых результатов.
 
- For John Boyd and Helmuth von Moltke, discussed in the previous two chapters,
- friction is what degrades our situational awareness and impedes learning.
- Boyd's Energy-Maneuverability (EM) theory proved that even if you were faster
- and more capable than your opponent, you could still fail if you did not
- sufficiently adapt to changing conditions or incorporate learning effectively
- along the way.
+ Для Джона Бойда и Гельмута фон Мольтке, о которых говорилось в двух предыдущих главах,
+ трение - это то, что ухудшает нашу ситуационную осведомленность и препятствует обучению.
+ Теория энергетической маневренности (ЭМ) Бойда доказывала, что даже если вы быстрее
+ и способнее, чем ваш противник, вы все равно можете потерпеть неудачу, если не будете
+ достаточно адаптироваться к изменяющимся условиям или эффективно включать обучение
+ на протяжении всего пути.
 
- Lean takes friction a bit further. In product and service delivery, Lean\
- practitioners note that you can succeed at delivery and yet still fail if you
- are less effective than the competition at helping your customer achieve their
- desired outcome. To avoid this, team members in Lean organizations know to
- explicitly search for and try to eliminate anything that hinders or does not
- directly add value in any way that the customer can perceive, declaring it
- *waste*.
+ Бережливое производство заводит трение еще дальше. В сфере предоставления продуктов и услуг
+ специалисты по бережливому производству отмечают, что вы можете преуспеть в поставке и все же
+ потерпеть неудачу, если вы менее эффективны, чем конкуренты, в оказании помощи вашему клиенту
+ в достижении желаемого результата. Чтобы избежать этого, члены команды в бережливых организациях
+ знают, что необходимо прямо искать и пытаться устранить все, что мешает или не добавляет напрямую
+ ценности, которую может воспринять клиент, и объявляют это *упущениями*.
 
- For Taiichi Ohno, who is credited with creating the Toyota Production System,
- waste takes three forms: pure waste (*muda*), overburden (*muri*), and
- irregularity (*mura*).
+ Для Тайити Оно, которому приписывают создание производственной системы Toyota,
+ упущения имеют три формы: чистые отходы (*muda*), перегруженность (*muri*) и
+ нерегулярность (*mura*).
 
- What is powerful about this approach is that it makes us openly question
- everything we do under the lens of how it contributes to the target outcome.
- The
-
- idea of removing friction and waste quickly reminds us that it is not how fast
- you can go that is important, but rather how far you can progress toward the
- target outcome. This different perspective on delivery forces us to challenge
- the status quo, driving us to continually experiment, learn, and improve to
- better achieve those outcomes.
+ Сила этого подхода в том, что он заставляет нас открыто ставить под сомнение все, что мы делаем,
+ под углом зрения того, как это способствует достижению целевого результата. Идея быстрого устранения
+ трения и упущений напоминает нам, что важно не то, насколько быстро вы можете двигаться, а то, 
+ насколько далеко вы можете продвинуться к целевому результату. Такой иной взгляд на доставку заставляет
+ нас бросить вызов статус-кво, заставляя нас постоянно экспериментировать, учиться и совершенствоваться,
+ чтобы чтобы лучше достигать этих результатов.
 
  ## Understanding Ohno's Forms of Waste
 
