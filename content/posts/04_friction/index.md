@@ -152,123 +152,111 @@ teams eliminate them.
 
 To better understand these types of waste, let's step through each of them.
 
-### Waste 1: Defects*
+### Упущение 1: Дефекты*
 
  **Figure 4.3**\
-Even subtle defects can be deadly.
+Даже незначительные дефекты могут быть смертельно опасны.
 
-Whether they are bugs or shortcomings in a service, no one needs to be told that
-defects are obvious waste. They are a failure that gets in the way of a product
-or service performing as the customer needs.
+Независимо от того, являются ли это баги или недостатки в сервисе, никому не нужно говорить, 
+что дефекты - это очевидные потери. Это сбой, который мешает продукту или услуге работать так, 
+как нужно клиенту.
 
-Not only does no one intentionally create defects, no one likes to be known for
-doing so. The friction they create can slow down delivery in embarrassing and
-unexpected ways. As most teams are judged on how quickly they can deliver, this
-combination means that defects are often underplayed, hidden, or labelled
-as"features."
+Никто не только намеренно не создает дефектов, но и не любит, когда об этом знают. Трения, 
+которые они создают, могут замедлить доставку самым неловким и неожиданным образом. Поскольку 
+о большинстве команд судят по тому, насколько быстро они могут выполнить работу, это сочетание 
+означает, что дефекты часто недооцениваются, скрываются или обозначаются как "особенности".
 
-Allowing a defect to fester only makes the situation worse. Defects found
-shortly after they are created are far easier to fix. The person who created a
-defect is far more likely to have enough context to know where it is located. As
-time goes on, context is lost, memories fade, and other changes may further
-obscure the root cause and thereby make it harder to find. Once a defect makes
-it into production, costs go up astronomically. Not only does this make it far
-more difficult to triage and fix, but now customers have likely been impacted.
+Позволяя дефекту разрастаться, вы только усугубляете ситуацию. Дефекты, обнаруженные вскоре 
+после их создания, гораздо легче устранить. У человека, создавшего дефект, гораздо больше 
+шансов иметь достаточный контекст, чтобы знать, где он находится. С течением времени контекст 
+теряется, воспоминания тускнеют, а другие изменения могут еще больше затмить первопричину 
+и тем самым затруднить ее поиск. Как только дефект попадает в производство, затраты растут 
+астрономически. Это не только значительно затрудняет сортировку и устранение неполадок, 
+но и теперь, вероятно, повлияло на клиентов.
 
-Defect-ridden code is also hard to work with. It makes meeting deadlines far
-more unpredictable. Not only do defects need to be fixed, but they also make it
-easy to unintentionally create additional ones. Few people like working in such
-dangerously unpredictable conditions. Even the knowledge that an area has rotten
-code can make it incredibly difficult to attract and retain good delivery staff
-to work on it, making it that much more difficult to deliver effectively.
+С дефектным кодом также трудно работать. Это делает соблюдение сроков гораздо более 
+непредсказуемым. Дефекты не только нуждаются в исправлении, но и позволяют легко 
+непреднамеренно создавать дополнительные. Мало кому нравится работать в таких опасно 
+непредсказуемых условиях. Даже знание того, что в какой-либо области есть "гнилой" код, может 
+невероятно затруднить привлечение и удержание хорошего персонала для работы над ним, 
+что значительно затрудняет эффективную доставку.
 
-The best way to prevent defects from occurring is to understand their causes. As
-covered in Chapter 5, "Risk," defects are the result of insufficient situational
-awareness of your delivery ecosystem. To demonstrate this, here is a list of the
-most common causes of defects:
+Лучший способ предотвратить возникновение дефектов - это понять их причины. Как описано в 
+главе 5 "Риск", дефекты являются результатом недостаточной ситуационной осведомленности о вашей 
+экосистеме доставки. Чтобы продемонстрировать это, вот список наиболее распространенных причин дефектов:
 
- - Misunderstood requirements
+ - Неправильно понятые требования
 
- - Errors and poorly worded instructions
+ - Ошибки и плохо сформулированные инструкции
 
- - Lost or insufficient context within the problem space
+ - Потерянный или недостаточный контекст в проблемном пространстве
 
- - Inconsistent or poorly structured and/or managed code, configuration, and/or
-   data
+ - Непоследовательный или плохо структурированный и/или управляемый код, конфигурация и/или данные
 
- - A lack of, or hard to follow, dependency management
+ - Отсутствие или труднодоступность управления зависимостями
 
- - Poorly tracked or understood build and/or run environment management
+ - Плохо отслеживаемое или понятное управление средой сборки и/или запуска
 
- - Nondeterministic/nonreliable/nonrepeatable installation and rollback
-   functions
+ - Недетерминированные/ненадежные/неповторяемые функции установки и отката
 
- - Using an unsuitable or unfamiliar tool or language
+ - Использование неподходящего или незнакомого инструмента или языка
 
- - Typos
+ - Опечатки
 
- Each one of these is an example of lost awareness. Some, like misunderstood
- requirements or lost context, are obvious. However, even more subtle causes
- like typos or tooling/language mismatches that seem minor on their face can
- cause very real, and often hard to find, problems.
+Каждый из них - пример утраченного осознания. Некоторые из них, например, неправильно 
+понятые требования или потерянный контекст, очевидны. Однако даже более тонкие причины, 
+такие как опечатки или несоответствия инструментария/ языка, которые на первый взгляд кажутся 
+незначительными, могут вызвать вполне реальные и часто трудноразличимые проблемы.
 
- Lean tackles this problem by trying to "mistake proof" the delivery line. It
- uses techniques designed to do this in two ways.
+Бережливое производство решает эту проблему, пытаясь "исключить ошибки" в линии доставки. 
+Он использует методы, предназначенные для достижения этой цели двумя способами.
 
- One approach is to design the system in such a way that it is impossible to
- make certain mistakes. Manufacturers do this regularly with tools and parts by
- creating a shape that can only be put together in one correct way. An example
- is the asymmetrical shape of an HDMI connector. In IT this can be done by
- creating tools that prevent dangerous commands or invalid configurations from
- being executed by accident. I cover some strategies for this in more length in
- Chapter 10, "Automation."
+Один из подходов заключается в проектировании системы таким образом, чтобы было невозможно 
+допустить определенные ошибки. Производители регулярно делают это с помощью инструментов и 
+деталей, создавая форму, которую можно собрать только одним правильным способом. Примером 
+может служить асимметричная форма разъема HDMI. В IT это можно сделать, создав инструменты, 
+которые предотвращают случайное выполнение опасных команд или недопустимых конфигураций. 
+Я более подробно расскажу о некоторых стратегиях для этого в главе 10 "Автоматизация".
 
- The other way is to put in place mechanisms that make it far easier to spot
- mistakes and potentially hazardous conditions in the first place. Lean\
- manufacturers use multiple techniques to bring immediate attention to anything
- abnormal or out of place.
+Другой способ заключается в создании механизмов, которые в первую очередь значительно облегчают 
+выявление ошибок и потенциально опасных условий. Бережливые производители используют множество 
+методов, чтобы немедленно привлечь внимание ко всему ненормальному или неуместному.
 
- One example is to use a clear marking such as color coding or symbols. Colors
- and symbols are great ways of providing a lot of information quickly with
- little overhead. Lean manufacturers use different colors for certain parts,
- trays, carts, and even places where tools are placed.
+Одним из примеров является использование четкой маркировки, такой как цветовая кодировка или 
+символы. Цвета и символы - отличные способы быстрого предоставления большого объема информации 
+с минимальными накладными расходами. Бережливые производители используют разные цвета для 
+определенных деталей, лотков, тележек и даже мест размещения инструментов.
 
- This simple technique is very helpful, and a familiar one for any heavy IDE
- (integrated development environment) tool user. I also use it heavily with
- color coding management interfaces and terminal windows between environments,
- color coding datacenter cabling and connectors, as well as color coding between
- different types of alarms and graphs. I have even worked with teams to "color
- code" tools, frameworks, and languages to the types of tasks that they are most
- suited for. Sometimes this "color code" is the use of distinct symbols or
- markings like stripe patterns in case someone is color blind. Using such
- coding\
- mechanisms both encourages people to use the most appropriate option for the
- job and gets them to ask, and if needed debate, why a certain tool or
- technology is not favored for a particular job type.
+Этот простой метод очень полезен и знаком любому пользователю тяжелой среды разработки IDE 
+(integrated development environment - интегрированная среда разработки). Я также активно 
+использую его с интерфейсами управления цветовым кодированием и окнами терминалов между средами, 
+цветовым кодированием кабелей и разъемов центра обработки данных, а также цветовым кодированием 
+между различными типами сигналов тревоги и графиков. Я даже работал с командами, чтобы 
+"раскрасить" инструменты, фреймворки и языки в соответствии с типами задач, для которых они 
+больше всего подходят. Иногда этот "цветовой код" представляет собой использование различных 
+символов или маркировок, таких как узоры в виде полос, на случай, если кто-то страдает 
+дальтонизмом. Использование таких механизмов кодирования побуждает людей использовать наиболее 
+подходящий вариант для работы и побуждает их спрашивать, а при необходимости и обсуждать, почему 
+определенный инструмент или технология не подходят для определенного типа работы.
 
- Another example of a mechanism for spotting mistakes is what in Lean is
- called"stop the line." In a Lean factory there will be *Andon* cords placed
- throughout the assembly line that activate an alarm to alert everyone of a
- defect. If the defect is not fixable immediately, the assembly line is halted.
- This exposes where a fault
+Другим примером механизма выявления ошибок является то, что в бережливом производстве называется 
+"остановить линию". На бережливом производстве по всей сборочной линии будут установлены кабели Andon, 
+которые активируют сигнализацию, предупреждающую всех о дефекте. Если дефект не устраняется немедленно, 
+сборочная линия останавливается. Это позволяет выявить место, где был обнаружен дефект, что помогает 
+найти источник дефекта и предотвращает продвижение неисправного изделия дальше по конвейеру, где дефект 
+может быть скрыт или может создать дополнительные неисправности.
 
- was found, aiding efforts to find the source, and prevents the failed product
- from moving further up the line where the fault can be concealed or create
- additional faults.
+В ИТ такие механизмы внедрить сложнее. Мы можем останавливать сборки и конвейеры доставки при 
+возникновении сбоя и делаем это. Однако проблемы не всегда очевидны в самый разгар, когда трудно 
+сделать шаг назад и увидеть целое. Вот почему я рекомендую иметь как Мастера очереди, как описано 
+в главе 13 "Мастер очереди", который может помочь непосредственно находить проблемы, так и 
+ведущего специалиста по сервисному проектированию, как описано в главе 9 "Зрелость предоставления 
+услуг и ведущий специалист по сервисному проектированию", который может помочь более крупной 
+команде развивайте зрелость, чтобы более эффективно видеть самих себя.
 
- In IT such mechanisms are more difficult to put in place. We can and do stop
- builds and delivery pipelines when a failure condition is encountered. However,
- problems are not always obvious in the heat of the moment, when it is difficult
- to step back and see the whole. This is why I recommend having both a Queue
- Master, as detailed in Chapter 13, "Queue Master," who can help find problems
- directly, as well as a Service Engineering Lead, as detailed in Chapter 9,
- "Service Delivery Maturity and the Service Engineering Lead," who can help the
- larger team build the maturity to see more effectively themselves.
-
- A shift toward such mistake proofing makes environments safe for teams to work
- in and repositions teams to view defects as a failure of the system that needs
- to be addressed to help all rather than as their own personal failure, which
- they might be tempted to conceal from others.
+Переход к такой защите от ошибок делает среду безопасной для работы команд и побуждает команды 
+рассматривать дефекты как сбой системы, который необходимо устранить, чтобы помочь всем, а не 
+как свою личную неудачу, которую они могут захотеть скрыть от других.
 
  ### Waste 2: Overproduction
 
