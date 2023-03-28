@@ -1154,76 +1154,77 @@ _Mura_ в переводе с японского означает неровно
 Чтобы лучше понять, давайте подробнее рассмотрим две наиболее распространенные
 модели: _неожиданная изменчивость спроса_ и _неуправляемая изменчивость_.
 
-### Unexpected Demand Variability
+### Неожиданная изменчивость спроса
 
-We are all familiar with the concept of fluctuating demand. Demand inevitably
-ebbs and flows throughout the day, week, or even year. Most variability is only
-noticed when a bottleneck, such as a store checkout queue or a traffic backup,
-creates some sort of noticeable delay or failure. Such variability, while\
-unpleasant, is tolerable when it follows predictable patterns that we can make
-adjustments for in advance to ease the pain.
+Мы все знакомы с концепцией "колеблющегося спроса". Спрос неизбежно меняется в
+течение дня, недели или даже года. В большинстве случаев изменчивость заметна
+только тогда, когда узкое место, например, очередь в кассу магазина или пробка
+на дороге, создает какую-то видимую задержку или сбой. Такая изменчивость, хотя
+и неприятна, но вполне терпима, когда она следует предсказуемым закономерностям,
+которые мы можем заранее скорректировать, чтобы контролировать ущерб.
 
-It is a very different story when demand shifts unexpectedly. Whether it is a
-lack of toilet paper or a suddenly overloaded web service, customer frustration
-builds to the breaking point as suppliers scramble to respond and adjust.
+Совсем другое дело, когда спрос меняется неожиданно. Будь то нехватка туалетной
+бумаги или внезапная перегрузка веб-сервиса, разочарование клиентов нарастает до
+предела, пока поставщики пытаются отреагировать и разобраться.
 
-For IT, demand-triggered variability is often a sign that the delivery arm has
-somehow become disconnected from the customer and their target outcomes. This
-loss in awareness makes it difficult to foresee even gradual changes until
+Для ИТ изменчивость, вызванная спросом, часто является признаком того, что
+команда разработчиков каким-то образом потеряла связь с клиентом и его
+потребностями. Подобное незнание затрудняет предвидение даже постепенных
+изменений до тех пор, пока они не станут причиной реальной проблемы. Кризис
+наступает, когда организация сталкивается с сопротивлением, что затрудняет
+адаптацию к ситуации.
 
-they cause a real problem. Crisis then ensues when the organization's response
-hits friction that makes it difficult to adjust sufficiently to deal with the
-situation.
+Подобные пробелы, как правило, имеют две причины.
 
-These sorts of awareness gaps tend to have two common causes.
+Во-первых, в некоторых случаях отделы продаж, маркетинга, продукции и поддержки,
+которые регулярно контактируют с клиентом, хотят уменьшить потенциальные
+отвлекающие факторы и получить больше контроля над управлением приоритетами
+команды внедрения, выступая в качестве посредника между клиентом и командой.
+Хотя рассуждения могут быть здравыми, они часто приводят к задержкам информации
+и разрыву контекста. В итоге команда внедрения видит поток заданий, в которых
+отсутствует значительная часть контекста о желаемом результате или препятствий
+на пути клиента к его достижению. Мало того, что у них нет простых средств,
+чтобы достичь это понимание, у них даже нет возможности выявить любые
+возникающие несоответствия. В результате в системе образуется множество пробелов
+в осведомленности и проблемных мест, где будет процветать изменчивость.
 
-First, in some instances, Sales, Marketing, Product, and Support teams that do
-have regular contact with the customer want to reduce potential distractions
-and have more control over managing delivery team priorities by acting as a
-proxy between customer and delivery. While the reasoning can be sound, it often
-leads to information delays and context gaps. The end result is the delivery
-team seeing a stream of jobs that lack much of the important context of the
-actual outcome desired or the obstacles in the customer's way in reaching it.
-Not only do they have no easy means to build an understanding, they have no way
-of catching any mismatches that develop. This leaves a system full of awareness
-gaps and friction points where variability will thrive.
+Во-вторых, подобные пробелы чаще всего образуются вокруг фрагментации
+организационных структур. Если смотреть на экосистему с их фрагментированной
+точки зрения, то ни бизнес, ни внедрение не могут быть полностью осведомлены о
+клиенте или об аспектах, которые определяют поведение в их среде.Такое положение
+дел никогда не бывает благоприятным, но становится серьезной проблемой, когда
+одна или обе стороны полностью уверены, что именно их представление истинно и
+что любые несоответствия - это просто шум или вина другой стороны. Проблема
+усугубляется непониманием состояния стороны внедрения или ее способности
+справиться с изменениями спроса.
 
-Second, awareness gaps more commonly form around the fragmentation of
-organizational silos. Looking at the ecosystem from their fragmented
-perspective, neither the business nor the delivery sides can be fully aware of
-the customer or of the dynamics that drive behavior in their environment. This
-is never a great spot to be in, but really becomes a serious issue when one or
-both sides fully _believe_ they have the true picture and that any
-misalignments are just noise or the other side's fault. The problem gets
-compounded by a lack of understanding of the health of the delivery side or its
-ability to handle demand shifts.
+В обоих случаях, когда наступает кризис, возникает целый ряд проблем. Команды
+могут стать перегруженными (Muri) или разделиться по функциональному признаку
+(Muda), чтобы избежать вины. Стресс замедляет работу, количество ошибок
+увеличивается, и способность организации выполнять свои обязательства резко
+снижается.
 
-In both cases, when the crisis hits, a cascade of problems erupts. Teams can
-become overwhelmed (_Muri_) or defensively fragment along functional lines
-(_Muda_) to avoid blame. The stress slows everything down, mistakes increase,
-and the organization's ability to deliver becomes severely disrupted.
+Даже в самых незначительных случаях команда не сможет полностью восстановиться.
+Запланированная ранее работа будет приостановлена или пострадает качество. Если
+не предпринимать активных мер, доверие будет еще больше снижаться, а факты
+произошедшего будут скрыты из-за страха быть обвиненным. Это еще больше ухудшает
+понимание ситуации и накладывает серьезные ограничения на обучение и
+совершенствование организации. Вызванный этим стресс также может привести к
+тому, что люди будут напряжены и у них возникнут трудности в коллективе, что еще
+больше усилит сопротивление при внедрении.
 
-Even in the most minor cases the team will not completely recover. Previously
-promised work will be missed or suffer quality issues. Unless actively
-countered, trust will further erode while the facts of what happened are hidden
-or obscured for fear of blame. This further degrades situational awareness and
-puts severe limits on organizational learning and improvement. The stress of
-the event can also leave people stressed and create bad feelings across teams,
-adding further delivery friction.
+Это может показаться катастрофой, но проблема на этом чаще всего не
+заканчивается. Пробел в осведомленности, вызвавший первоначальный кризис, часто
+заставляет нас ошибочно воспринимать произошедшее как чистую проблему с
+ресурсами. Наша инстинктивная реакция толкает нас на принятие неадекватных
+решений, которые только усугубляют реальную проблему. Особенно уязвимы в этом
+отношении руководители высшего звена. В большинстве случаев реальность на местах
+затуманена потоками веселых отчетов, которые получают члены руководства, и
+жестко контролируемым общением с подчиненными, что означает, что зачастую они
+тоже теряют суть ситуации.
 
-This may sound bad, but the problem rarely ends there. The awareness gap that
-caused the initial crisis often makes us misread what happened as a pure
-resourcing issue. Our instinctual response pushes us to make further\
-inappropriate decisions that only exacerbate the actual problem. The C-suite is
-particularly vulnerable to this. In most cases the reality on the ground has
-been
-
-obfuscated by the streams of cheery reports C-suite members receive and heavily
-managed interactions they have with their subordinates, meaning that often they
-too have lost their situational awareness.
-
-Let's take a look at what happens and why we often make things go from bad to
-worse.
+Давайте посмотрим, что происходит и почему мы часто делаем так, что ситуация
+становится все хуже и хуже.
 
 ### The Bullwhip Effect
 
