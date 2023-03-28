@@ -1199,8 +1199,8 @@ _Mura_ в переводе с японского означает неровно
 справиться с изменениями спроса.
 
 В обоих случаях, когда наступает кризис, возникает целый ряд проблем. Команды
-могут стать перегруженными (Muri) или разделиться по функциональному признаку
-(Muda), чтобы избежать вины. Стресс замедляет работу, количество ошибок
+могут стать перегруженными (_Muri_) или разделиться по функциональному признаку
+(_Muda_), чтобы избежать вины. Стресс замедляет работу, количество ошибок
 увеличивается, и способность организации выполнять свои обязательства резко
 снижается.
 
@@ -1326,39 +1326,41 @@ everyone to follow prescriptive processes.
 
 ### The Snowflake
 
-**Figure 4.15**\
-Snowflakes are all unique and fragile in their own special way.
+![](images/4.15.png)
 
-As children we are told that every snowflake is different. This makes its
-fragile beauty special because it is both one of a kind and ephemeral. Few
-would suggest that these are qualities that we want in our IT services. Yet,
-the ways in which many organizations build and manage environments make
-snowflakes in IT frighteningly common.
+**Рисунок 4.15**\
+Снежинки все уникальны и хрупки по-своему.
 
-In 2012 Martin Fowler wrote a blog post that coined the term "snowflake
-server."[^3] Snowflakes are server and software configurations that have
-organically grown and changed over time to the point where it is nearly
-impossible to exactly duplicate them. They can happen anywhere, from server and
-data configurations to external environment factors such as hidden resource
-contention in virtualized or containerized environments.
+В детстве нам говорили, что каждая каждая снежинка неповторима. Это делает её
+хрупкую красоту особенной, потому что она является единственной в своем роде,
+эфемерной. Мало кто может предположить, что именно эти качества мы хотим видеть
+в наших ИТ-услугах. Однако то, как многие организации управляют средами, делает
+эти "снежинки" в ИТ пугающе распространенными. 
+
+В 2012 году Мартин Фаулер написал статью, в котором ввел термин "Snowflake-
+сервер"[^3]. Snowflake - это конфигурации серверов и программного обеспечения,
+которые органично выросли и изменились со временем до такой степени, что их
+практически невозможно в точности повторить. Они могут возникнуть где угодно -
+от конфигурации сервера и данных до факторов внешней среды, таких как скрытая
+борьба за ресурсы в виртуализированных или контейнерных средах.
 
 [^3]: https://martinfowler.com/bliki/SnowflakeServer.html
 
-More often than not this drift happens through special "one-off" tweaks, such
-as manual modifications to fix a problem and get things working. Other times
-the drift is caused by poor packaging and patching that leaves installation and
-update detritus scattered about. With the "job done," people often forget about
-the details of what or how it was done. As one-offs build, it becomes harder
-and harder to figure out everything that makes them different from what we
-think they should be. They become increasingly unpredictable and dangerous,
-sometimes to the point of paralyzing improvement and putting the business at
-risk.
+Чаще всего это происходит из-за специальных "разовых" настроек вроде ручных
+модификаций для устранения проблемы и обеспечения работоспособности. В других
+случаях причиной возникновения Snowflake-серверов является плохая упаковка и
+исправления, в результате которых остаётся разбросанный мусор от установки и
+обновления. Когда "работа сделана", люди часто забывают о том, что и как было
+сделано. По мере создания одноразовых продуктов становится все труднее
+разобраться в том, что отличает их от того, какими они должны быть, по нашему
+мнению. Они становятся все более непредсказуемыми и опасными, иногда до такой
+степени, что парализуют процесс совершенствования и ставят бизнес под угрозу.
 
-Those who are faced with having to reproduce unknown one-off configurations
-often try to overcome the problem by simply imaging the disks of the deployed
-instances bit by bit. But as Fowler notes, such hacks not only perpetuate the
-buildup of cruft, they also do nothing to ensure consistent and understandable
-behavior.
+Те, кто сталкивается с необходимостью воспроизведения неизвестных разовых
+конфигураций, часто пытаются решить эту проблему, просто создавая образ дисков
+развернутых экземпляров по частям. Но, как отмечает Фаулер, такие действия не
+только увековечивают накопление мусора, но и ничего не делают для обеспечения
+последовательного и понятного поведения.
 
 ### Minimizing Mura
 
