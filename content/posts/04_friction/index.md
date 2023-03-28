@@ -1324,7 +1324,7 @@ optimistically unaware. Those who do concern themselves with unmanaged
 variability often mistakenly believe that it can be fixed simply by forcing
 everyone to follow prescriptive processes.
 
-### The Snowflake
+### Снежинка
 
 ![](images/4.15.png)
 
