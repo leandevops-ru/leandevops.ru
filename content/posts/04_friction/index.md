@@ -842,117 +842,123 @@ Task switching
 количества людей, а также работу, которая, кажется, течет по кругу между
 командами или требует большого количества хождения туда-сюда.
 
-### Waste 8: Excessive Processes
+### Упущение 8: Избыточные процессы
 
-**Figure 4.11**\
-"Why do I have to fill out all these forms to replace my keyboard?"
+![](images/4.11.png)
 
-Processes can be helpful. They standardize the shape and direction of work to
-ensure a reliably repeatable outcome. If deployed and maintained properly,
-processes can reduce errors and rework. They also are good ways of capturing
-knowledge that can enhance the capabilities of the team.
+**Рисунок 4.11**\
+"Почему я должен заполнять все эти формы, чтобы заменить клавиатуру?"
 
-However, you can have too much of a good thing. For IT, having and following
-the processes can become more important than the customer outcome, sometimes to
-the point where it is even declared as the objective that the customer is
-looking for. This is true even when the processes themselves do not seem to do
-much to improve delivery or service effectiveness.
+Процессы могут быть полезны. Они стандартизируют форму и направление работы,
+чтобы обеспечить надежный повторяемый результат. При правильном развертывании и
+обслуживании процессы могут сократить количество ошибок и переделок. Они также
+являются хорошим способом сбора знаний, которые могут расширить возможности
+команды.
 
-Some of the worst process waste is done under the banner of "industry best
-practice," even when it is clear that the process is hindering the business.
-Over time, this divergence in purpose can reduce an organization's ability to
-respond in a timely and flexible way to the demands placed upon it. Learning
-and improvement seem to slow to the point where there is nothing significant
-that directly correlates to improved effectiveness and progress toward customer
-needs. Tensions and stress rise from increased frustration, workloads, and\
-rework.
+Однако хорошего может быть слишком много. Для ИТ-отдела наличие и выполнение
+процессов могут стать более важными, чем результат для клиента, иногда до такой
+степени, что это даже объявляется целью, которую ищет заказчик. Это верно даже
+тогда, когда сами процессы, как кажется, не делают многого для повышения
+эффективности поставок или обслуживания.
 
-Excessive processes tend to develop one or more of the following attributes:
+Некоторые из худших процессов потерь осуществляются под знаменем "лучшей
+отраслевой практики", даже когда очевидно, что процесс мешает бизнесу. В течение
+времени такое расхождение в целях может снизить способность организации
+своевременно и гибко реагировать на предъявляемые к ней требования. Обучение и
+совершенствование, кажется, замедляются до такой степени, что нет ничего
+существенного, что бы напрямую коррелировалось с повышением эффективности и
+продвижением к удовлетворению потребностей клиентов. Напряжение и стресс растут
+из-за растущей неудовлетворенности, рабочей нагрузки и доработок.
 
--   **Inflexibility:** IT lives in an ever more dynamic ecosystem. Customer and
-    business needs can shift at an even faster rate than technology. The
-    combination of condition changes means processes need to be continually
-    reviewed, altered, and sometimes even eliminated in order to stay aligned.
-    Inability or resistance to adapt processes reduces their efficacy and
-    creates waste.
+Избыточные процессы имеют тенденцию к развитию одного или нескольких из
+следующих признаков:
+
+-   **Негибкость**: Информационные технологии живут в постоянно меняющейся
+    экосистеме. Потребности клиентов и потребности бизнеса могут меняться даже
+    быстрее, чем технологии. Сочетание изменений условий означает, что процессы
+    должны постоянно пересматриваться, изменяться, а иногда даже ликвидировать
+    их, чтобы сохранить согласованность. Неспособность или сопротивление
+    адаптации процессов снижает их эффективность и создает потери.
     
--   **Excessively prescriptive:** A useful process is typically a repeatable
-    pattern that helps us understand the situation and navigate toward a
-    successful outcome.
-
-    However, excessively prescriptive processes can be so detailed that they
-    become a mindless straightjacket that actively prevents people from
-    adjusting to changing conditions. Such processes should be reviewed to
-    determine whether the process is a workaround hiding a larger problem.
-
--   **Demonstrate little to no discernible customer value:** Some processes are
-    put in place with the best of intentions. However, due to either habit or\
-    misunderstanding of the actual need, they struggle to provide any
-    appreciable value. These processes are typically poorly constructed or are
-    ill fitting for their deployed environment. Sometimes they have been taken
-    verbatim from another environment or official list of "best practices." For
-    instance, one company required physical signatures for certain change
-    procedures. There were no legal or regulatory requirements for the
-    procedure, and later I found that the only reason it was there was because
-    the process had been copied from a company that did have such requirements.
-
-    Such processes should be reviewed to determine what problem they are trying
-    to solve and whether the problem exists and needs solving in the target\
-    environment. If it does, the process should be altered to make the intended
-    desired value far more apparent. If it doesn't, the process should be
-    thrown out.
+-   **Чрезмерные предписания:** Полезный процесс –-- это, как правило,
+    повторяющийся шаблон, который помогает нам понять ситуацию и двигаться к
+    успешному результату. 
     
-    It is far safer to have no process than to shoehorn in one that is not fit
-    for purpose.
+    Однако чрезмерно предписывающие процессы могут быть
+    настолько подробными, что превращаются в бездумную "рубашку", которая
+    активно мешает людям адаптироваться к меняющимся условиям. Такие процессы
+    следует пересмотреть, чтобы определить, не является ли процесс обходным
+    путем, скрывающим более серьезную проблему.
 
--   **Execution-knowledge mismatch:** Sometimes a process ends up being
-    executed by people who either do not understand the underlying reasons for
-    it or lack the knowledge, awareness, or skills required for executing it.
-    IT organizations are often filled with such processes, and they don't just
-    occur at the junior support technician level. In fact, in my experience
-    they are most common where a process requires sign-off by senior
-    management, like change board approvals and official governance processes.
-    The lack of sufficiently shared situational awareness degrades the
-    approver's ability to effectively execute their intended procedural duties.
-    It can be caused by ineffective internal communication flows as well as
-    poorly structured information.
+-   **Демонстрируют мало-мальски заметную потребительскую ценность:**
+    Некоторые процессы внедряются из лучших побуждений. Однако, в силу привычки
+    или непонимания реальной потребности, они не могут обеспечить ощутимую
+    ценность. Эти процессы, как правило, плохо построены или плохо подходят для
+    развернутой среды. Иногда они дословно взяты из другой среды или из
+    официального списка "лучших практик". Например, одна компания требовала
+    физические подписи для определенных процедур изменений. Для этой процедуры
+    не существовало никаких юридических или нормативных требований, и позже я
+    обнаружил, что единственная причина, по которой она существовала,
+    заключалась в том, что процесс был скопирован из компании, у которой были
+    такие требования.
+    
+    Такие процессы следует проанализировать, чтобы определить, какую проблему
+    они пытаются решить, и существует ли эта проблема и нуждается ли она в
+    решении в целевой среде. Если да, то процесс должен быть изменен, чтобы
+    сделать предполагаемую желаемую ценность гораздо более очевидной. Если нет,
+    процесс следует отбросить. 
+    
+    Гораздо безопаснее не иметь никакого процесса,
+    чем впихивать в него то, что не соответствует цели.
 
-    When mismatches happen, it is imperative to quickly find out how they have
-    developed so they can be rectified. Is there a more appropriate way of
-    achieving the intent behind the process? Perhaps the process can be
-    executed at a level where the right situational awareness exists, or the
-    quality and flow of information can be improved such that the approver can
-    effectively perform his or her duties.
+-   **Несоответствие между исполнением и знаниями:** Иногда процесс
+    выполняется людьми, которые либо не понимают причин, лежащих в его основе,
+    либо не обладают знаниями, осведомленностью или навыками, необходимыми для
+    его выполнения. В ИТ-организациях часто встречаются такие процессы, и они
+    происходят не только на уровне младших техников поддержки. На самом деле, по
+    моему опыту, они наиболее распространены там, где процесс требует подписи
+    высшего руководства, например, при утверждении советом директоров изменений
+    и официальных процессов управления. Отсутствие достаточной общей
+    ситуационной осведомленности снижает способность утверждающего лица
+    эффективно выполнять возложенные на него процедурные обязанности. Это может
+    быть вызвано неэффективными внутренними коммуникационными потоками, а также
+    плохо структурированной информацией.
 
--   **Regularly broken or circumvented:** Sometimes processes seem to be
-    regularly broken or circumvented. One very common one is breaking a
-    purchase into a lot of small transactions in order to work around a very
-    slow process for anything over a particular value. Another is reusing old
-    code or systems to avoid having to spend lots of time porting to some
-    substandard"official" technology.
+    Когда возникают несоответствия, необходимо быстро выяснить, как они
+    возникли, чтобы их можно было устранить. Существует ли более подходящий
+    способ достижения цели, лежащей в основе процесса? Возможно, процесс может
+    быть выполнен на таком уровне, где существует необходимая ситуационная
+    осведомленность, или качество и поток информации могут быть улучшены таким
+    образом, чтобы утверждающий мог эффективно выполнять свои обязанности.
 
-These are all symptoms that a bigger problem exists. Rather than resorting to
-strict enforcement, the process needs to be reviewed to see why it is not
-followed.
+-   **Регулярно нарушается или обходится:** Иногда кажется, что процессы
+    регулярно нарушаются или обходятся. Один из самых распространенных примеров
+    – разбиение покупки на множество мелких транзакций, чтобы обойти очень
+    медленный процесс для всего, что превышает определенную стоимость. Другой
+    случай – повторное использование старого кода или систем, чтобы избежать
+    необходимости тратить много времени на перенос на какую-то некачественную
+    "официальную" технологию.
 
-It is possible that the process is overly cumbersome, doesn't match actual
-conditions, or that its value is not understood by those who should be using
-it.
+Все это симптомы того, что существует более серьезная проблема. Вместо того
+чтобы прибегать к строгому принуждению, необходимо проанализировать процесс,
+чтобы понять, почему он не соблюдается. 
 
-Occasionally, much like the fact that certain statutes require that some
-financial transactions use fax technology, the process is simply no longer
-needed.
+Возможно, процесс слишком громоздок, не соответствует реальным условиям или его
+ценность не понятна тем, кто должен его использовать. 
 
-Each of these symptoms is a good indicator that you have excessive processes.
-It is important to review processes regularly, whether or not there are obvious
-signs of problems. I usually encourage teams to look at whether any processes
-appear problematic or questionable at regular cycle sync points like
-retrospectives and strategic reviews, as discussed in Chapter 14, "Cycles and
-Sync Points."
+Иногда, подобно тому, как некоторые законы требуют, чтобы в некоторых финансовых
+операциях использовалась технология факса, процесс просто больше не нужен.
 
-Good processes need to clearly contribute to the larger objectives, the ones
-that the customer cares about. Processes that do not do that in the most
-effective way need to be changed or removed entirely.
+Каждый из этих симптомов является хорошим индикатором того, что у вас избыточные
+процессы. Важно регулярно анализировать процессы, независимо от того, есть ли
+явные признаки проблем или нет. Обычно я рекомендую командам обратить внимание
+на то, не выглядят ли какие-либо процессы проблемными или сомнительными в
+регулярных точках синхронизации циклов, таких как ретроспективы и стратегические
+обзоры, как обсуждалось в главе 14, "Циклы и точки синхронизации".
+
+Хорошие процессы должны четко способствовать достижению больших целей, тех, о
+которых заботится клиент. Процессы, которые не делают этого наиболее эффективным
+образом, должны быть изменены или полностью удалены.
 
 ## 無理(Muri) (Перегрузка)
 
