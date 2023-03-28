@@ -1337,8 +1337,8 @@ everyone to follow prescriptive processes.
 в наших ИТ-услугах. Однако то, как многие организации управляют средами, делает
 эти "снежинки" в ИТ пугающе распространенными. 
 
-В 2012 году Мартин Фаулер написал статью, в котором ввел термин "Snowflake-
-сервер"[^3]. Snowflake --- это конфигурации серверов и программного обеспечения,
+В 2012 году Мартин Фаулер написал статью, в котором ввел термин "Snowflake-сервер"[^3]. 
+Snowflake --- это конфигурации серверов и программного обеспечения,
 которые органично выросли и изменились со временем до такой степени, что их
 практически невозможно в точности повторить. Они могут возникнуть где угодно -
 от конфигурации сервера и данных до факторов внешней среды, таких как скрытая
@@ -1527,51 +1527,55 @@ the fact.
 > safeguards to recover. By dealing with the variation as a given, it stops
 > being an issue, resulting in far more robust and resilient services.
 
-## See the Whole
+## Увидеть всё
+
+![](images/4.17.png)
 
 **Figure 4.17**\
-"I think that dolphin over there wants us to dive in and play!"
+"Мне кажется, что этот дельфин хочет, чтобы мы нырнули и поиграли с ним!"
 
-As you might imagine, it is rare for most sources of friction in the service
-ecosystem to neatly fit in one category or have one simple root cause. Often,
-they layer on top of one another, creating a tangled mess of dysfunction.
+Как вы можете себе представить, большая часть разногласий в экосистеме услуг
+редко укладываются в одну категорию или имеют одну простую первопричину. Часто
+они наслаиваются друг на друга, создавая запутанный клубок из различных
+нарушений в деятельности. 
 
-For this reason, Lean embraces examining the whole value stream from the time
-an order is received until a solution is delivered to address it. Leaders are
-encouraged to walk the floor ("go to the Gemba") to look at the end-to-end flow
-with their own eyes. They do this not to tell people on the floor how to do
-their
+По этой причине, бережливое производство предполагает изучение всего потока
+формирования стоимости, с момента получения заказа, до момента доставки его до
+адреса. Руководителям рекомендуется ходить по производству ("ходить на Гембу"),
+чтобы увидеть сквозной процесс собственными глазами. Они делают это не для того,
+чтобы указывать людям на рабочих местах, как им работать, а для того, чтобы
+помочь найти причины, которые снижают осведомленность как на рабочем месте, так
+и на всей линии. 
 
-jobs, but to help find the impediments that reduce awareness within the
-workspace as well as across the line.
+Для повышения осведомленности и сокращения проблемных “узких мест”, структура
+работы в бережливых организациях имеет тенденцию быть более гибкой, с меньшим
+количеством четко определенных ролей. В бережливом производстве людей поощряют к
+совместной работе по внесению изменений в структуру рабочих мест и методы работы
+для улучшения потока и сокращения количества ошибок.
 
-To improve awareness and reduce bottlenecks, the structure of work in Lean
-organizations tends to be more fluid, with fewer sharply defined roles. In Lean
-Manufacturing, people are encouraged to work together to make adjustments to
-the structures of their work stations and their way of working to improve flow
-and reduce errors. Information can flow naturally, allowing workers flexibility
-and awareness that helps shape meaningful continuity between their work and the
-end product.
+Информация может течь естественным образом, обеспечивая работникам гибкость и
+осведомленность, что помогает сформировать значимую преемственность между их
+работой и конечным продуктом. Бережливые организации также налаживают контакты с
+клиентами и поставщиками, чтобы понять и совместно работать над достижением
+желаемого результата. Когда компания Toyota решила выйти на американский рынок
+минивэнов, ее команда дизайнеров проехала по США на минивэне, чтобы понять
+потребности и желания рынка. Точно так же они ездили на европейских автомобилях
+класса люкс в Европе и США, прежде чем приступить к созданию Lexus. Toyota также
+регулярно работает с поставщиками, чтобы помочь им понять и принять методы
+бережливого производства, зная, что их улучшения в конечном итоге помогут и
+Toyota, и их клиентам.
 
-Lean organizations also reach out to customers and suppliers in order to
-understand and work together toward achieving the desired outcome. When Toyota
-decided to enter the US minivan market, they had their design team drive around
-the US in a minivan to understand the needs and desires of the market.
+## Итоги
 
-Similarly, they drove European luxury cars in Europe and the US before
-embarking on Lexus. Toyota also regularly works with suppliers to help them
-understand and adopt Lean practices, knowing that their improvements will help
-both Toyota and their customers in the end.
+Сосредоточение внимания только на улучшениях, увеличивающих скорость доставки и
+пропускную способность, мало что дает для того, чтобы вы и ваша команда работали
+эффективно. Проблема "напрасных трат" в вашей экосистеме доставки может снизить
+скорость реагирования и увеличить нагрузку на команду, снижая при этом вашу
+способность достигать результатов, которых ожидают ваши клиенты и которые
+необходимы вашей организации для успеха. 
 
-## Summary
-
-Focusing only on improvements that increase delivery speed and throughput does
-little to ensure you and your team deliver effectively. Friction "wastes" in
-your delivery ecosystem can damage responsiveness and increase team workload
-all while reducing your ability to deliver the outcomes that your customers
-expect and your organization needs to be successful.
-
-As you will see in the next chapter, gaps in your situational awareness caused
-by friction and your inability to understand your delivery ecosystem also have
-a significant impact on delivery and service operational risk in ways that
-reduce the efficacy of traditional IT risk management mechanisms.
+Как вы увидите в следующей главе, пробелы в вашей ситуационной осведомленности,
+вызванные проблемами и неспособностью понять вашу экосистему доставки, также
+оказывают значительное влияние на операционный риск доставки и обслуживания
+таким образом, что снижают эффективность традиционных механизмов управления
+ИТ-рисками.
