@@ -117,47 +117,53 @@ their presence in your own ecosystems.
 > helpful to you as you progress through this chapter, please feel free to
 > replace the word "waste" with "friction" in your mind.
 
-## Muda (Pure Waste)
+## Муда (Отходы)
+
+![](images/4.2.png)
 
 **Figure 4.2**\
-Muda is as bad as it looks.
+Муда так же плох, как и выглядит.
 
-Muda is the Japanese word for waste as well as uselessness, idleness, and
-futility. By definition it is an activity that the customer wouldn't willingly
-pay for. Contrary to popular belief, the target isn't to figure out how to do
-things cheaper. Rather, it is to identify and remove anything that doesn't
-tangibly contribute to achieving the desired outcome.
+Muda - это японское слово, означающее упущения, а также бесполезность, праздность
+и тщетность. По определению, это деятельность, за которую клиент не готов
+платить. Вопреки распространенному мнению, цель не в том, чтобы выяснить, как
+сделать что-то дешевле. Скорее, это выявление и устранение всего, что не вносит
+ощутимого вклада в достижение желаемого результата.
 
-Seeking out Muda is more than just finding useless things to eliminate. Muda can
-help us identify places where situational awareness has been lost, where
-customer outcomes have been misunderstood, or even where learning has been
-hobbled. It also gets us to better understand the underlying intent for all the
-things we are told we need to do in order to meet any legal, regulatory, or
-internal requirements that do not provide direct tangible value to the customer.
-For Ohno, these\
-requirements were also a form of Muda. While they may be difficult to eliminate,
-it doesn't mean that we cannot somehow minimize or streamline any friction they
-may create and still meet their intended purpose.
+Поиск Муды - это нечто большее, чем просто поиск бесполезных вещей, которые
+нужно устранить. Муда может помочь нам выявить места, где была потеряна
+ситуационная осведомленность, где неправильно понимали результаты клиентов или
+даже где обучение было затруднено. Он также помогает нам лучше понять основной
+замысел всех тех вещей, которые, как нам говорят, мы должны делать для того,
+чтобы соответствовать любым юридическим, нормативным или внутренним требованиям,
+которые не обеспечивают прямой ощутимой ценности для клиента. Для Оно эти
+требования также были формой Муды. Хотя их трудно устранить, это не значит, что
+мы не можем каким-то образом минимизировать или упростить любые трения, которые
+они могут создать, и при этом выполнить их предназначение.
 
-Shigeo Shingo, one of the creators of the Toyota Production System, helpfully
-identified seven types of waste in manufacturing. Over the years, an eighth was
-added (non-used employee talent), creating a helpful list for teams to use in
-their efforts to root out waste. To guide us on our journey I have created a
-useful analog in the DevOps world, which is shown in Table 4.1.
+Шигео Шинго, один из создателей производственной системы Toyota, определил семь
+видов упущений в производстве. Со временем к ним добавился восьмой
+(неиспользуемые таланты сотрудников), создав полезный список, который команды
+могут использовать в своих усилиях по искоренению упущений. Чтобы направить нас в
+нашем путешествии, я создал полезный аналог в мире DevOps, который представлен в
+таблице 4.1.
+
+![](images/tableE_4.1.png)
 
 **Table 4.1**\
-Seven Types of Waste in Manufacturing and Their Corresponding Terms in DevOps
+Семь видов упущений в производстве и соответствующие им термины в DevOps
 
-This may seem like a somewhat obvious list of things not to do. But it takes
-more than just declaring that you are not going to do them. It is important to
-understand why they happen, as well as how they degrade our decision making.
+Это может показаться очевидным списком того, чего не следует делать. Но
+необходимо что-то большее, чем просто утверждение: "Я не буду этого делать".
+Важно понять, почему они происходят, а также как они ухудшают наше принятие
+решений.
 
-Doing so should help you understand the power of many of the mechanisms, from
-Workflow and Queue Master to Service Engineering Leads and sync points, that I
-heavily rely upon both to make it obvious when they are occurring and to help
-teams eliminate them.
+Это поможет вам понять силу многих механизмов, от Workflow и Queue Master до
+Service Engineering Leads и точек синхронизации, на которые я очень
+сильно полагаюсь как для того, чтобы сделать очевидным возникновение проблем, 
+так и для того, чтобы помочь командам устранить их.
 
-To better understand these types of waste, let's step through each of them.
+Чтобы лучше понять эти виды упущений, давайте рассмотрим каждый из них.
 
 ### Упущение 1: Дефекты
 
