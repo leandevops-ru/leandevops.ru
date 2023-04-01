@@ -1038,80 +1038,87 @@ _перегруженные релизы_.
 
 ### Overloading Releases
 
-Having occasional big releases consisting of lots of changes bundled together
-can seem like a good thing. It gives developers more time to work on meatier
-problems and gives testers more time to test. Operations people like the fact
-that there will be fewer release interrupts to worry about, while for customers
-a surge in new features can make a new release seem compelling.
+Наличие более редких, но крупных релизов, состоящих из множества изменений,
+может показаться хорошей идеей. Это дает разработчикам больше времени для
+работы над более сложными проблемами и тестировщикам больше времени для
+тестирования. Возможно ещё и меньше поводов для беспокойства из-за прерываний
+выпуска, в то время как для клиентов всплеск новых функций может сделать новый
+выпуск привлекательным.
 
-So why are big releases a bad thing?
+Так почему же большие релизы --- это плохо?
 
-Rather perversely, many who favor the big release approach over having more
-frequent smaller ones usually end up increasing the very risk and delivery
-friction that many claim they are attempting to avoid. For starters, having
-fewer releases doesn't necessarily equate to less risk. In fact, bundling many
-changes means a thicket of new and different interactions. This creates a thick
-fog that obscures everyone's situational awareness. Which of the many changes
-might be the root cause of a new problem? It could be one or the interaction of
-many. If developers haven't fully thought out how each change might interact
-with others or, worse, if changes were made by several different teams, it
-could make troubleshooting and fault resolution far more difficult and time
-consuming.
+Довольно извращенно, но многие, кто предпочитает подход с большим выпуском
+более частым выпускам меньшего размера, обычно в конечном итоге увеличивают тот
+самый риск и трудности с доставкой, которых, по утверждению многих, они
+пытаются избежать. Начнем с того, что меньшее количество выпусков не
+обязательно означает меньший риск. На самом деле, объединение множества
+изменений означает множество новых и непохожих друг на друга взаимодействий.
+Это создает густой туман, который затемняет понимание ситуации каждым
+человеком. Какое из многочисленных изменений может быть основной причиной новой
+проблемы? Это может быть один из них или взаимодействие много. Если
+разработчики не до конца продумали, как каждое изменение может
+взаимодействовать с другими, или, что еще хуже, если изменения вносились
+несколькими разными командами, это может значительно усложнить поиск и
+устранение неисправностей и отнять много времени.
 
-Having fewer releases doesn't really help reduce delivery friction, either.
-Giving developers longer to work on features can encourage long-lived branches
-and fewer check-ins. This reduces transparency and can result in a painful
-integration problem down the road. It also lets developers off the hook from
-thinking defensively about changes and how they might interact in the ecosystem
-if they go live before they are complete.
+Меньшее количество выпусков также на самом деле не помогает уменьшить трения
+при доставке. Предоставление разработчикам большего времени для работы над
+функциями может способствовать созданию веток с длительным сроком службы и
+уменьшению количества проверок. Это снижает прозрачность и может привести к
+болезненной проблеме интеграции в будущем. Это также позволяет разработчикам не
+задумываться об изменениях и о том, как они могут взаимодействовать в
+экосистеме, если они вступят в силу до их завершения.
 
-Longer release cycles do not help testing, either. Shorter cycles require
-really understanding what is of high value to test. They also create an
-incentive to invest in improving test cycle times, allowing the organization to
-get more feedback more frequently. Longer cycles encourage generic testing with
-poorer focus and longer feedback cycles. This results in a poorer understanding
-of the health of the code, and often results in releases going live with lots
-of known bugs.
+Более длительные циклы выпуска также не помогают тестированию. Более короткие
+циклы требуют реального понимания того, что представляет большую ценность для
+тестирования. Они также создают стимул инвестировать в увеличение
+продолжительности цикла тестирования, что позволяет организации чаще получать
+больше отзывов. Более длительные циклы поощряют генетическое тестирование с
+меньшей направленностью и более длительными циклами обратной связи. Это
+приводит к ухудшению понимания работоспособности кода и часто приводит к
+запуску релизов с большим количеством известных ошибок.
 
-The same goes for governance processes. Those used to working with large
-releases often fool themselves into believing that the only way any
-organization can have robust governance is to require many checkpoints full of
-reviews and detailed documentation in order to spot and mitigate potential
-risk. However, having necessarily heavy governance processes can actually make
-it more difficult to manage risk. Nobody likes having to justify everything
-they do, and the documentation process can be tedious and feel wasteful for
-everyone involved. When change tracking is limited and governance boards are
-run by managers who are not deeply technical or into the detailed minutiae,
-many smaller changes are simply missed or obfuscated in the name of expediency.
+То же самое относится и к процессам управления. Те, кто привык работать с
+большими выпусками, часто обманывают себя, полагая, что единственный способ
+обеспечить надежное управление в любой организации --- это требовать множества
+контрольных точек, полных обзоров и подробной документации, чтобы выявить и
+снизить потенциальный риск. Однако наличие обязательно сложных процессов
+управления на самом деле может затруднить управление рисками. Никому не
+нравится оправдывать все, что они делают, а процесс документирования может
+быть утомительным и казаться расточительным для многих. все вовлеченные. Когда
+отслеживание изменений ограничено, а руководящими советами руководят менеджеры,
+которые не разбираются в технических деталях, многие более мелкие изменения
+просто пропускаются или замалчиваются во имя целесообразности.
 
-There is also a time penalty. Change happens in more than software. People,
-usage patterns, business requirements, and regulatory requirements can all
-change, sometimes unexpectedly. More time means more opportunity for these
-changes to affect the operating environment of the service. A release that
-reflects the earlier conditions from when the project was started may be
-unsuited for current needs. Holding onto changes longer also delays customers
-and the business benefiting from their value, if their value isn't eroded away
-by changing conditions.
+Существует также штрафное время. Изменения происходят не только в программном
+обеспечении. Люди, модели использования, бизнес-требования и нормативные
+требования --- все это может измениться, иногда неожиданно. Чем больше времени,
+тем больше возможностей для того, чтобы эти изменения повлияли на операционную
+среду сервиса. Освобождение, которое отражает более ранние условия с момента
+начала проекта, которые могут не соответствовать текущим потребностям. Более
+длительное удержание изменений также не позволяет клиентам и бизнесу извлекать
+выгоду из их ценности, если только их ценность не подорвана меняющимися
+условиями.
 
-What to do?
+Что же делать?
 
-All of these types of Muri can be avoided by looking at how work flows through
-each part of your system. As discussed in Chapter 12, "Workflow," visualizing
-workflow through effective use of Kanban boards and Queue Master rotations can
-go a long way to help spot problematic bottlenecks, including long wait times,
-deep queues, and lots of work in progress.
+Всех этих типов ошибок можно избежать, посмотрев на то, как протекает работа в
+каждой части вашей системы. Как обсуждается в главе 12, визуализация рабочего
+процесса с помощью эффективного использования досок Kanban и ротации мастеров
+может значительно помочь выявить проблемные узкие места, включая длительное
+время ожидания, большие очереди и большое количество незавершенной работы.
 
-Another useful measure is to look at code repository structures and statistics,
-as well as build, test, and deployment statistics. Does work get trapped on
-long-lived branches? Are certain tasks always handled by a tiny minority of the
-team? Are there long integration and test cycles with complex conflicts and
-seemingly intractable long-lived bugs? Do deployments touch a lot of different
-areas? Is it expected that there will be unstable periods after a production
-release?
+Другой полезной мерой является просмотр структур репозитория кода и статистики,
+а также статистики сборки, тестирования и развертывания. Попадает ли работа в
+ловушку на долгоживущих ветвях? Всегда ли с определенными задачами справляется
+ничтожное меньшинство команда? Существуют ли длительные циклы интеграции и
+тестирования со сложными конфликтами и, казалось бы, неразрешимыми
+долгоживущими ошибками? Затрагивают ли развертывания много разных областей?
+Ожидается ли, что после выпуска продукта будут периоды нестабильности?
 
-Understanding flow and Muri can help us create a sustainable balance that
-promotes the very awareness and learning needed to make better decisions and
-achieve our target outcomes.
+Понимание flow и Muri может помочь нам создать устойчивый баланс, который
+способствует повышению осведомленности и обучению, необходимым для принятия
+более эффективных решений и достижения наших целевых результатов.
 
 ## Mura (Колебания и Нерегулярность)
 
