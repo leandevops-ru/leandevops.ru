@@ -1,7 +1,7 @@
 ---
 title: 'Governance'
 date: '2023-06-04'
-draft: false
+draft: true
 ---
 
 # Title 1

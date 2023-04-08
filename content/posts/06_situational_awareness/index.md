@@ -1,7 +1,7 @@
 ---
 title: 'Situational Awareness'
 date: '2023-04-08'
-draft: false
+draft: true
 ---
 
 # Title 1
