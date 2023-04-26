@@ -445,7 +445,7 @@ Topologies: Organizing Business and Technology Teams for Fast Flow от Ману
 
 ![](images/8.5.png)
 
-**Рисунок 8.5**\ 
+**Рисунок 8.5**\
 Для устранения тумана в сфере оказания услуг требуется нечто большее, чем
 наличие вентилятора.
 
