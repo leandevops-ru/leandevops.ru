@@ -731,4 +731,174 @@ Washington, DC: National Academy Press; 1999, p. 27
 > имеют достаточной подготовки. Когда такое случается, это прискорбно, но это 
 > довольно легко обнаружить и исправить. Но чаще всего проблема заключается 
 > всё-таки в навязанном <<стандарте>>.
+> 
+> A common reason why attempts to standardize fail is that vendors try to
+> lock customers into their tooling ecosystem by selling them a whole suite of
+> tools, along with “best practice” processes that try to commandeer the
+> entire service lifecycle. Usually, the journey begins when the customer is
+> attracted to one or a handful of genuinely useful tools. When they engage
+> the vendor, the customer soon finds themselves being pushed into
+> purchasing a whole suite of tools and processes for their desired tools to
+> work “optimally.” More often than not, the additional tools and processes
+> are weak, cumbersome, or simply do not match the needs of the customer.
+> What is worse is that many times the suite extends far beyond the scope of
+> the purchasing organization, forcing others to choose to use a bad tool or
+> use a parallel set of tools and “double key” as necessary.
+> 
+> Application Lifecycle Management (ALM) and IT Service Management
+> (ITSM) vendors are the most egregious users of such bundling techniques.
+> Their solutions often try to assume control of all aspects of the ecosystem
+> by tightly integrating ticketing, repository, configuration management
+> (CMDB), deployment and environment management, automation,
+> monitoring, and reporting tools and the processes around them into a single
+> end-to-end bundle.
+> 
+> From an outsider’s perspective, having one nice out-of-the box solution that
+> takes care of all aspects of the delivery lifecycle may sound appealing;
+> however, rarely do such solutions work well for everyone. Even though
+> teams across an organization need to coordinate and pass work between
+> each other, they often have very different needs. Often these variations go
+beyond role distinctions and arise from unique challenges the organization
+> might face. The tools and best practices in all-in-one solutions inevitably
+> generalize team needs in ways that ignore these differences. Often this adds
+> unnecessary delivery friction for no reason other than to fit the solution or,
+> worse, distorts or strips out ecosystem information that teams need for
+> effective decision making.
+> 
+> In one such case, an organization had rolled out a tool suite that attempted
+> to impose unnecessary change gates across an already streamlined CI/CD
+> pipeline. In another, the tooling forced the organization to choose between
+> replacing a fully automated delivery pipeline with one that required manual
+> manipulation of the tooling suite every time code needed to be launched or
+> breaking the configuration management database (CMDB), and with it, the
+> monitoring and ticketing systems.
+> 
+> For that reason, I usually strongly dissuade organizations from going “all
+> in” on one suite. I have seen many teams fix seemingly intractable
+> dysfunction by moving away from fancy tools that didn’t work for them to
+> either “dumb” ones like Bugzilla or sticky task cards on a wall that did.
+> This problem is not unique to IT. Manufacturing shops that try to adopt
+> Lean techniques often find that they produce better products faster and
+> cheaper with simpler tools than with slicker but far more inflexible “all-inone” tools.
+
+### Shitsuke: Building a Support System to Ensure Success
+
+Shitsuke, the final pillar of 5S, focuses on building a culture that maintains the
+structural and managerial support needed to sustain the previous four pillars.
+Shitsuke is the recognition that work and improvement initiatives are not
+sustainable when done in total isolation. They need a structure that encourages
+awareness, cross-organizational cooperation, a sense of progress and belonging,
+and learning. While everyone plays some role, it is management’s commitment
+that is most crucial. By understanding and supporting each of the 5S pillars,
+management can create the conditions that allow those on the ground to
+sustainably communicate, collaborate, and continuously strive toward ever
+better ways of delivering the goals of organization.
+
+Managers are uniquely positioned to shape how information flows, is
+understood, and is acted upon. Through their peers and superiors they have the
+potential to see and help with the coordination of activities across several
+teams. Management can facilitate information flow and cross-organizational
+alignment, which helps with everything from knowing the state of the
+ecosystem to organizing, improving, and creating sensible standards to help
+meet target outcomes.
+
+Managers also tend to either be part of or have more access to executive
+leadership, enabling them to play a role in shaping strategies that define
+organizational objectives and target outcomes. They can do this by improving
+executive awareness of conditions on the ground, as well as by ensuring that
+they convey the intent behind outcomes accurately to those in the trenches.
+
+Все это работает, если эти же менеджеры создают и развивают условия, которые
+побуждают людей создавать механизмы, обеспечивающие поток информации. Это
+означает формирование культуры безопасности и доверия. Люди на всех уровнях
+должны чувствовать себя комфортно, не бояться высказывать свое мнение, 
+быть готовыми подвергать сомнению предположения и пробовать новое для
+достижения поставленной цели. Даже если они впоследствии окажутся неправы, 
+они извлекут опыт из этих уроков.
+
+Микроманипулирование тем, как должна выполняться работа, поощрение соперничества
+с нулевым результатом, соперничество между командами и наказание за неудачи могут,
+конечно, быстро разрушить любое чувство безопасности и доверия. Но и более 
+невинные действия, такие как внедрение нового инструментария, технологии или 
+процесса без того, чтобы хотя бы попытаться включить тех, кто должны использовать
+его в процессе принятия решения. Это не значит, что все должны быть согласны.
+Однако если вы не сможете убедить многих, на кого это повлияет (скептически или 
+иным образом), как этот подход 5S создает условия, которые помогут им
+лучше достичь целевых результатов организации каким-то наглядным способом, 
+доверие будет подорвано, и решение никогда не достигнет своего потенциала.
+
+### Наблюдение за автоматизацией 5S в действии
+
+Теперь, когда мы рассмотрели каждый элемент, составляющий 5S, как все это
+вместе помогает в автоматизации IT? Существует множество примеров из каждой 
+части жизненного цикла предоставления услуг, которые можно использовать.
+Я выбрал два примера из собственного опыта. Один из них --- это сервис по 
+требованию стартапа. Другой --- крупная компания, предоставляющая 
+интернет--услуги.
+
+## Стартап
+
+Стартапы редко могут позволить себе роскошь нанимать большое количество 
+сотрудников до того, как они доказали, что их предложения нашли прибыльный
+рынок, на котором они пользуются спросом. Это особенно актуально, если речь 
+идет об онлайн--сервисе по требованию. Стартапа, где спрос может быстро
+расти и падать. Такие компании часто являются идеальным местом для всевозможной 
+автоматизации. Автоматизация не только снижает и сокращает потребность в большом 
+количестве персонала для быстрого предоставления и масштабирования услуг, 
+но и при хорошей работе клиенты вряд ли будут беспокоиться о сбоях в обслуживании,
+вызванных выгоранием персонала провайдера.
+
+Для нового бизнеса, начинающего с нуля, относительно легко автоматизировать
+все с самого начала. Однако, не позаботившись о внедрении принципов 5S, можно 
+легко повредить свою способность оставаться быстрым и бережливым, после того, как 
+услуги начнут работать и использоваться активными клиентами.
+
+Меня привлекли для управления основной частью поставок и операций в стартапе, 
+в котором довели до ситуации в которой автоматизация предоставления услуг 
+было уже трудно поддерживать и развивать. Мало того, что программное обеспечение
+стало чрезвычайно сложным, с тесной связью между компонентами во всем стеке 
+услуг, в погоне за новым бизнесом клиентам было позволено в значительной степени 
+настраивать под себя версии. В некоторых случаях эта настройка доходила до 
+аппаратного обеспечения и операционной системы. Настройки программного
+обеспечения также проникали глубоко в код, вплоть до того, что некоторые
+клиенты имели собственные ветви кода.
+
+
+Вся эта кастомизация усугублялась тем, что версии программного стека клиентов не 
+поддерживались в жестком, последовательном диапазоне. Новый клиент часто получал
+последнюю версию программного стека, в то время как старым клиентам приходилось 
+ждать согласия клиента и возможностей команды доставки для обновления.
+
+Обновление также было затруднено. Сложность и изменчивость означали, что между
+средами разработки/тестирования и производства практически не было возможности для 
+согласованности. Это было настолько плохо, что при развертывании программное 
+обеспечение редко работало так, как ожидалось, если вообще работало. Это приводило
+к постоянному пожаротушению и ручному взлому в производстве. Это делало практически
+невозможным узнать, как что-либо было настроено, не говоря уже о воспроизводимости.
+
+Внедрение инструментов, которые можно было бы использовать и получать предсказуемые
+результаты, означало наведение порядка во всем этом беспорядке. Единственный способ 
+сделать так, чтобы такая уборка и работала, и прижилась, заключался в том, чтобы
+каким-то образом в процессе сделать так, чтобы всем было гораздо проще использовать 
+один и тот же организованный подход, чем продолжать свободный подход, который они 
+использовали в настоящее время.
+
+Чтобы найти выход из ситуации, в которой оказался стартап, мы с командой
+решили сначала составить общую конфигурацию стека, которую можно было бы 
+использовать в качестве самый базовый стартовый рецепт (разновидность сейтона). 
+Если бы мы были умнее, мы могли бы изменить способ организации нашей среды, разделив
+элементы на общие, последовательные строительные блоки. Любые различия, специфичные 
+для конкретного клиента, могли бы затем добавлялись бы по мере необходимости 
+отслеживаемым способом во время сборки. Например, мы знали, что веб-сервер состоит из 
+экземпляра ОС Linux, веб-сервера Apache и некоторых модулей. Модули могут отличаться 
+в зависимости от конкретного клиента, но они могут быть добавлены или вычтены из
+сборки во время установки. Конфигурации также обычно представляли собой файлы, которые
+могли быть шаблоны, в которых определялись и добавлялись различия для конкретного 
+клиента или экземпляра и добавлять по мере необходимости.
+
+Затем мы создали стандартизированные версионные пакеты этой общей базы и автоматизировали 
+их развертывание и настройку. Поскольку мы делали это до появления таких инструментов,
+как Terraform, Puppet, Ansible или Chef, мы использовали усовершенствованную версию 
+Kickstart, которая брала из репозиториев пакеты и детали конфигурации.
+
 
