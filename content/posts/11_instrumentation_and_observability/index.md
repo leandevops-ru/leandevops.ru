@@ -45,7 +45,7 @@ draft: true
 неизбежны, убедитесь, что пакеты, зависящие от среды, отражены в отчете вместе
 со своими причинами, потенциальными рисками и способами их тестирования и
 смягчения.
-* **Какие зависимости имеют мои пакеты?** Зависимочти --- это неприятные вещи,
+* **Какие зависимости имеют мои пакеты?** Зависимости --- это неприятные вещи,
 которые часто не получают должного внимания. Это особенно верно, когда они
 внешние, или, что еще хуже, получены через что-то вроде NPM или Maven. Эти
 зависимости должны быть учтены и отражены в отчете, с применением смягчающих
@@ -58,35 +58,39 @@ draft: true
 того, насколько хорошо они в настоящее время управляются. Целью должно быть
 минимизировать эти риски, либо устранить их, либо выделить их опасность.
 
-## Instrumenting Tooling
+## Instrumenting Tooling (???)
 
-Increasing reliance on tooling and automation is generally a good thing. When
-done well, it reduces variability and makes us think about ways of making our
-ecosystem more repeatable. But how many of us instrument our tooling to capture
-and track what has been done with it, how it performed, and what the end results
-were? How many of us create traceable links between tooling actions, the
-artifacts they used or interacted with, and any tasks behind their initiation?
+Увеличение зависимости от инструментов и автоматизации, в целом, является
+положительным явлением. Когда это реализовано правильно, оно снижает
+вариативность и заставляет нас задуматься о способах сделать нашу экосистему
+более повторяемой. Но сколько из нас **instrument our tooling (???)** для сбора
+и отслеживания того, что было сделано с ним, как он работал и каковы были
+конечные результаты? Сколько из нас создают прослеживаемые связи между
+действиями инструментов, использованными или взаимодействующими с ними
+артефактами и любыми задачами, стоящими за их запуском?
 
-Capturing this information is very useful, particularly to those who are heavily
-reliant on the expected tooling performance. This information provides
-visibility of the overall health of the tooling and how well it is performing
-its job. If you have been unfortunate enough to have had tooling die or
-misbehave and leave your ecosystem a mess, you probably know how useful any
-records of what happened and why are for cleaning up from the wreckage and
-preventing it from happening in the future. I have seen many cases where
-monitoring systems get overloaded and do not report in a timely way. I have also
-discovered build tools, backup jobs, and other maintenance activities that broke
-in silent ways that were not discovered until disaster struck.
+Сбор такой информации очень полезен, особенно для тех, кто сильно полагается на
+ожидаемую производительность **tooling (???)** и того, насколько хорошо он
+выполняет свою работу. Если вам не повезло и **tooling** вышел из строя или
+начал работать неправильно, причем в результате ваша экосистема оказалась в
+полном беспорядке, то вы, вероятно, знаете, насколько полезными являются записи
+о том, что произошло и почему, для устранения последствий и предотвращения
+подобных ситуаций в будущем. Я видел много случаев, когда системы мониторинга
+перегружались и не предоставляли своевременных отчетов. Я также обнаруживал
+случаи, когда инструменты сборки, резервное копирование и другие процессы
+обслуживания ломались незаметным способом, который не обнаруживался до
+наступления катастрофы.
 
-Instrumentation can help you spot inconsistencies before they become problems.
-Instrumentation can also help you spot potential improvements and even size up
-their likely value. A good habit to get teams into is scheduling a regular
-instrumentation and reporting review to get teams in the habit of reviewing how
-well they understand what is going on with tooling, as well as to find any areas
-where instrumentation missed or was not sufficiently effective to proactively
-spot deteriorating conditions. Often this can help the team discover
-inconsistencies within or between various tools, or places where it was
-misinterpreted, that can be improved. 
+Инструментирование может помочь обнаружить несоответствия до того, как они
+станут проблемами. Оно также может помочь обнаружить потенциальные улучшения и
+оценить их возможную ценность. Хорошей практикой является регулярное
+планирование обзора инструментирования и отчетности, чтобы команды привыкли
+анализировать, насколько хорошо они понимают, что происходит с **tooling**, а
+также чтобы выявить области, где инструментирование было пропущено или оказалось
+недостаточно эффективным для проактивного обнаружения ухудшающихся условий.
+Часто это помогает команде обнаружить несоответствия внутри или между различными
+инструментами, а также места, где оно было неправильно интерпретировано, и где
+можно провести улучшения.
 
 ## Instrumenting Environment Change and Configuration Management
 
