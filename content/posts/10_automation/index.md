@@ -732,81 +732,82 @@ Washington, DC: National Academy Press; 1999, p. 27
 > довольно легко обнаружить и исправить. Но чаще всего проблема заключается 
 > всё-таки в навязанном <<стандарте>>.
 > 
-> A common reason why attempts to standardize fail is that vendors try to
-> lock customers into their tooling ecosystem by selling them a whole suite of
-> tools, along with “best practice” processes that try to commandeer the
-> entire service lifecycle. Usually, the journey begins when the customer is
-> attracted to one or a handful of genuinely useful tools. When they engage
-> the vendor, the customer soon finds themselves being pushed into
-> purchasing a whole suite of tools and processes for their desired tools to
-> work “optimally.” More often than not, the additional tools and processes
-> are weak, cumbersome, or simply do not match the needs of the customer.
-> What is worse is that many times the suite extends far beyond the scope of
-> the purchasing organization, forcing others to choose to use a bad tool or
-> use a parallel set of tools and “double key” as necessary.
+> Частой причиной неудач попыток стандартизации является то, что поставщики пытаются
+> запереть клиентов в своей экосистеме инструментария, продавая им целый набор
+> инструментов наряду с <<лучшей практикой>> процессов, которые пытаются командовать
+> всем жизненным циклом услуг. Обычно путешествие начинается, когда клиент
+> привлекает один или несколько действительно полезных инструментов. Когда они обращаются к
+> с поставщику, клиент вскоре обнаруживает, что его подталкивают к
+> приобретению целого набора инструментов и процессов, чтобы их желаемые инструменты
+> работали <<оптимально>>. Чаще всего дополнительные инструменты и процессы
+> слабые, громоздкие или просто не соответствуют потребностям клиента.
+> Еще хуже то, что во многих случаях набор инструментов выходит далеко за пределы сферы деятельности
+> закупочной организации, заставляя других выбирать: использовать плохой инструмент или
+> использовать параллельный набор инструментов и <<двойной ключ>> по мере необходимости.
 > 
-> Application Lifecycle Management (ALM) and IT Service Management
-> (ITSM) vendors are the most egregious users of such bundling techniques.
-> Their solutions often try to assume control of all aspects of the ecosystem
-> by tightly integrating ticketing, repository, configuration management
-> (CMDB), deployment and environment management, automation,
-> monitoring, and reporting tools and the processes around them into a single
-> end-to-end bundle.
+> Управление жизненным циклом приложений и управление ИТ-услугами
+> поставщиков являются наиболее вопиющими пользователями таких методов объединения.
+> Их решения часто пытаются взять на себя контроль над всеми аспектами экосистемы
+> путем тесной интеграции тикетинга, репозитория, управления конфигурацией,
+> развертывания и управления средой, автоматизации,
+> инструментов мониторинга и отчетности, а также процессов вокруг них в единую
+> сквозную связку.
 > 
-> From an outsider’s perspective, having one nice out-of-the box solution that
-> takes care of all aspects of the delivery lifecycle may sound appealing;
-> however, rarely do such solutions work well for everyone. Even though
-> teams across an organization need to coordinate and pass work between
-> each other, they often have very different needs. Often these variations go
-beyond role distinctions and arise from unique challenges the organization
-> might face. The tools and best practices in all-in-one solutions inevitably
-> generalize team needs in ways that ignore these differences. Often this adds
-> unnecessary delivery friction for no reason other than to fit the solution or,
-> worse, distorts or strips out ecosystem information that teams need for
-> effective decision making.
+> С точки зрения стороннего наблюдателя наличие одного хорошего готового решения, которое
+> заботится обо всех аспектах жизненного цикла поставки, может показаться привлекательным;
+> однако редко такие решения работают хорошо для всех. Даже если
+> командам в организации необходимо координировать и передавать работу
+> между собой, они часто имеют очень разные потребности. Часто эти различия выходят
+> за рамки ролевых различий и возникают из-за уникальных проблем, с которыми организация
+> может столкнуться. Инструменты и лучшие практики в решениях <<все в одном>> неизбежно
+> обобщают потребности команды таким образом, что игнорируют эти различия. Часто это добавляет
+> ненужное трение при доставке без какой-либо причины для того, чтобы соответствовать решению, или,
+> что еще хуже, искажает или вычеркивает информацию об экосистеме, которая нужна командам для
+> эффективного принятия решений.
 > 
-> In one such case, an organization had rolled out a tool suite that attempted
-> to impose unnecessary change gates across an already streamlined CI/CD
-> pipeline. In another, the tooling forced the organization to choose between
-> replacing a fully automated delivery pipeline with one that required manual
-> manipulation of the tooling suite every time code needed to be launched or
-> breaking the configuration management database (CMDB), and with it, the
-> monitoring and ticketing systems.
+> В одном из таких случаев организация внедрила набор инструментов, который пытался
+> навязать ненужные ворота для изменений в уже оптимизированном CI/CD
+> конвейера. В другом случае инструментарий заставил организацию выбирать между
+> заменой полностью автоматизированного конвейера доставки на такой, который требует ручной
+> манипуляции с набором инструментов каждый раз, когда необходимо запустить код, или
+> сломать базу данных управления конфигурацией, а вместе с ней и
+> системы мониторинга и тикетинга.
 > 
-> For that reason, I usually strongly dissuade organizations from going “all
-> in” on one suite. I have seen many teams fix seemingly intractable
-> dysfunction by moving away from fancy tools that didn’t work for them to
-> either “dumb” ones like Bugzilla or sticky task cards on a wall that did.
-> This problem is not unique to IT. Manufacturing shops that try to adopt
-> Lean techniques often find that they produce better products faster and
-> cheaper with simpler tools than with slicker but far more inflexible “all-inone” tools.
+> По этой причине я обычно настоятельно не рекомендую организациям <<полностью
+> один пакет>>. Я видел, как многие команды устраняли, казалось бы, неразрешимую
+> дисфункцию, перейдя от модных инструментов, которые не работали на них, к
+> либо <<тупым>>, таким как Bugzilla, либо липким карточкам с задачами на стене, которые работали.
+> Эта проблема не уникальна для ИТ. Производственные цеха, которые пытаются внедрить
+> методы бережливого производства, часто обнаруживают, что они производят лучшую продукцию быстрее и
+> дешевле с более простыми инструментами, чем с более хитрыми, но гораздо более негибкими инструментами
+> <<все в одном>>.
 
-### Shitsuke: Building a Support System to Ensure Success
+### Сицукэ: создание системы поддержки для обеспечения успеха
 
-Shitsuke, the final pillar of 5S, focuses on building a culture that maintains the
-structural and managerial support needed to sustain the previous four pillars.
-Shitsuke is the recognition that work and improvement initiatives are not
-sustainable when done in total isolation. They need a structure that encourages
-awareness, cross-organizational cooperation, a sense of progress and belonging,
-and learning. While everyone plays some role, it is management’s commitment
-that is most crucial. By understanding and supporting each of the 5S pillars,
-management can create the conditions that allow those on the ground to
-sustainably communicate, collaborate, and continuously strive toward ever
-better ways of delivering the goals of organization.
+Сицукэ, последний столп 5S, фокусируется на создании культуры, которая поддерживает
+структурную и управленческую поддержку, необходимую для поддержания предыдущих четырех столпов.
+Сицукэ --- это признание того, что работа и инициативы по улучшению не являются
+устойчивыми, если они осуществляются в полной изоляции. Им необходима структура, которая поощряет
+осведомленность, межорганизационное сотрудничество, чувство прогресса, принадлежности
+и обучение. Хотя каждый играет определенную роль, именно приверженность руководства
+имеет решающее значение. Понимая и поддерживая каждый из столпов 5S,
+руководство может создать условия, которые позволят сотрудникам на местах
+устойчиво общаться, сотрудничать и постоянно стремиться ко все более
+лучшим способам достижения целей организации.
 
-Managers are uniquely positioned to shape how information flows, is
-understood, and is acted upon. Through their peers and superiors they have the
-potential to see and help with the coordination of activities across several
-teams. Management can facilitate information flow and cross-organizational
-alignment, which helps with everything from knowing the state of the
-ecosystem to organizing, improving, and creating sensible standards to help
-meet target outcomes.
+Менеджеры занимают уникальное положение в формировании того, как информация поступает, понимается и
+принимаются меры. Через своих коллег и начальников они имеют возможность и 
+потенциал, чтобы видеть и помогать в координации деятельности нескольких
+команд. Руководство может способствовать потоку информации и межорганизационному
+согласованию, что помогает во всем, начиная от знания состояния
+экосистемы до организации, совершенствования и создания разумных стандартов, помогающих
+достичь целевых результатов.
 
-Managers also tend to either be part of or have more access to executive
-leadership, enabling them to play a role in shaping strategies that define
-organizational objectives and target outcomes. They can do this by improving
-executive awareness of conditions on the ground, as well as by ensuring that
-they convey the intent behind outcomes accurately to those in the trenches.
+Менеджеры также, как правило, либо входят в состав руководства, либо имеют более широкий доступ к нему, 
+что позволяет им играть определенную роль в формировании стратегий, определяющих
+организационные задачи и целевые результаты. Они могут сделать это путем повышения
+осведомленности руководителей о ситуации на местах, а также путем обеспечения того, чтобы
+они точно передали намерения, лежащие в основе конечных результатов, тем, кто находится в окопах.
 
 Все это работает, если эти же менеджеры создают и развивают условия, которые
 побуждают людей создавать механизмы, обеспечивающие поток информации. Это
