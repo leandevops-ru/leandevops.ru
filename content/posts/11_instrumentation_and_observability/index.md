@@ -1,5 +1,5 @@
 ---
-title: 'Instrumentation and Observability'
+tИТle: 'Instrumentation and ObservabilИТy'
 date: '2023-05-13'
 draft: true
 ---
@@ -33,24 +33,24 @@ draft: true
 Помимо информации, связанной с конкретной версией артефакта, есть несколько
 важных факторов, которые стоит учитывать и отражать в отчётах:
 * **Насколько атомарны мои пакеты?** Атомарные пакеты означают, что вы можете
-применять и удалять их в любой среде с небольшим риском того, что они оставят
-следы или иным образом изменят среду таким образом, что это не сможет быть
-автоматически отменено.
+  применять и удалять их в любой среде с небольшим риском того, что они оставят
+  следы или иным образом изменят среду таким образом, что это не сможет быть
+  автоматически отменено.
 * **Насколько мои пакеты независимы от среды?** Многие организации привыкли
-создавать разные пакеты для разработки, тестирования и продакшена. Это нехорошая
-привычка, так как она создает потенциальные <<неизвестности>>, которые могут
-вызвать проблемы. Эти различия следует преобразовать в параметры конфигурации
-или флаги, которые можно будет установить при установке или запуске. Если есть
-причина, по которой это невозможно сделать, и такие различия действительно
-неизбежны, убедитесь, что пакеты, зависящие от среды, отражены в отчете вместе
-со своими причинами, потенциальными рисками и способами их тестирования и
-смягчения.
+  создавать разные пакеты для разработки, тестирования и продакшена. Это
+  нехорошая привычка, так как она создает потенциальные <<неизвестности>>,
+  которые могут вызвать проблемы. Эти различия следует преобразовать в параметры
+  конфигурации или флаги, которые можно будет установить при установке или
+  запуске. Если есть причина, по которой это невозможно сделать, и такие
+  различия действительно неизбежны, убедитесь, что пакеты, зависящие от среды,
+  отражены в отчете вместе со своими причинами, потенциальными рисками и
+  способами их тестирования и смягчения.
 * **Какие зависимости имеют мои пакеты?** Зависимости --- это неприятные вещи,
-которые часто не получают должного внимания. Это особенно верно, когда они
-внешние, или, что еще хуже, получены через что-то вроде NPM или Maven. Эти
-зависимости должны быть учтены и отражены в отчете, с применением смягчающих
-мер, где это возможно, например, иметь локальные копии, чтобы избежать их
-исчезновения или скрытых проблем.
+  которые часто не получают должного внимания. Это особенно верно, когда они
+  внешние, или, что еще хуже, получены через что-то вроде NPM или Maven. Эти
+  зависимости должны быть учтены и отражены в отчете, с применением смягчающих
+  мер, где это возможно, например, иметь локальные копии, чтобы избежать их
+  исчезновения или скрытых проблем.
 
 Каждый из этих факторов направлен на выявление и отслеживание уровня вашей
 подверженности потенциальным <<неизвестностям>>. Обычно я размещаю эти вопросы
@@ -92,607 +92,658 @@ draft: true
 инструментами, а также места, где оно было неправильно интерпретировано, и где
 можно провести улучшения.
 
-## Instrumenting Environment Change and Configuration Management
-
-An extremely common and generally good practice in IT is to create change
-tickets whenever you make an environment change in production. It forms a good
-record to know when changes were made, who made them, what changed, and why. 
-
-But how many of us actually capture in any great detail what was actually done,
-how exactly it was done, and the differences between the original and new
-states? How many of us go back to change records with any regularity to compare
-current or past ecosystem dynamics with changes that have been made? 
-
-As the deliverer of services, the changes that you make are arguably the most
-notable and important activity you do that affects the dynamics of the
-ecosystem. This is why it is important to capture the changes you make, as well
-as the differences between the existing and new configuration state. Doing this
-is very important for building shared awareness, as well as aiding in
-troubleshooting any subsequent incidents a change causes in a way that the root
-cause can be understood. Documenting changes in this way is so important that I
-always encourage teams to put up links to the details of the last five to ten
-changes on the front page of any incident reporting tool. I have found time and
-again that this not only helps whomever is fiddling an incident to reduce the
-time to recover, but also helps those involved in the change to address any of
-the root causes in a much more succinct way.
-
-Unfortunately, most delivery teams do a terrible job of capturing the full
-details of any change in a way that can both maintain shared awareness of
-ecosystem state and be used as a complete audit trail. It is often done so
-poorly that many operational teams are resistant to frequent production changes.
-
-The most common way that change information is missed occurs when changes are
-performed manually. Such untracked manual changes sometimes happen when people
-have to jump in to troubleshoot a problem to get things to work. Other times
-there is some commercial software being used that forces changes to be made by
-hand through admin consoles or other difficult-to-script mechanisms. Both of
-these result in details often being missed and should be minimized or tracked
-wherever possible. I have seen teams save shell histories or use scripted test
-tools that can manipulate GUIs to have a more repeatable and trackable record.
-
-Another surprisingly common challenge occurs when work is automated but the
-tools performing the change do not capture the prior configuration state, what
-transpired when the change was performed. Some fail to check the end result of
-the change to see that it matches what was expected. I have personally seen
-deployment tools that shuffled around files or symbolic links, appended things
-to configuration files and the like, or shuffled around some containers, and
-then declared victory without actually seeing that the actions resulted in what
-was expected. In some cases, the tools ignored errors, from permissions
-conflicts to files either not being where they were supposed to be or not being
-complete, and moved on to the next step. Other times service APIs failed to come
-up properly or responded in unexpected ways. Even when the errors are captured,
-few bother to look at them until something blows up, if at all.
-
-Perhaps the biggest and most common issue is that while we might track changes
-made to production services, very few of us do the same for test and development
-environments, or for changes made to supporting services such as monitoring or
-backup services. In fact, it is extremely common for changes to be made by an
-untracked hand in all of them.
-
-The other challenge is that few of us actually capture and compare the
-configurations that exist in development, test, and production to analyze their
-differences and understand how these differences might create different dynamics
-in each. Did the package going to production pass through the development and
-test environments? If not, was it installed in them afterward? This does not
-mean that development and test environments need to have exactly the same
-configurations as production, or even that they need to have the same
-configuration as each other. Most of the time it is nearly impossible for that
-to be the case. However, accepting that there are differences doesn’t mean that
-you shouldn’t bother to know what those differences are, or check and take into
-account how they might alter behavior. Overlooking or ignoring these differences
-creates yet more unnecessary and often problematic unknowns.
-
-Capturing, reporting, and analyzing such information allows you to have a much
-better grasp on what you have within your environment. Creating links between
-all the artifacts and activities, from task tickets to the change tickets at the
-end of the cycle, allows you to walk your ecosystem, beginning at any point, to
-understand and build context into what is happening in it.
-
-## Instrumenting Testing
-
-When done well, testing will contain a treasure trove of useful information. It
-can provide all sorts of insights, many that go beyond exposing potential risks
-caused by defects in the code. One of the most important ways that testing
-instrumentation can help improve shared ecosystem awareness is to use it to
-capture how service changes will likely behave in the target operational
-ecosystem.
-
-Using automated testing tools and testing instrumentation in this way might
-sound unremarkable at first, or even a restatement of what most believe testing
-teams do. The difference is that it is not aimed at “quality assurance.” For
-one, the premise of quality assurance is broken. QA does not really assure much
-of anything. It mostly tells you what bugs were encountered during testing.
-Others likely exist that were simply not encountered.
-
-This doesn’t mean that such testing shouldn’t be done. Instead, testing should
-be oriented in a way that tries to improve your understanding of how services
-will behave under different scenarios and conditions in order to improve your
-ability to respond effectively to various service behaviors. Testing should also
-help you more easily figure out what conditions are likely occurring when
-certain service behaviors are seen.
-
-I also like to use testing to better expose the service hazards created by
-brittle code found through development instrumentation. This helps expose more
-details of the “size of the prize” by investing in refactoring or a more
-thorough overhaul of a problematic area.
-
-To make testing instrumentation maximally useful, I try to augment it with
-production instrumentation tooling whenever possible (and vice versa).
-Monitoring and service instrumentation, log analysis tools, nondestructive test
-tools, synthetic transaction tools, and so forth can provide a quick way of
-being able to compare like-for-like results. Exposing test cases and test case
-results in a way that can be compared with what is experienced in the production
-environment also allows for both test and operational instrumentation to be
-retuned in order to make sure that the right dynamics are looked at and compared
-in the future.
-
-Another useful item to capture are the deployment configuration differences
-between test environments and production environments. Doing this in a way that
-can also capture and denote the various behavior and performance differences
-that the configuration differences between the environments create allows you to
-verify your understandings of potential points of friction and bottlenecks
-caused by deployment configuration differences. This allows you to have more
-confidence in what levers can be changed when such conditions are triggered in
-production.
-
-## Instrumenting Production
-
-Few IT professionals would argue that instrumenting production is not sensible.
-Learning the best way to do so is probably the main reason you decided to read
-this chapter in the first place. The production environment is an extremely
-target-rich environment for making your ecosystem observable. It is where your
-users meet your services, and thus is the place where you should look to
-understand how those services are helping customers meet their target outcomes.
-Many organizations have realized this, which has given birth to a great deal of
-interest and investment in Big Data analytics solutions.
-
-What is often missed is that building an accurate level of understanding of this
-dynamic in the most holistic and efficient manner requires more than what can be
-done using more traditional monitoring and logging approaches. This is true even
-when supported by fancy Big Data analytical tools.
-
-If your goal is to improve your understanding of your production ecosystem in
-order to make more effective decisions, there are a number of instrumentation
-areas that are worth considering that are often overlooked, as described in the
-following sections.
-
-## Queryable/Reportable Live Code and Services
-
-One of the biggest problems with serverless services and the like is that
-instrumenting and tracking them in traditional ways isn’t all that
-straightforward. One of the best ways to overcome this is by placing queryable
-hooks in your services directly that can give you an idea of what is going on.
-
-You do not need to have particularly advanced hooks to start. Even something as
-simple as a hook that responds to a flag asking “Are you alive?” is a useful
-start. This can easily be expanded to “What are your health vitals?” all the way
-to more debugging-like information such as “What is happening with these
-users/sessions/data as it traverses the service?” Other ways to instrument and
-track what is happening is to use capabilities like Java Management Extensions
-(JMX), or having services register themselves and push out regular metrics in a
-pub/sub sort of way to a central bus or point where they can be collected and
-analyzed.
-
-None of these approaches are particularly difficult to implement. What makes
-such capabilities worthwhile is that implementing and using them can reduce a
-lot of the complexity and time lag that occurs with trying to do the same thing
-through a more traditional logging mechanism. The values they return can be made
-to conform to a usable standard, which allows the values to be quickly put up on
-a dashboard for analysis to find any disparities across service instances.
-
-When done well, instrumenting services and user interfaces can enable you to
-observe users and user sessions in near real time as they move across the
-service ecosystem. This is a particularly handy capability to have when
-analyzing problems being experienced by one or a small subset of users.
-
-## Presenting Task, Change, Incident, and Problem Records Together 
-
-A lot of service management tool vendors talk about the power of using their
-tooling ecosystems being in how everything connects together. They will include
-ticketing systems with workflows, configuration management databases (CMDBs),
-and even monitoring. The problem is that the vast majority of the data is either
-buried in its own silo or isn’t particularly easy to put together in views that
-are useful to you and others who need it.
-
-I have found that it is often extremely useful to present all of this
-information together. This is especially true with change information, which
-should be immediately viewable to anyone who is fielding an incident. To do
-this, I generally favor using a simple web page or some other equally
-uncomplicated mechanism that is easily viewable whether you are on the go or
-sitting at your desk.
-
-While keeping change and incident records together is extremely important, I
-also like to look for ways of easily tracing the chain of relationships from any
-point in my ecosystem. Having the ability to start, for example, with a package
-or configuration and walk both back to the series of tasks that created it and
-forward to where it was deployed and how is extremely powerful. This approach
-allows you to pull together information you might need in the right context at
-the right time. The cross-seeding, as mentioned earlier, is critical to this;
-however, making it easy to use also means that it will be used much more
-heavily. Creating a simple system that allows you to easily walk the ecosystem
-is key to this.
-
-Another useful thing to do is to present the data and trends that might be
-interesting to technical and nontechnical audiences regularly. This can be
-everything from failed changes and aspects of changes that created unexpected
-service behavior to incidents that took far longer than normal to handle. This
-presentation needs to be done in a way that can spur improvement, not in a way
-that get turned into a blame game. Blaming, as we know, encourages people to
-hide data and disconnect relationships. I tend to focus most reporting to those
-closer to the action but allow it to be packaged up in a blameless way for
-delivery to upper management when help and support are needed.
-
-## Environment Configuration 
-
-We talked about configuration management and deployments earlier. But are you
-aware of everything that is in your delivery ecosystem? Do you know how quickly
-and consistently you can rebuild and redeploy each part of your delivery
-ecosystem from scratch?
-
-Knowing what you have in your delivery ecosystem is more than knowing the
-versions of the software installed or very basic elements like network addresses
-and the like. It is about knowing and regularly reviewing exactly what the
-ecosystem is composed of. I have found the best way to discern this information
-is by rebuilding as much of your ecosystem as you can regularly.
-
-By “rebuilding” I mean more than moving a bunch of containers or Virtual Machine
-Disk (VMDKs) files around. I mean being able to reinstall the full stack,
-configure it, and put it into production. Knowing how quickly and consistently
-you can do this enables you to know how long it might take to rebuild any
-component in an emergency.
-
-Rebuilding also acts as a catalyst for flagging situations where there are
-single points of failure in the rebuild process. Being able to rebuild this way
-also means that you do not have to count on some discovery tool to try to learn
-and monitor what you might have, if it can figure it out at all. It also means
-that if you fall foul of a security breach such as a ransomware attack, you can
-have some confidence regarding how much of the stack you can burn to the ground
-and rebuild rather than lose.
-
-Another important part of tracking the environment configuration is that you can
-build a way to capture and understand what is changing in your environment and
-how it is changing. It also allows you to spot suspicious or unauthorized
-changes quickly.
-
-I try to look for opportunities to regularly do rebuilds, as well as build
-dashboards that record friction points and other danger hot spots that the team
-can try to remove. These should be reviewed at very regular intervals, at least
-as often as strategic reviews, where goals can be set and actions can be taken
-to improve the situation.
-
-## Logging
-
-Logging is a traditional and important part of every ecosystem; however, how
-often do we actually examine those logs? How trustworthy are they in telling us
-what we want to know? How structured and readable are they?
-
-I approach logging in two streams: 
-*   **Operational usefulness:** Logs that are not trustworthy, that are
-difficult to parse, or that simply do not provide any value should be
-highlighted. What about them is not useful, trustworthy, or easy to parse? What
-is the effect on operational support? Capturing and reviewing this information
-allows you to address the situation. You sometimes might find that there are
-better ways of obtaining the same information, or that there is so much spurious
-noise that much of what is currently logged should be shut off or tuned way
-down. Logging is definitely one of those places where you can have too much, too
-little, and too irrelevant.
-*   **Longer-term utility:** What do the logs convey, and who can use that
-information? Are there any legal or regulatory rules that might affect their
-handling or storage? Are they easy to obtain and process? How long do they take
-to process into a useable form, and why? What is their accuracy? Highlighting
-and tracking such logs and log data entries, especially those that are important
-or may diverge from the needs of those looking to consume the information, helps
-identify potential awareness lags that might reduce the efficacy of decision
-making. 
-
-## Monitoring
-
-Monitoring is one of those things that we all do. It makes sense. But much like
-the concerns about service instrumentation that my DevOps friends expressed, how
-useful is all of the monitoring to you? Does it always tell you what you need to
-know in a timely way with enough context to act?
-
-Even though much of the monitoring data organizations collect is subpar at best,
-many of us tend to feel that more is better. We will often collect alerts and
-statistics that we almost never look at, let alone use, leaving monitoring
-systems looking like the digital equivalent of a hoarder’s garage full of old
-newspapers.
-
-The best way to approach monitoring is by going through it to determine not only
-its accuracy but also who will consume the data, for what reason, and what
-decisions they are likely to make based on it. If there are better, more
-accurate, or more timely ways that information can easily be obtained, then the
-old method should be replaced with the newer, better one. If monitoring triggers
-alerts that do not get looked at until several pile up or something else occurs,
-that issue should be addressed. Getting too much useless information is
-sometimes worse than not receiving anything, as it desensitizes you to the
-information.
-
-Monitoring tuning should be part of regular tactical review. This should be done
-especially after incidents where it was not sufficiently effective in helping
-proactively catch problems before they caused problems. There is also value to
-look at how to improve the overall efficacy of monitoring at strategic reviews.
-Monitoring needs to be continuously tuned and improved as dynamics change.
-
-Staff should also be encouraged to not grow to accept the buildup of noisy or
-useless monitoring. 
-
-## Security Tracking and Analysis 
-
-Security tends to be the source of policies that create inconveniences that
-often seem far larger than the security value they provide. However, in the
-services world security is necessary to protect both your organization and,
-ultimately, your customer; however, security also has a side benefit that is
-often overlooked. Security can provide an even stronger impetus to capture and
-track what is in your ecosystem. This can be used to better understand ecosystem
-behavior caused by various states and user activities that can improve your
-overall awareness.
-
-Many security techniques and instrumentation tend to either sit on top of other
-tracking mechanisms, like logs, environment configuration tracking, and the
-like, or have their own specialized tools to monitor such things as peculiar
-traffic and threats. These mechanisms are looking for things that look odd or
-abnormal, which can be done in two ways.
-
-You can use these mechanisms to look for a list of activities and states that
-reflect known security threats and violations. This is the way that most
-organizations go about it, as it is fairly straightforward to do, but it is not
-the best approach to count on entirely as it assumes by default that there has
-been no unauthorized access. This is not the best stance for most organizations,
-especially those that are a big or interesting enough target. This approach also
-does not account for the fact that a lot of the more nefarious security
-violations begin from the inside, either from an internal bad actor or someone
-who has had their credentials compromised in some way.
-
-The other way to approach security is to try to capture and track the state and
-activities of as much of your operating ecosystem as possible. This includes
-tracking configuration and data changes, network traffic, and the like, leaving
-tempting honeypots around to try to lure bad actors to learn more about them so
-that you can better protect the more sensitive parts of your ecosystem.
-
-To be able to track this information, capture and track the configuration and
-changes that you make so you can easily query and check for any unknown
-differences. This should capture both potential security threats and behaviors
-(whether from errant tools or unfollowed processes) that aren’t being tracked.
-
-Highlights of such data should be made visible to help teams and the
-organization improve. 
-
-## Service Data
-
-The last area that you should consider consists of the structure, storage, and
-accessibility of service data. This includes both customer data and other forms
-of data used to drive your services.
-
-Even though most Big Data programs look to heavily mine service data, relatively
-few organizations spend much time thinking about the overall architecture and
-structure of the data they have beyond what is absolutely necessary to drive
-services. Such data inevitably grows organically into various piles scattered
-about the ecosystem. This results in duplication and mismatches that make the
-data far more difficult to piece together and understand than what it
-represents. It also makes it more difficult to obtain the information to
-analyze.
-
-To reduce these sorts of problems, it is best to put two mechanisms in place as
-part of your delivery process: 
-*   Have a rotating role that builds and owns the architectural map of what data
-is stored where, in what way, and by which applications and services it used.
-Duplicates and mismatches should be found and eliminated wherever possible.
-*   Have data architecture and design be considered as part of the delivery
-process to begin with. Where should data live? What should access it? Have
-duplicates been accounted for and minimized wherever possible? How might data be
-extracted, to where, and for what purpose? This process does not have to be
-particularly heavyweight. In fact, it is far easier to manage smaller changes
-than bigger ones. 
-
-## Pulling It All Together
-
-Putting in place the right instrumentation to deliver the right information to
-the right audience to meet their objectives can sound really difficult. Where do
-you start? How do you keep it going? How do you improve?
-
-Sometimes it is difficult to see the best path forward, especially when you are
-very close to the problem and used to the ways you have always done things.
-
-Fortunately, IT is far from the only industry that faces this sort of
-instrumentation problem. Many other industries require instrumentation because
-they also have high availability requirements, highly unpredictable demand, and
-unforgiving high sensitivity to failure. Looking at how someone in a very
-different context copes can often help you step back and more objectively look
-at your own world.
-
-The industry that I personally like to walk through is one that most of us
-interact with almost every day but think little about: _the wastewater
-management industry_. 
-
-## Instrumenting a Wastewater Ecosystem
-
-<!-- image here, p.366 -->
-
-Few would argue that a service that both takes care of your waste and keeps your
-neighbor’s out of your home is not important. Yet how many people think about
-the complexities of building and managing such a system?
-
-I had the opportunity to see one such system run by the City of Los Angeles up
-close. The smells were predictably nasty, as were the daily safety hazards
-employees were exposed to working around a live network of sewers, wet wells,
-digesters, and holding ponds. But what most would assume would be a very
-pedestrian and often forgotten-about service soon proved to be anything but.
-
-Like most cities, LA provides water and sewerage services to residents and
-businesses through a network of pipes and tunnels running throughout the city.
-People not only expect their water to be safe and whatever goes down the drain
-to not come back up, but also expect the streets to be free of waste. Sewers are
-also places where, without active monitoring and dispersion, harmful gases can
-build up, creating hazardous clouds and at times explosive conditions.
-
-Los Angeles, however, faces far more challenges than the average municipality.
-The greater metropolitan area covers over 4800 square miles of arid and semiarid
-terrain crossing a complex topology of mountains and valleys. The area is prone
-to both drought and flash flooding. Both are bad for sewage systems. The former
-can leave waste building up in the pipes. The latter can overwhelm the waste and
-runoff systems, leaving hazards filling the streets, and sometimes even people’s
-homes. To add to the complexity, LA also has to contend with additional natural
-hazards like earthquakes, landslides, and wildfires. If that isn’t difficult
-enough, the water, sewage, and storm systems crisscross a maze of local
-authorities that often do not see eye to eye, let alone have both the desire and
-means to cooperate.
-
-Despite these challenges, I witnessed a dynamic system in action that has become
-one of the most advanced in the world. Not only is sewage in the streets
-exceedingly rare, but runoff and waste discharges have over the years been
-reduced by over 95%. What is more, the system has improved water quality and
-delivery capabilities, dropped total water consumption in real terms, and
-reduced the amount of coastline fouling and other environmental problems. This
-has been accomplished despite continued population growth and change across the
-region.
-
-How does the LA Sanitation department do it?
-
-For one, they realized there was no way the ecosystem would survive if the city
-took the approach of building a static design of a network of pipes in the
-ground. A single storm or a rogue factory illegally dumping hazardous materials
-into the system could destroy large sections of the region. They needed to
-actively learn about the ecosystem and the changes going on within it, all while
-constantly trying to find new ways to improve.
-
-The department stayed focused on the target outcomes: keep wastewater out of
-people’s homes and the streets, and minimize health hazards and pollution, all
-while looking for opportunities to recycle and reuse water along the way. They
-began by trying to understand more about the environment they were operating in.
-They scattered sensors and ran tests throughout the network and across the
-region. These help them understand how water flows on the surface, underground,
-as well as through the drainage and sewerage networks. These check not only
-capacity and flow rates, but also monitor for hazardous concentrations of
-everything from explosive and poisonous gases to problematic materials flowing
-through the system. They also look at how the entire system is performing, from
-the sewers, pump stations, and treatment plants to the behaviors of the people
-who use and operate them.
-
-This monitoring and tracking is fundamentally different than traditional IT
-monitoring and service workflow management. Unlike IT, they were not focused
-primarily on spotting anomalies to react to. It can take months or even years to
-change a storm channel or add sewer capacity, making even the most backward IT
-procurement process seem lightning fast. Instead, they go beyond IT by seeking
-to actively understand and shape the ecosystem itself. Information is constantly
-analyzed and used to continually improve the efficacy of everyone’s
-understanding of the network.
-
-This approach and mindset does more than improve responsiveness to potential
-failure scenarios. It allows for friction points and risk areas to stand out and
-be better understood. Anything from a new factory to a reformulation of a
-commonly used bath gel can easily change the dynamics of the entire network.
-They also look at local and regional hydrology and surface drainage patterns to
-understand and predict potential runoff hazards. Active harvesting of
-information helps build an ever more accurate understanding of the operating
-environment and any relevant patterns it might contain. This improves the
-targeting of everything from high-value infrastructure improvement to local
-policy and ordinance changes. They even go so far as to engage in planning and
-permitting to understand how proposed changes might affect the system, proposing
-solutions that help keep the ecosystem healthy.
-
-As sophistication has increased, so have the public demands that have been
-placed on the service. If water is so scarce, can runoff and wastewater be
-harvested and made reusable, or even potable? Can waste be somehow recycled and
-put toward a useful cause that reduces its negative environmental impact?
-
-The district tries to stay attuned to these demands. They constantly look at
-revamping storm drainage, sewage, and water delivery methods to maximize water
-reuse. Not only has wastewater treatment improved, but the district has learned
-that they can take advantage of some unique features of the LA basin to improve
-water reuse. Much of Los Angeles sits on top of alternating aquifers and oil.
-They realized that they can confidently inject recycled gray water into the
-ground at strategic locations where the soil composition will further treat the
-water while simultaneously recharging underground aquifers that are already used
-as potable water sources. This maintains local water sources while stabilizing
-the ground to reduce the risks of subsistence and saltwater intrusion, as well
-as minimizing underground movements that may potentially activate an earthquake
-fault. These efforts have been so successful that not only have waste levels
-been lowered, but actual water usage has been reduced in real terms even as the
-population has grown.
-
-Recovery does not end with water. Methane from the network is captured and used
-to generate power, all while efforts are put in place to recycle as much of the
-rest of the waste as possible. This is an immensely challenging task,
-particularly as there is no real way to force users across the ecosystem to
-report on what they flush down the drains, let alone how and when they use the
-network.
-
-The result of all of these efforts is that those running the ecosystem feel as
-if they understand the heartbeat of the city. They can see the patterns of usage
-every day, from a steady increase in flow from residential districts as people
-get up in the morning, to a shift to office and retail parks and industrial
-districts as people to go to work, and back to residential districts in the
-evening. Similarly, market trends and seasonal patterns of factories and offices
-become apparent as flows and the makeup of their contents change. Even the
-impacts of public events and weather patterns can be identified and understood
-within the signal noise of other events occurring throughout the network.
-
-All of these observations allow for better targeting and more proactive response
-to change, helping surprises become increasingly rare. This knowledge can then
-be fed back into city planning, zoning, and permitting, uncovering potential
-problems before they have a chance to damage this otherwise hiddenaway
-ecosystem. 
-
-## Instrumenting an IT Ecosystem
-
-You can use the same sort of thinking described in the previous section to build
-in a similarly powerful understanding of your IT ecosystem.
-
-Later in my career, I worked for a company that provided a wide variety of web
-and Internet-based services. Performance and usability expectations differed
-considerably. For instance, users were far more sensitive to response and
-quality issues with streaming media than, say, an RSS feed. However, there were
-also important differences between markets. Not meeting these expectations had a
-significant detrimental effect to both market reputation and the bottom line.
-
-Being heavily consumer-facing, many of our services were also vulnerable to
-extreme “Slashdot-effect” style traffic spikes. There were times when traffic
-would suddenly grow by 1000–100000 times the normal flow. Without sufficient
-available infrastructure and a quick response, everything could quickly
-collapse. However, the business case for acquiring all the extra capacity was
-not always clear-cut. It was prohibitively expensive to have so much excess
-remain idle most of the time, and as service performance characteristics change
-over time, it was not even clear that capacity acquired now would work
-effectively in the future.
-
-With so many shifting variables, we needed to find ways to instrument to better
-understand the dynamics of our ecosystem.
-
-On the service side, we started to build in hooks that allowed us to peer into
-the health and performance characteristics of the services themselves. We
-matched these with other operational instrumentation such as logs and monitoring
-information to provide additional clues of how various events would affect the
-dynamics of the operating ecosystem.
-
-We also put the same sorts of instrumentation in place in the development and
-test environments, where we looked for the sorts of events and load profiles
-that might create performance problems. This allowed us to then work out various
-options we might have for handling such challenges, from more traditional
-capacity scaling to disabling various features and making certain elements
-static or cached.
-
-We then began to instrument up the amount of time and variability involved in
-responding to changing events. This included turnaround time and accuracy for
-responding to an event, the time and potential risks involved in changing the
-capacity of various service elements, time and complexity involved in disabling
-or changing features, time and potential problems with moving and restoring
-data, and the like. This gave us some indication of our costs of delay that
-could be used to guide investments.
-
-Another element that was important to all of this instrumentation was
-understanding customer expectations and usage patterns. While it was never easy
-to spot coming load spikes or gauge customer satisfaction with a service, we did
-find a number of useful clues that helped. For instance, we noticed clear time
-windows during the day when some services were used more heavily than others. We
-could also see a number of clues of customers becoming frustrated with service
-performance.
-
-With all of this information, we started finding places to optimize. We began to
-heavily automate our ability to deploy and reconfigure service instances to
-improve our response speed and flexibility. We used customer usage patterns to
-dynamically rebalance the capacity of various services throughout the day. For
-elements that had higher friction profiles like data, we looked to
-opportunistically replicate and reposition data to improve our responsiveness to
-potential events.
-
-We also regularly reviewed the quality and timeliness of our instrumentation
-data. This allowed us to continually tune what we had, find new places to
-instrument, and build reasonably accurate indications of the likely return on
-investment (RoI) for such work. 
-
-In the end, we became far more responsive to ecosystem changes. We also managed
-to improve our overall utilization rates to maximize the value of our
-infrastructure and development investments. Being more proactive also greatly
-improved team morale and creativity. 
-
-## Summary
-
-Instrumenting your delivery ecosystem to make its dynamics observable is
-critical to establish the situational awareness necessary for decision making.
-But to do it effectively you need to understand what the right data is for the
-audience consuming it, and what they are consuming it for. We in IT do a lot of
-things that make this difficult, from hoarding the wrong data to picking up data
-that is distorted by insufficient accuracy, timeliness, and biases. By building
-the right instrumentation and review mechanisms in your ecosystem, you can find
-and minimize these distortions to get you on the right track.
+## Инструментирование изменений среды и управления конфигурацией
+
+Очень распространенной и обычно хорошей практикой в ИТ является создание заявок
+на изменение при внесении изменений в производственную среду. Это создает
+полезную запись, позволяющую знать, когда были внесены изменения, кто их внес,
+что было изменено и почему. 
+
+Но сколько из нас на самом деле подробно фиксируют, что было сделано, как именно
+это было сделано и какие различия между исходным и новым состояниями? Сколько из
+нас регулярно обращаются к записям об изменениях для сравнения текущей или
+прошлой динамики экосистемы с внесенными изменениями?
+
+Как поставщик услуг, изменения, которые вы вносите, пожалуй, являются самой
+заметной и важной деятельностью, которая влияет на динамику экосистемы. Поэтому
+важно фиксировать изменения, а также различия между существующим и новым
+состоянием конфигурации. Это очень важно для создания общего осознания и помощи
+в устранении любых последующих инцидентов, вызванных изменениями, таким образом,
+что корневая причина может быть понята. Документирование изменений в таком виде
+настолько важно, что я всегда настоятельно рекомендую командам размещать ссылки
+на детали последних пяти-десяти изменений на главной странице любого инструмента
+для отчетности об инцидентах. Я раз за разом обнаруживал, что это помогает не
+только тем, кто разбирается в инциденте, сократить время восстановления, но
+также помогает тем, кто участвовал в изменении, более лаконично решить любые
+корневые причины.
+
+К сожалению, большинство команд по внедрению плохо справляются с полным
+фиксированием подробностей любого изменения таким образом, чтобы это
+поддерживало общее осознание состояния экосистемы и могло использоваться как
+полный аудиторский след. Это часто делается настолько плохо, что многие
+операционные команды сопротивляются частым изменениям в производственной среде.
+
+Самым распространенным способом упущения информации об изменениях является
+выполнение изменений вручную. Такие неотслеживаемые ручные изменения иногда
+возникают, когда людям приходится вмешиваться для устранения проблем и заставить
+все работать. Иногда используется коммерческое программное обеспечение, которое
+требует выполнения изменений вручную через административные консоли или другие
+сложные для автоматизации механизмы. В обоих случаях детали часто упускаются, и
+их следует минимизировать или фиксировать всякий раз, когда это возможно. Я
+видел команды, которые сохраняют историю командной строки или используют
+сценаризированные (**scripted (???)**) тестовые инструменты, которые могут
+управлять графическими интерфейсами для создания более повторяемой и
+прослеживаемой записи изменений.
+
+Еще одной удивительно распространенной проблемой является ситуация, когда работа
+автоматизирована, но инструменты, выполняющие изменения, не фиксируют предыдущее
+состояние конфигурации и то, что произошло при выполнении изменений. Некоторые
+не проверяют конечный результат изменения, чтобы убедиться, что он соответствует
+ожиданиям. Я лично видел инструменты развертывания, которые перемещали файлы или
+символические ссылки, добавляли что-то в файлы конфигурации и подобное,
+перемещали контейнеры, и затем объявляли успех, не проверяя, действительно ли
+выполненные действия привели к ожидаемому результату. В некоторых случаях
+инструменты игнорировали ошибки, от конфликтов разрешений до того, что файлы
+либо не находились там, где ожидалось, либо были неполными, и переходили к
+следующему шагу. Иногда API-интерфейсы сервисов не запускались должным образом
+или давали неожиданные ответы. Даже когда ошибки записываются, мало кто обращает
+на них внимание, пока что-то не взорвется, если вообще обращают.
+
+Возможно, самой большой и наиболее распространенной проблемой является то, что,
+в то время как мы можем отслеживать изменения, внесенные в производственные
+сервисы, очень немногие из нас делают то же самое для тестовых и разработческих
+сред, а также для изменений, внесенных в поддерживающие сервисы, такие как
+сервисы мониторинга или резервного копирования. На самом деле, чрезвычайно
+распространено, что все эти изменения вносятся без отслеживания.
+
+Другая проблема заключается в том, что немногие из нас действительно фиксируют и
+сравнивают конфигурации, существующие в разработке, тестировании и продакшене,
+чтобы проанализировать их различия и понять, как эти различия могут создавать
+разные динамики в каждой из сред. Проходил ли пакет через разработку и
+тестирование перед отправкой в продакшен? Если нет, был ли он установлен в них
+позже? Это не означает, что конфигурации в разработке и тестировании должны быть
+точно такими же, как в производстве, или даже что они должны иметь одинаковую
+конфигурацию друг с другом. В большинстве случаев это почти невозможно. Однако
+признание наличия различий не означает, что необходимо игнорировать
+существование этих различий, или не проверять и не учитывать, как они могут
+изменять поведение. Пропускание или игнорирование этих различий создает лишние и
+часто проблематичные неизвестные факторы.
+
+
+Фиксация, отчетность и анализ такой информации позволяют вам гораздо лучше
+понять, что имеется внутри вашей среды. Создание связей между всеми артефактами
+и действиями, от заявок на задачу до заявок на изменение в конечной точке цикла,
+позволяет вам, начиная с любой точки, проследить всю вашу экосистему, чтобы
+понять и восстановить контекст происходящего в ней.
+
+## Инструментирование тестирования
+
+При правильной организации тестирования можно получить множество полезной
+информации. Оно может предоставить различные идеи и представления, превышающие
+выявление потенциальных рисков, вызванных дефектами в коде. Одним из наиболее
+важных способов использования инструментирования тестирования для улучшения
+общего понимания экосистемы является возможность захвата того, как изменения в
+сервисе вероятно будут вести себя в целевой операционной среде.
+
+Использование автоматизированных инструментов тестирования и инструментации в
+этом контексте может показаться неособо заметным или даже простым
+перефразированием того, что, как считается, делают команды по тестированию.
+Однако отличие состоит в том, что это не направлено на <<обеспечение качества>>.
+Во-первых, концепция QA оказывается недостаточно эффективной. Она не дает много
+гарантий. В основном она сообщает вам, какие ошибки были обнаружены во время
+тестирования, и, вероятно, существуют другие ошибки, которые просто не были
+обнаружены.
+
+Это не означает, что такое тестирование не нужно проводить. Вместо этого
+тестирование должно быть ориентировано на улучшение понимания того, как сервисы
+будут вести себя в различных сценариях и условиях, чтобы улучшить вашу
+способность эффективно реагировать на различные поведения сервисов. Тестирование
+также должно помочь вам лучше понять, какие условия вероятно возникают при
+определенных поведениях сервиса.
+
+Я также предпочитаю использовать тестирование для более полного выявления
+проблемного кода, обнаруженного при помощи инструментации разработки. Это
+помогает выявить больше деталей <<размера выгоды>>, инвестируя в рефакторинг или
+более полную переработку проблемной области.
+
+Для максимальной полезности инструментирования тестирования я рекомендую
+интегрировать его с инструментарием мониторинга и анализа работы продуктивной
+среды (**augment ИТ wИТh production instrumentation tooling whenever possible
+(???)**), и наоборот. Это включает использование инструментов мониторинга,
+анализа логов, неразрушающего тестирования, синтетических транзакций и других
+подобных инструментов для осуществления прямых сравнений. Путем предоставления
+информации о тестовых случаях и их результатов, а также сравнения с
+производственной средой, можно настроить как тестовое, так и операционное
+инструментирование. Это позволяет анализировать и сравнивать правильные динамики
+в будущих сценариях.
+
+Кроме того, ценно зафиксировать и документировать различия в конфигурации
+развертывания между тестовыми и производственными средами. В документации
+следует также отразить любые отличия в поведении и производительности,
+возникающие из-за этих различий в конфигурации. Понимание и отслеживание таких
+различий позволяют иметь большую уверенность в том, какие настройки могут быть
+изменены, когда подобные условия возникают в производственной среде.
+
+## Инструментирование продакшена
+
+Внедрение инструментирования в продакшен является разумным подходом, и,
+вероятно, именно поэтому вы решили прочитать эту главу. Продакшен является
+особенно важной для обеспечения наблюдаемости вашей экосистемы. Это место, где
+ваши пользователи взаимодействуют с вашими сервисами, и поэтому именно здесь вы
+должны искать понимание того, как эти сервисы помогают пользователям достигать
+своих целевых результатов. Многие организации осознали это, и это привело к
+большому интересу и инвестициям в решения Big Data-аналитиков.
+
+Однако часто пропускается то, что для построения точного уровня понимания этой
+динамики в наиболее всестороннем и эффективном способе требуется больше, чем то,
+что может быть сделано с использованием традиционных подходов к мониторингу и
+ведению журналов. Это верно даже при использовании современных аналитических
+инструментов Big Data.
+
+Если ваша цель заключается в том, чтобы улучшить понимание экосистемы продакшена
+для принятия более эффективных решений, то стоит обратить внимание на ряд
+областей инструментального обеспечения, которые часто упускаются из виду, как
+описано в следующих разделах.
+
+## Запрашиваемый/отчетный оперативный код и сервисы
+
+Одна из самых больших проблем, связанных с бессерверными сервисами и тому
+подобным, заключается в том, что инструментировать и отслеживать их
+традиционными способами не так-то просто. Один из лучших способов преодолеть это
+--- напрямую разместить в ваших сервисах перехватчики с возможностью запроса,
+которые могут дать вам представление о том, что происходит.
+
+Вам не нужно иметь особо продвинутые перехватчики, чтобы начать. Даже такой простой перехватчик, который реагирует на флаг, спрашивающий <<Ты жив?>>, является
+полезным началом. Это можно легко расширить до <<Каковы ваши показатели
+здоровья?>> вплоть до дополнительной информации, подобной отладочной, такой как
+<<Что происходит с этими пользователями/сеансами/данными при их прохождении
+через сервис?>> Другие способы инструментировать и отслеживать происходящее --- это
+использовать такие инструменты, как Java Management Extensions (JMX), или
+заставлять службы регистрироваться самостоятельно и отправлять регулярные
+метрики в виде pub / sub на центральную шину или точку, где они могут быть
+собраны и проанализированы.
+
+Ни один из этих подходов не является особенно сложным в реализации. Что делает
+такие возможности полезными, так это то, что их внедрение и использование может
+значительно снизить сложность и временные задержки, возникающие при попытке
+сделать то же самое с помощью более традиционного механизма логгирования.
+Возвращаемые значения могут быть приведены в соответствие с
+применяемым стандартом, что позволяет быстро отображать значения на панели
+управления для анализа, чтобы выявить любые различия между экземплярами
+сервиса.
+
+Если все сделано правильно, инструментирование сервисов и пользовательских
+интерфейсов может позволить вам наблюдать за пользователями и пользовательскими
+сеансами практически в режиме реального времени по мере их перемещения по
+экосистеме сервисов. Это особенно удобная возможность при анализе проблем, с
+которыми сталкивается один или небольшая группа пользователей.
+
+## Совместное представление записей о задачах, изменениях, инцидентах и проблемах 
+
+Многие поставщики инструментов управления сервисами говорят о том, что
+преимущества использования их инструментальных экосистем заключаются в том, как
+все взаимосвязано. Они будут включать в себя системы поиска ошибок с рабочими
+процессами, базы данных управления конфигурацией (CMDBS) и даже мониторинг.
+Проблема в том, что подавляющее большинство данных либо скрыто в отдельном
+хранилище, либо их не особенно легко объединить в представления, полезные вам и
+другим, кто в них нуждается.
+
+Я обнаружил, что часто чрезвычайно полезно представлять всю эту информацию
+вместе. Это особенно верно в отношении информации об изменениях, которая должна
+быть немедленно доступна для просмотра любому, кто занимается исследованием
+инцидента. Для этого я обычно предпочитаю использовать простую веб-страницу или
+какой-либо другой столь же несложный механизм, который легко просматривается
+независимо от того, находитесь ли вы в пути или сидите за своим рабочим столом.
+
+Хотя сведение воедино записей об изменениях и инцидентах чрезвычайно важно, мне
+также нравится искать способы легко проследить цепочку взаимосвязей из любой
+точки моей экосистемы. Возможность начать, например, с пакета или конфигурации и
+вернуться как к серии задач, которые их создали, так и перейти к тому, где и как
+они были развернуты, чрезвычайно эффективна. Такой подход позволяет вам собрать
+воедино информацию, которая может вам понадобиться, в нужном контексте и в
+нужное время. Перекрестный посев (**cross-seeding (???)**), как упоминалось ранее, имеет решающее значение
+для этого; однако упрощение его использования также означает, что он будет
+использоваться гораздо интенсивнее. Ключом к этому является создание простой
+системы, которая позволит вам легко перемещаться по экосистеме.
+
+Еще одна полезная вещь, которую нужно сделать, --- это регулярно представлять
+данные и тенденции, которые могут быть интересны технической и нетехнической
+аудитории. Это может быть что угодно --- от неудачных изменений и аспектов
+изменений, которые привели к неожиданному поведению сервиса, до инцидентов,
+обработка которых заняла гораздо больше времени, чем обычно. Эта презентация
+должна быть сделана таким образом, чтобы стимулировать улучшение, а не
+превращаться в игру с обвинениями. Обвинение, как мы знаем, побуждает людей
+скрывать данные и разрывать отношения. Я, как правило, направляю большую часть
+отчетов тем, кто ближе к делу, но позволяю безукоризненно оформить их для
+передачи высшему руководству, когда требуется помощь и поддержка.
+
+## Конфигурация среды 
+
+Ранее мы говорили об управлении конфигурацией и развертываниями. Но знаете ли вы
+обо всем, что происходит в вашей экосистеме доставки? Знаете ли вы, как быстро и
+последовательно вы можете перестроить и перераспределить каждую часть вашей
+экосистемы доставки с нуля?
+
+Знать, что у вас есть в вашей экосистеме доставки --- это нечто большее, чем
+знать версии установленного программного обеспечения или очень простые элементы,
+такие как сетевые адреса и тому подобное. Речь идет о том, чтобы точно знать и
+регулярно пересматривать, из чего состоит экосистема. Я обнаружил, что лучший
+способ распознать эту информацию --- это регулярно пересобирать как можно большую
+часть вашей экосистемы.
+
+Под <<пересборкой>> я подразумеваю нечто большее, чем перемещение нескольких
+контейнеров или файлов на диске виртуальной машины (VMDKS). Я имею в виду
+возможность переустановить полный стек, настроить его и запустить в
+производство. Знание того, насколько быстро и последовательно вы можете это
+делать, позволяет вам знать, сколько времени может потребоваться для
+восстановления любого компонента в аварийной ситуации.
+
+Пересборка также действует как катализатор для выявления ситуаций, когда в
+процессе перестройки имеются отдельные точки сбоя. Возможность перестроить таким
+образом также означает, что вам не нужно рассчитывать на какой-либо инструмент
+обнаружения, который попытается изучить и отследить то, что у вас может быть,
+если он вообще сможет это выяснить. Это также означает, что если вы столкнетесь
+с нарушением безопасности, таким как атака программ-вымогателей, вы можете быть
+уверены в том, какую часть стека вы сможете сбросить и восстановить заново, а
+не потерять.
+
+Другой важной частью отслеживания конфигурации среды является то, что вы можете
+создать способ фиксировать и понимать, что меняется в вашей среде и как она
+меняется. Это также позволяет вам быстро обнаруживать подозрительные или
+несанкционированные изменения.
+
+Я стараюсь искать возможности регулярно проводить пересборки, а также создавать панели управления, которые фиксируют точки трения и другие опасные точки,
+которые команда может попытаться устранить. Они должны пересматриваться через
+очень регулярные промежутки времени, по крайней мере, так же часто, как
+стратегические обзоры, где можно ставить цели и предпринимать действия для
+улучшения ситуации.
+
+## Логгирование
+
+Логгирование является традиционной и важной частью любой экосистемы; однако
+как часто мы на самом деле просматриваем логи? Насколько они заслуживают
+доверия, рассказывая нам то, что мы хотим знать? Насколько они структурированы и
+удобочитаемы?
+
+Я подхожу к логгированию с двух сторон: 
+* ** Эксплуатационная полезность: ** Логи, которым не стоит доверять,
+  которые трудно анализировать или которые просто не предоставляют никакой
+  ценности, должны быть выделены. Что в них не является полезным, заслуживающим
+  доверия или простым для анализа? Как это повлияет на оперативную поддержку?
+  Сбор и просмотр этой информации позволит вам разобраться в ситуации. Иногда вы
+  можете обнаружить, что существуют лучшие способы получения той же информации,
+  или что существует так много ложного шума, что многое из того, что в данный
+  момент регистрируется, следует отключить или настроить на более низкий
+  уровень. Ведение логов --- определенно одно из тех мест, где у вас может быть
+  слишком много, слишком мало и слишком неуместно.
+* ** Долгосрочная полезность: ** Что передают логи и кто может использовать
+  эту информацию? Существуют ли какие-либо юридические или нормативные правила,
+  которые могут повлиять на их обращение или хранение? Легко ли их получить и
+  обработать? Сколько времени требуется для приведения их в пригодную для
+  использования форму и почему? Какова их точность? Выделение и отслеживание
+  таких логов и их записей, особенно тех, которые важны или могут
+  отличаться от потребностей тех, кто хочет использовать информацию, помогает
+  выявить потенциальные задержки в информировании, которые могут снизить
+  эффективность принятия решений.
+
+## Мониторинг
+
+Мониторинг --- это одна из тех вещей, которыми мы все занимаемся. В этом есть
+смысл. Но так же, как и опасения по поводу инструментария обслуживания, которые
+высказали мои друзья-DevOps инженеры, насколько полезен для вас весь мониторинг?
+Всегда ли он своевременно сообщает вам то, что вам нужно знать, с достаточным
+контекстом для действий?
+
+Несмотря на то, что большая часть данных мониторинга, собираемых организациями,
+в лучшем случае некачественна, многие из нас склонны считать, что чем больше,
+тем лучше. Мы часто собираем оповещения и статистику, на которые почти никогда
+не обращаем внимания, не говоря уже о том, чтобы использовать, в результате чего
+системы мониторинга выглядят как цифровой эквивалент гаража барахольщика, полного
+старых газет.
+
+Лучший способ подойти к мониторингу --- это изучить его, чтобы определить не
+только его точность, но и то, кто будет использовать данные, по какой причине и
+какие решения они, вероятно, примут на их основе. Если существуют лучшие, более
+точные или более своевременные способы, с помощью которых можно легко получить
+информацию, то старый метод следует заменить новым, более совершенным. Если
+мониторинг запускает оповещения, которые не просматриваются до тех пор, пока не
+накопится несколько или не произойдет что-то еще, эту проблему следует
+устранить. Получать слишком много бесполезной информации иногда хуже, чем не
+получать ничего, поскольку это снижает вашу чувствительность к информации.
+
+Настройка мониторинга должна быть частью регулярного тактического обзора. Это
+следует делать, особенно после инцидентов, когда это было недостаточно
+эффективно для того, чтобы помочь заблаговременно выявить проблемы до того, как
+они вызовут проблемы. Также имеет смысл рассмотреть вопрос о том, как повысить
+общую эффективность мониторинга при проведении стратегических обзоров.
+Мониторинг необходимо последовательно настраивать и совершенствовать по мере изменения
+динамики.
+
+Следует также поощрять персонал к тому, чтобы он не привыкал к наращиванию
+<<шумного>> или бесполезного мониторинга.
+
+## Отслеживание и анализ безопасности 
+
+Безопасность, как правило, является источником политик, создающих неудобства,
+которые часто кажутся намного большими, чем ценность безопасности, которую они
+обеспечивают. Однако в мире услуг безопасность необходима для защиты как вашей
+организации, так и, в конечном счете, вашего клиента; однако у безопасности
+также есть побочное преимущество, которое часто упускается из виду. Безопасность
+может стать еще более мощным стимулом для сбора и отслеживания того, что
+находится в вашей экосистеме. Это может быть использовано для лучшего понимания
+поведения экосистемы, вызванного различными состояниями и действиями
+пользователей, что может улучшить вашу общую осведомленность.
+
+Многие методы обеспечения безопасности и инструментальные средства, как правило,
+либо дополняют другие механизмы отслеживания, такие как журналы, отслеживание
+конфигурации среды и тому подобное, либо имеют свои собственные
+специализированные инструменты для мониторинга таких вещей, как специфический
+трафик и угрозы. Эти механизмы ищут вещи, которые выглядят странными или
+ненормальными, что может быть сделано двумя способами.
+
+Вы можете использовать эти механизмы для поиска списка действий и состояний,
+которые отражают известные угрозы безопасности и нарушения. Именно так поступает
+большинство организаций, поскольку это довольно просто сделать, но полностью
+полагаться на этот подход не стоит, поскольку по умолчанию предполагается, что
+несанкционированного доступа не было. Это не лучшая позиция для большинства
+организаций, особенно для тех, которые являются достаточно крупной или
+интересной целью. Этот подход также не учитывает тот факт, что многие из
+наиболее неприятных нарушений безопасности начинаются изнутри, либо со стороны
+внутреннего злоумышленника, либо кого-то, чьи учетные данные были каким-либо
+образом скомпрометированы.
+
+Другой способ приблизиться к безопасности --- попытаться зафиксировать и
+отслеживать состояние и действия как можно большей части вашей операционной
+экосистемы. Это включает в себя отслеживание изменений конфигурации и данных,
+сетевого трафика и тому подобного, оставляя вокруг заманчивые приманки, чтобы
+попытаться заманить злоумышленников узнать о них больше, чтобы вы могли лучше
+защитить наиболее чувствительные части вашей экосистемы.
+
+Чтобы иметь возможность отслеживать эту информацию, фиксируйте и отслеживайте
+конфигурацию и вносимые вами изменения, чтобы вы могли легко запрашивать и
+проверять наличие любых неизвестных различий. Это должно отражать как
+потенциальные угрозы безопасности, так и поведение (будь то от ошибочных
+инструментов или незарегистрированных процессов), которые не отслеживаются.
+
+Основные моменты таких данных должны быть видны, чтобы помочь командам и
+организации совершенствоваться.
+
+## Сервисные данные
+
+Последняя область, которую вам следует рассмотреть, состоит из структуры,
+хранения и доступности сервисных данных. Сюда входят как данные о клиентах, так
+и другие формы данных, используемые для управления вашими услугами.
+
+Несмотря на то, что большинство программ обработки больших данных ориентированы
+на интенсивный анализ сервисных данных, относительно немногие организации тратят
+много времени на размышления об общей архитектуре и структуре имеющихся у них
+данных, помимо того, что абсолютно необходимо для управления сервисами. Такие
+данные неизбежно органично разрастаются в различные кучи, разбросанные по
+экосистеме. Это приводит к дублированию и несоответствиям, из-за которых данные
+гораздо труднее собрать воедино и понять, чем то, что они представляют. Это
+также затрудняет получение информации для анализа.
+
+Чтобы уменьшить количество подобных проблем, лучше всего внедрить два механизма
+в рамках вашего процесса доставки: 
+* Иметь сменяющуюся роль, которая создает архитектурную карту того, какие данные
+  хранятся, где, каким образом и с помощью каких приложений и служб они
+  используются, и владеет ею. Дубликаты и несоответствия должны быть обнаружены
+  и устранены везде, где это возможно.
+* С самого начала следует рассматривать архитектуру и дизайн данных как часть
+  процесса доставки. Где должны храниться данные? Что должно получить к нему
+  доступ? Были ли учтены дубликаты и сведены ли они к минимуму везде, где это
+  возможно? Как могут быть извлечены данные, куда и с какой целью? Этот процесс
+  не обязательно должен быть особенно тяжелым. Правда, гораздо легче
+  управлять небольшими изменениями, чем более крупными.
+
+## Собираем все воедино
+
+Внедрение правильного инструментирования для донесения нужной информации до нужной
+аудитории в соответствии с ее целями может показаться действительно сложным. С
+чего вы начнете? Как вам удастся поддерживать это в рабочем состоянии? Как вы
+будете совершенствоваться?
+
+Иногда трудно увидеть наилучший путь продвижения вперед, особенно когда вы очень
+близки к проблеме и привыкли к тому, как вы всегда поступали.
+
+К счастью, это далеко не единственная отрасль, которая сталкивается с такого
+рода проблемами с приборами. Многие другие отрасли промышленности нуждаются в
+приборостроении, поскольку они также предъявляют высокие требования к
+доступности, крайне непредсказуемому спросу и неумолимо высокой чувствительности
+к отказам. Наблюдение за тем, как кто-то копирует в совершенно другом контексте,
+часто может помочь вам сделать шаг назад и более объективно взглянуть на свой
+собственный мир.
+
+Отрасль, по которой мне лично нравится проходиться --- это та, с которой
+большинство из нас взаимодействует почти каждый день, но о которой мало думают:
+_сфера управления сточными водами_.
+
+## Инструментирование экосистемы управления сточными водами
+
+<!-- изображение здесь, стр.366 -->
+
+Мало кто станет спорить с тем, что услуга, которая одновременно заботится о
+ваших отходах и не допускает в ваш дом отходы вашего соседа, не важна. И все же,
+сколько людей задумываются о сложностях построения такой системы и управления
+ею?
+
+У меня была возможность увидеть вблизи одну из таких систем, которыми управляет
+город Лос-Анджелес. Запахи были предсказуемо неприятными, как и ежедневные
+угрозы безопасности, которым подвергались сотрудники, работая рядом с
+действующей сетью канализационных коллекторов, влажных колодцев, варочных котлов
+и накопительных прудов. Но то, что большинство считало бы очень заурядным и
+часто забываемым сервисом, вскоре оказалось совсем не таким.
+
+Как и большинство городов, Лос-Анджелес предоставляет услуги водоснабжения и
+канализации жителям и предприятиям через сеть труб и туннелей, проходящих по
+всему городу. Люди не только ожидают, что их вода будет безопасной и все, что
+попадает в канализацию, не вернется обратно, но и ожидают, что на улицах не
+будет отходов. Канализационные коллекторы также являются местами, где без
+активного мониторинга и рассеивания могут скапливаться вредные газы, создавая
+опасные облака, а иногда и взрывоопасные условия.
+
+Однако Лос-Анджелес сталкивается с гораздо большими проблемами, чем
+среднестатистический муниципалитет. Большая столичная область занимает более
+4800 квадратных миль засушливой и полузасушливой местности, пересекающей сложную
+топологию гор и долин. Этот район подвержен как засухе, так и внезапным
+наводнениям. И то, и другое вредно для канализационных систем. В первом случае в
+трубах могут скапливаться отходы. Последнее может привести к переполнению систем
+сбора отходов и стоков, в результате чего опасные объекты заполнят улицы, а
+иногда даже дома людей. В довершение всего Лос-Анджелесу также приходится
+бороться с дополнительными стихийными бедствиями, такими как землетрясения,
+оползни и лесные пожары. Если это недостаточно сложно, системы водоснабжения,
+канализации и ливневой канализации пересекаются с лабиринтом местных органов
+власти, которые часто не сходятся во взглядах, не говоря уже о том, что у них
+есть желание и средства для сотрудничества.
+
+Несмотря на эти трудности, я стал свидетелем динамичной системы,
+которая стала одной из самых передовых в мире, в действии. Мало того, что сточные воды на
+улицах встречаются чрезвычайно редко, так еще и количество стоков и сбросов
+отходов за последние годы сократилось более чем на 95%. Более того, система
+улучшила качество воды и возможности ее доставки, снизила общее потребление воды
+в реальном выражении и уменьшила количество зарастания береговой линии и других
+экологических проблем. Это было достигнуто, несмотря на продолжающийся рост
+населения и изменения во всем регионе.
+
+Как это делает санитарное управление Лос-Анджелеса?
+
+Во-первых, они поняли, что экосистема ни за что не выживет, если город
+воспользуется подходом к созданию статичной конструкции сети труб в земле.
+Один-единственный шторм или несанкционированный завод, незаконно сбрасывающий
+опасные материалы в систему, может уничтожить значительные районы региона. Им
+нужно было активно изучать экосистему и происходящие в ней изменения, постоянно
+пытаясь найти новые способы улучшения.
+
+Департамент по-прежнему был сосредоточен на достижении целевых результатов: не
+допускать попадания сточных вод в дома и на улицы людей и свести к минимуму
+опасность для здоровья и загрязнение окружающей среды, одновременно изыскивая
+возможности для переработки и повторного использования воды. Они начали с того,
+что попытались больше узнать об окружающей среде, в которой они работали. Они
+разбросали датчики и провели тесты по всей сети и по всему региону. Это помогает
+им понять, как вода течет на поверхности, под землей, а также по дренажным и
+канализационным сетям. Они проверяют не только производительность и скорость
+потока, но и отслеживают наличие опасных концентраций всего --- от взрывоопасных и
+ядовитых газов до проблемных материалов, проходящих через систему. Они также
+смотрят на то, как работает вся система, от канализационных коллекторов,
+насосных станций и очистных сооружений до поведения людей, которые их используют
+и эксплуатируют.
+
+Такой мониторинг и отслеживание в корне отличаются от традиционного
+ИТ-мониторинга и управления рабочим процессом обслуживания. В отличие от ИТ,
+они не были сосредоточены в первую очередь на выявлении аномалий, на которые
+нужно было реагировать. На замену ливневого канала или увеличение пропускной
+способности канализации могут уйти месяцы или даже годы, из-за чего даже самый
+отсталый процесс закупок ИТ кажется молниеносным. Вместо этого они выходят за
+рамки ИТ, стремясь активно понимать и формировать саму экосистему. Информация
+постоянно анализируется и используется для постоянного повышения эффективности
+понимания сети каждым пользователем.
+
+Такой подход и образ мышления не просто повышают оперативность реагирования на
+возможные сценарии сбоев. Это позволяет выделить точки трения и зоны риска и
+лучше их понять. Все, что угодно, от открытия новой фабрики до изменения
+рецептуры широко используемого геля для ванн, может легко изменить динамику всей
+сети. Они также изучают местную и региональную гидрологию и модели
+поверхностного дренажа, чтобы понять и спрогнозировать потенциальные опасности
+для стока. Активный сбор информации помогает получить еще более точное
+представление об операционной среде и любых соответствующих закономерностях,
+которые она может содержать. Это улучшает адресность всего - от улучшения
+дорогостоящей инфраструктуры до изменений в местной политике и постановлениях.
+Они даже заходят так далеко, что участвуют в планировании и позволяют понять,
+как предлагаемые изменения могут повлиять на систему, предлагая решения, которые
+помогают сохранить экосистему здоровой.
+
+По мере того как усложнялась система, повышались и требования общественности к
+сервису. Если воды так мало, можно ли собирать сточные воды и превращать их в
+пригодные для повторного использования или даже питьевые? Можно ли каким-то
+образом переработать отходы и направить их на полезное дело, которое уменьшит их
+негативное воздействие на окружающую среду?
+
+Округ старается соответствовать этим требованиям. Они постоянно рассматривают
+возможность модернизации ливневой канализации, канализационных стоков и методов
+подачи воды для максимального повторного использования воды. Улучшилась не
+только очистка сточных вод, но и округ узнал, что они могут воспользоваться
+некоторыми уникальными особенностями бассейна Лос-Анджелеса для улучшения
+повторного использования воды. Большая часть Лос-Анджелеса расположена на
+поверхности чередующихся водоносных горизонтов и нефти. Они поняли, что могут
+уверенно закачивать переработанную серую воду в грунт в стратегически важных
+местах, где состав почвы будет дополнительно очищать воду, одновременно пополняя
+подземные водоносные горизонты, которые уже используются в качестве источников
+питьевой воды. Это позволяет поддерживать местные источники воды, одновременно
+стабилизируя грунт, чтобы снизить риски пропитания и проникновения соленой воды,
+а также свести к минимуму подземные перемещения, которые потенциально могут
+привести к землетрясению. Эти усилия были настолько успешными, что не только был
+снижен уровень отходов, но и фактическое потребление воды сократилось в реальном
+выражении, даже несмотря на рост населения.
+
+Восстановление не заканчивается водой. Метан из сети улавливается и используется
+для выработки электроэнергии, в то же время предпринимаются усилия по
+переработке как можно большего количества остальных отходов. Это чрезвычайно
+сложная задача, особенно с учетом того, что нет реального способа заставить
+пользователей по всей экосистеме отчитываться о том, что они сбрасывают в
+канализацию, не говоря уже о том, как и когда они используют сеть.
+
+Результатом всех этих усилий является то, что те, кто управляет экосистемой,
+чувствуют себя так, словно понимают <<биение сердца>> города. Они могут видеть
+структуру использования каждый день, начиная с неуклонного увеличения потока из
+жилых районов, когда люди встают утром, и заканчивая перемещением в офисные и
+торговые парки, а также промышленные районы, когда люди идут на работу, и
+обратно в жилые районы вечером. Аналогичным образом, рыночные тенденции и
+сезонные особенности фабрик и офисов становятся очевидными по мере изменения
+потоков и состава их содержимого. Даже воздействие общественных мероприятий и
+погодных условий может быть идентифицировано и понято в шумовом сигнале других
+событий, происходящих по всей сети.
+
+Все эти наблюдения позволяют лучше ориентироваться и более активно реагировать
+на изменения, помогая неожиданностям становиться все более редкими. Затем эти
+знания могут быть использованы при городском планировании, зонировании и выдаче
+разрешений, выявляя потенциальные проблемы до того, как у них появится шанс
+нанести ущерб этой скрытой экосистеме.
+
+## Инструментирование ИТ-экосистемы
+
+Вы можете использовать тот же подход, описанный в предыдущем разделе, для
+создания столь же глубокого понимания вашей ИТ-экосистемы.
+
+Позднее в своей карьере я работал в компании, которая предоставляла широкий спектр
+веб-сервисов и интернет-услуг. Ожидания в отношении производительности
+и удобства использования значительно различались. Например, пользователи были
+гораздо более чувствительны к отклику и проблемам с качеством потокового
+мультимедиа, чем, скажем, к RSS-ленте. Однако между рынками существовали и
+важные различия. Несоответствие этим ожиданиям оказало значительное негативное
+влияние как на репутацию на рынке, так и на итоговый результат.
+
+Будучи в значительной степени ориентированными на потребителя, многие из наших
+сервисов также были уязвимы для экстремальных скачков трафика в стиле
+<<Slashdot-эффекта>>. Были времена, когда трафик внезапно увеличивался в
+1000-100000 раз по сравнению с нормальным потоком. Без достаточной доступной
+инфраструктуры и быстрого реагирования все может быстро рухнуть. Однако
+экономическое обоснование приобретения всех дополнительных мощностей не всегда
+было четким. Было непомерно дорого иметь такой избыток, который большую часть
+времени простаивал без дела, и поскольку эксплуатационные характеристики сервиса
+со временем менялись, было даже неясно, будут ли мощности, приобретенные сейчас,
+эффективно работать в будущем.
+
+С таким количеством меняющихся переменных нам нужно было найти способы
+использования инструментов для лучшего понимания динамики нашей экосистемы.
+
+Что касается сервиса, мы начали встраивать хуки, которые позволяли нам изучать
+работоспособность и эксплуатационные характеристики самих сервисов. Мы
+сопоставили их с другими операционными инструментами, такими как журналы и
+информация мониторинга, чтобы получить дополнительные сведения о том, как
+различные события повлияют на динамику операционной экосистемы.
+
+Мы также внедрили такие же инструменты в среду разработки и тестирования, где мы
+искали те события и профили загрузки, которые могли бы создать проблемы с
+производительностью. Это позволило нам затем разработать различные варианты,
+которые могли бы быть у нас для решения подобных задач, от более традиционного
+масштабирования емкости до отключения различных функций и превращения
+определенных элементов в статические или кэшированные.
+
+Затем мы начали измерять количество времени и вариативность, затрачиваемые на
+реагирование на изменяющиеся события. Это включало время выполнения работ и
+точность реагирования на событие, время и потенциальные риски, связанные с
+изменением пропускной способности различных сервисных элементов, время и
+сложность, связанные с отключением или изменением функций, время и потенциальные
+проблемы с перемещением и восстановлением данных и тому подобное. Это дало нам
+некоторое представление о наших затратах на задержку, которые можно было бы
+использовать для определения направления инвестиций.
+
+Еще одним элементом, который был важен для всего этого инструментария, было
+понимание ожиданий клиентов и моделей использования. Несмотря на то, что никогда
+не было легко определить грядущие скачки нагрузки или оценить удовлетворенность
+клиентов обслуживанием, мы нашли ряд полезных подсказок, которые помогли.
+Например, мы заметили четкие временные интервалы в течение дня, когда некоторые
+сервисы использовались интенсивнее, чем другие. Мы также могли видеть ряд
+признаков того, что клиенты были разочарованы качеством обслуживания.
+
+Располагая всей этой информацией, мы начали искать места для оптимизации. Мы
+начали в значительной степени автоматизировать нашу способность развертывать и
+перенастраивать экземпляры служб, чтобы повысить скорость реагирования и
+гибкость. Мы использовали шаблоны использования клиентов для динамического
+перебалансирования пропускной способности различных сервисов в течение дня. Для
+элементов с более высокими профилями трения, таких как данные, мы стремились
+своевременно реплицировать и перемещать данные, чтобы повысить нашу
+оперативность реагирования на потенциальные события.
+
+Мы также регулярно проверяли качество и своевременность наших измерительных
+данных. Это позволило нам постоянно настраивать то, что у нас было, находить
+новые места для инструментов и получать достаточно точные показатели вероятной
+окупаемости инвестиций (RoI) для такой работы. 
+
+В конце концов, мы стали гораздо более чутко реагировать на изменения
+экосистемы. Нам также удалось улучшить наши общие показатели использования,
+чтобы максимизировать отдачу от наших инвестиций в инфраструктуру и развитие.
+Более активная деятельность также значительно повысила моральный дух и
+креативность команды.
+
+## Подводя итоги
+
+Инструментирование вашей экосистемы доставки таким образом, чтобы сделать ее
+динамику заметной, имеет решающее значение для обеспечения ситуационной
+осведомленности, необходимой для принятия решений. Но чтобы делать это
+эффективно, вам нужно понимать, какие данные являются нужными для аудитории,
+потребляющей их, и для чего они их потребляют. Мы, ИТ-специалисты, делаем много
+вещей, которые затрудняют это, от накопления неверных данных до сбора данных,
+искаженных из-за недостаточной точности, своевременности и предвзятости. Создав
+правильные инструменты и механизмы проверки в своей экосистеме, вы сможете
+обнаружить и свести к минимуму эти искажения, чтобы встать на правильный путь.
