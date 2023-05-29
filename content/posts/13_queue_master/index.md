@@ -557,6 +557,198 @@ Master имеют приоритет над всем остальным. Это 
 >  с ним, чтобы убедиться в отсутствии конфликтов. Они договорились, что 
 >  Дэйв будет отмечать их большой оранжевой буквой D.
 
+## Queue Master Rollout Challenges
+
+While the value of the Queue Master becomes increasingly obvious over time,
+it often seems like a struggle to get it established. The challenges always seem
+to follow a familiar pattern. This section describes some of the main challenges
+along with some strategies to work through them.
+
+## Team Members Don’t See the Value
+
+The first pushback most teams see is that most team members at first simply do
+not see the value of the Queue Master. Everyone is already extremely busy, so
+the idea of messing around with the way that work is handled sounds like
+another set of useless and cumbersome steps that will further strain the team.
+
+The main intent of the Queue Master role is to build a better understanding of
+the patterns of work hitting the team so that the team can find faster, easier, and
+ultimately more effective ways of delivering the outcomes that matter. Team
+members often think that they already know what is going on and simply need
+more resources. Yet their awareness naturally narrows to their own work and
+the parts of the ecosystem that directly impact it.
+
+This narrowing, along with not consistently having enough time to assemble
+enough of the right compelling evidence to convince others to invest and try
+out new things, can slow the speed of improvements. This can become
+increasingly frustrating and demoralizing.
+
+Team members will often give the role a chance if they can be shown and
+convinced that the Queue Master is a faster and more effective way to capture
+and articulate the problems the team faces in a way that can help them get the
+support they need for improvements. Fortunately, it does not usually take too
+many cycles to open everyone’s eyes to all sorts of ways the role can facilitate
+huge improvement gains.
+
+## Более традиционно настроенные менеджеры препятствуют внедрению программы
+
+Иногда команда рада попробовать что-то другое, но есть сопротивление этому со 
+стороны более традиционно мыслящего менеджера, который чувствует, что что он теряет 
+контроль над ситуацией. Они могут чувствовать себя некомфортно, если делегируют 
+многие обязанности, которые, по их мнению, входят в их компетенции. Эти менеджеры 
+могут быть особенно обеспокоены тем, чтобы некоторые из их более младших членов
+команды справлялись с этой ролью.
+
+Для этих менеджеров позиционирование должно быть повернуто таким образом, чтобы 
+показать, что Мастер очереди и рабочий процесс существуют для того, чтобы облегчить 
+им жизнь. Если только рабочая экосистема находится в сфере очевидного (как это 
+подробно обсуждается в Главе 5 <<Риск>>), весьма вероятно, что они уже чувствуют,
+что их мир в некоторой степени не поддается контролю. Рабочий процесс и Мастер
+очередей дают задание указать, что происходит, в руки людей, которые, скорее всего,
+знают об этом. Поскольку рабочий процесс предназначен для команды, он и Мастер очередей
+могут помочь менеджеру увидеть, где могут возникнуть проблемы, требующие решения, и 
+помочь им построить кейсы для изменения направления деятельности или выделения
+дополнительных ресурсов со стороны бизнеса. По мере того, как команда становится 
+более успешной, менеджер может быть более ориентирован на внешнюю среду, помогая 
+тем самым команде и собственной карьере.
+
+Один из способов преодолеть это препятствие --- не пытаться внедрять роль Мастера очереди
+со всеми участниками ротации сразу. Вместо этого начните с некоторых более опытных
+членов команды, возможно, с помощью опытного тренера, чтобы облегчить введение этой роли.
+Это не только поможет всем, включая менеджеров, получить максимальную отдачу от рабочего
+процесса и его механизмов обучения и обратной связи, но и даст им возможность лучше понять
+роль, почему она внедряется и что каждый может сделать для ее улучшения. 
+
+Аналогичная ситуация и с менеджерами проектов. Они являются одним из ключевых звеньев, 
+обеспечивающих убеждение в том, что координация между командами происходит и что
+выполняемая работа продвигает организацию к целевым результатам проекта или программы, 
+которой они руководят. Мастер очереди помогает им выявлять потенциальные конфликты, 
+проблемную двусмысленность, а также ограничения ресурсов и общие проблемы до того, 
+как они взорвут проект.
+
+## Бесцеремонные Мастера очереди
+
+Я видел случаи, когда Мастера очереди считали себя своего рода <<начальниками на неделю>>.
+Когда это происходит, они пытаются переложить работу на членов команды и проталкивают ее 
+через рабочий процесс. Это идет явно вразрез с намерением как роли и механизма рабочего
+процесса. Работа должна проходить через рабочий процесс. Роль мастера очереди заключается в
+том, чтобы помочь убедиться, что приоритеты, порядок и потребности рабочих элементов ясны.
+Они могут указывать на проблемы и помогать разблокировывать работу, но помимо того, чтобы
+держать людей в рамках правил рабочего процесса, они не должны указывать людям, что и как делать.
+
+## Младшие члены команды в качестве Мастеров очереди
+
+Большинство людей испытывают, по крайней мере, небольшой дискомфорт от роли Мастера очереди
+сначала. Это новая для них роль, и им еще предстоит познакомиться с ее внутренними и внешними
+особенностями и аутсайдерами. Особенно это касается менее опытных младших членов команды. Они
+будут поставлены в ситуацию, когда им нужно будет квалифицировать входящую работу, вести 
+синхронизацию и просить совета у старших сотрудников. Эта роль может быть трудной и гораздо 
+более склонной к ошибкам. Иногда младшим членам команды может показаться, что на них обрушивается
+поток работы, похожий на пожарный шланг, который, кажется, невозможно преодолеть.
+
+По этой причине более опытные люди в команде должны инициировать роль Мастера очереди в первую
+очередь. По мере того, как все лучше освоятся с этой ролью, младшие сотрудники могут стать тенью 
+мастера очереди, а затем перевернуть ее и попросить более опытного человека стать тенью младшего, 
+когда он будет выполнять свою роль. После успешной ротации младший сотрудник включается в ротацию. 
+Система приятелей (независимо от уровня стажа) также полезна, чтобы помочь разобраться с вопросами. 
+В конце концов, каждый должен быть включен в работу и помогать всем остальным.
+
+> ### Робкий Мастер очереди
+> 
+> Поначалу команде было трудно справиться с ролью мастера очереди. Они уже долгое время боролись с 
+> постоянным дождем работы, которая вываливалась на их пути. Им потребовалось некоторое время, чтобы 
+> перестать позволять людям хватать любого оперативного сотрудника, оказавшегося поблизости. Это было 
+> непросто, и многие разработчики и бизнесмены жаловались на то, что им приходится постоянно обращаться
+> к Мастеру очереди. Но со временем настойчивость победила. Постоянное сокращение прерываний, 
+> безусловно, помогло команде быстрее справляться с работой. Это также уменьшило количество ошибок, 
+> которые они совершали.
+>
+> Некоторые члены команды изначально скептически относились к ценности фиксации всей поступающей 
+> работы. Многие считали, что маленькие задачи возникают только из-за маленьких проблем. Обстановка 
+> была настолько неспокойной, что было мало шансов поймать потенциальную проблему до того, как она 
+> станет большой и взрывоопасной. Но Мастеру очереди уже удалось поймать пару проблемных элементов.
+> Один из них был связан с новой службой, которую все чаще приходилось перезапускать. На сайте
+> Мастер очереди обнаружил, что существует ошибка, из-за которой служба останавливается
+> при большой нагрузке. Если бы ошибка не была обнаружена, она привела бы к краху основной
+> производственной службы, когда стартовала новая маркетинговая кампания.
+>
+> It had been a bit rough for those who had taken on the QM hat. They had
+> smartly started by rotating the role across some of the more senior members
+> of the team. Eliza, who had been at the company for years, felt
+> overwhelmed at first by the sheer number of tasks coming in. It took her a
+> couple of days to realize that she wasn’t expected to handle them all herself.
+> She just had to make sure that they were clear, reasonably sized, prioritized
+> correctly, and didn’t conflict with anything else on the board before
+> entering the workflow. This took almost no time now as everyone figured
+> out how to use the new task template. Any problems were either kicked
+> back to the requestor or sorted by the team and Sally, the manager. This
+> allowed Eliza to spend most of her rotation handling Dark Matter tasks and
+> looking out for interesting patterns.
+>
+> Eventually, the team got into the rhythm and started to widen the rotation
+> out to the more junior members. One of these was Matt, who had originally
+> been brought in for his great Unix knowledge. Even though he was
+> comfortable enough to crack jokes and be the life of the party in the team
+> chat room, he was extremely shy and quiet in person. He struggled to look
+> anyone in the eye, and was known to hide behind boxes in the hallway to
+> avoid face-to-face conversation with anyone.
+>
+> When it became Matt’s turn for Queue Master, everyone was concerned.
+> Could he handle the constant barrage of tasks? Would he hide under his
+> desk to avoid the inevitable person coming by to ask for a service restart?
+> Was his limited familiarity with the web frontend going to cause problems
+> with the workflow?
+>
+> The team never left anyone to sink or swim all alone. They knew letting
+> one person fail could crush the rest of the team. Rashmi, one of the other
+> senior team members with whom Matt had frequently played video games,
+> offered to help Matt out. She shadowed him at first, and let him know she
+> was always there to answer any questions if he got stuck. Sally reminded
+> Matt that she was always just a few steps away in case he needed help
+> pushing back on a misprioritized or unclear task.
+>
+> The cycle came, and Matt took on the role. He was terrified at first, but
+> Rashmi and the team helped him through the rough patches. He spotted an
+> interesting pattern of requests to change a particular server configuration
+> that he was able to incorporate in the new operating system builds. He also
+> learned a lot more about the web frontend. In the end, while the weeks he
+> was made Queue Master were by far his least favorite, he knew it helped
+> the team. It also gave him a new appreciation for way that things worked
+> around him. He even learned a few neat things as well.
+
+## Queue Masters Who Struggle to Lead Sync Points
+
+Some people are shy, introverted, or just generally uncomfortable with bringing
+attention to themselves. Some simply do not want to be put in a position where
+they feel responsible for the success of the team. That is certainly
+understandable. Yet, it is important for everyone to have their turn at the Queue
+Master role, both to take part in helping the team and to get a chance to take a
+step back and see firsthand the dynamics across the service ecosystem. It is also
+critical that someone act as the lead to help bring the rest of the team together
+for the various sync points that occur during the Queue Master cycle, and the
+Queue Master is the best placed to do so.
+
+As with junior team members, it is worthwhile for the team to help those
+uncomfortable Queue Mastering to build confidence. There are a number of
+ways to help the uncomfortable run sync points. There can be some shadowing
+by a senior member, much like Rashmi did with Matt in the sidebar story. The
+team can construct some simple templates for running the various meetings.
+There are some details in Chapter 7, “Cycles and Sync Points,” that can help
+here. The team can also provide some constructive feedback and
+encouragement along the way. As the team should be participating in all the
+sync points, this should be fairly easy to do.
+
+Above all, it should never be forgotten that the team is only successful if
+everyone is able to pitch in and give their best.
+
+## Summary
+
+Like the Service Engineering Lead, the Queue Master is a critical role for
+helping improve situational awareness across the delivery organization, and
+everyone in the team should rotate through the role. It ensures that the
+workflow works well, and helps the team learn and improve.
+
+
 
 
 
