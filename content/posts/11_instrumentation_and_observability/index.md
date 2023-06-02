@@ -1,6 +1,6 @@
 ---
 title: "Instrumentation and ObservabilИТy"
-date: "2023-05-13"
+date: "2023-06-03"
 ---
 
 ## Введение
