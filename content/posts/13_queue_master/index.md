@@ -740,92 +740,79 @@ Master имеют приоритет над всем остальным. Это 
 > при большой нагрузке. Если бы ошибка не была обнаружена, она привела бы к краху основной
 > производственной службы, когда стартовала новая маркетинговая кампания.
 >
-> It had been a bit rough for those who had taken on the QM hat. They had
-> smartly started by rotating the role across some of the more senior members
-> of the team. Eliza, who had been at the company for years, felt
-> overwhelmed at first by the sheer number of tasks coming in. It took her a
-> couple of days to realize that she wasn’t expected to handle them all herself.
-> She just had to make sure that they were clear, reasonably sized, prioritized
-> correctly, and didn’t conflict with anything else on the board before
-> entering the workflow. This took almost no time now as everyone figured
-> out how to use the new task template. Any problems were either kicked
-> back to the requestor or sorted by the team and Sally, the manager. This
-> allowed Eliza to spend most of her rotation handling Dark Matter tasks and
-> looking out for interesting patterns.
+> Для тех, кто взял на себя обязанности Мастера Очереди, это было нелегко. Они
+> разумно начали с ротации роли между некоторыми из более старших членов
+> команды. Элиза, проработавшая в компании много лет, сначала была ошеломлена огромным количеством 
+> поступающих заданий. Ей потребовалось несколько дней, чтобы понять, что от нее не ожидают, что 
+> она справится со всеми заданиями сама. Она просто должна была убедиться, что они понятны, 
+> разумного размера, правильно расставлены приоритеты и не вступают в конфликт с чем-либо еще на 
+> доске, прежде чем попасть в рабочий процесс. Теперь это почти не занимало времени, так как все 
+> разобрались с использованием нового шаблона задач. Любые проблемы были либо отброшены,
+> либо возвращались обратно к заказчику, либо решались командой и Салли, менеджером. Это
+> позволило Элизе проводить большую часть своей ротации, решая задачи по темной материи и
+> наблюдая за интересными закономерностями.
 >
-> Eventually, the team got into the rhythm and started to widen the rotation
-> out to the more junior members. One of these was Matt, who had originally
-> been brought in for his great Unix knowledge. Even though he was
-> comfortable enough to crack jokes and be the life of the party in the team
-> chat room, he was extremely shy and quiet in person. He struggled to look
-> anyone in the eye, and was known to hide behind boxes in the hallway to
-> avoid face-to-face conversation with anyone.
+> В конце концов, команда вошла в ритм и начала расширять ротацию
+> на более молодых членов. Одним из них был Мэтт, который первоначально
+> был принят в команду за его большие знания Unix. Несмотря на то, что он был
+> достаточно комфортным, чтобы отпускать шутки и быть центром вечеринки в командном
+> чате, он был чрезвычайно застенчив и тих в общении. Он с трудом смотрел
+> кому-либо в глаза и, как известно, прятался за коробками в коридоре, чтобы
+> чтобы избежать разговора с кем-либо лицом к лицу.
 >
-> When it became Matt’s turn for Queue Master, everyone was concerned.
-> Could he handle the constant barrage of tasks? Would he hide under his
-> desk to avoid the inevitable person coming by to ask for a service restart?
-> Was his limited familiarity with the web frontend going to cause problems
-> with the workflow?
+> Когда наступила очередь Мэтта стать Мастером Очереди, все забеспокоились.
+> Сможет ли он справиться с постоянным шквалом заданий? Спрячется ли он под своим,
+> чтобы избежать неизбежного прихода человека с просьбой о перезапуске сервиса?
+> Не приведет ли его ограниченное знакомство с веб-фронтендом к проблемам
+> с рабочим процессом?
 >
-> The team never left anyone to sink or swim all alone. They knew letting
-> one person fail could crush the rest of the team. Rashmi, one of the other
-> senior team members with whom Matt had frequently played video games,
-> offered to help Matt out. She shadowed him at first, and let him know she
-> was always there to answer any questions if he got stuck. Sally reminded
-> Matt that she was always just a few steps away in case he needed help
-> pushing back on a misprioritized or unclear task.
+> Команда никогда не оставляла никого тонуть или плыть в одиночестве. Они знали, что если
+> позволить этому быть, то один человек потерпит неудачу, и это может сломить всю команду. 
+> Рашми, один из других старших членов команды, с которой Мэтт часто играл в видеоигры,
+> предложила Мэтту свою помощь. Сначала она следила за ним и дала ему понять, что она
+> всегда готова ответить на любые вопросы, если он застрянет. Салли напомнила
+> Мэтту, что она всегда находится всего в нескольких шагах от него, если ему понадобится помощь.
 >
-> The cycle came, and Matt took on the role. He was terrified at first, but
-> Rashmi and the team helped him through the rough patches. He spotted an
-> interesting pattern of requests to change a particular server configuration
-> that he was able to incorporate in the new operating system builds. He also
-> learned a lot more about the web frontend. In the end, while the weeks he
-> was made Queue Master were by far his least favorite, he knew it helped
-> the team. It also gave him a new appreciation for way that things worked
-> around him. He even learned a few neat things as well.
+> Наступил цикл, и Мэтт взялся за эту роль. Сначала он был в ужасе, но
+> Рашми и команда помогли ему преодолеть трудности. Он заметил
+> интересную схему запросов на изменение определенной конфигурации сервера, которую он 
+> смог включить в новые сборки операционной системы. Он также
+> узнал гораздо больше о веб-фронтенде. В конце концов, хотя недели, когда он
+> в качестве Мастера Очереди были для него самыми нелюбимыми, он знал, что это помогло
+> команде. Это также дало ему новое понимание того, как все работает
+> вокруг него. Он даже научился нескольким интересным вещам.
 
-## Queue Masters Who Struggle to Lead Sync Points
+## Мастера Очереди, которые борются за лидерство в точках синхронизации
 
-Some people are shy, introverted, or just generally uncomfortable with bringing
-attention to themselves. Some simply do not want to be put in a position where
-they feel responsible for the success of the team. That is certainly
-understandable. Yet, it is important for everyone to have their turn at the Queue
-Master role, both to take part in helping the team and to get a chance to take a
-step back and see firsthand the dynamics across the service ecosystem. It is also
-critical that someone act as the lead to help bring the rest of the team together
-for the various sync points that occur during the Queue Master cycle, and the
-Queue Master is the best placed to do so.
+Некоторые люди застенчивы, интроверты или просто не любят привлекать к себе внимание.
+Некоторые просто не хотят быть поставленными в положение, когда они чувствуют себя 
+ответственными за успех команды. Это, безусловно. понятно. Тем не менее, важно, чтобы у 
+каждого была своя очередь на роль Мастера Очереди, как для того, чтобы принять участие в 
+помощи команде, так и для того, чтобы получить возможность сделать
+шаг назад и воочию увидеть динамику развития экосистемы услуг. Также
+очень важно, чтобы кто-то выполнял роль ведущего, помогая собрать вместе остальных членов 
+команды для различных точек синхронизации, которые происходят во время цикла работы Мастера 
+Очереди. Мастер Очереди --- лучший помощник в этом деле.
 
-As with junior team members, it is worthwhile for the team to help those
-uncomfortable Queue Mastering to build confidence. There are a number of
-ways to help the uncomfortable run sync points. There can be some shadowing
-by a senior member, much like Rashmi did with Matt in the sidebar story. The
-team can construct some simple templates for running the various meetings.
-There are some details in Chapter 7, “Cycles and Sync Points,” that can help
-here. The team can also provide some constructive feedback and
-encouragement along the way. As the team should be participating in all the
-sync points, this should be fairly easy to do.
+Как и в случае с младшими членами команды, команде стоит помочь тем, кто испытывает дискомфорт 
+в Мастерстве Очереди, чтобы укрепить уверенность. Существует несколько
+способов помочь тем, кто чувствует себя некомфортно, запустить точки синхронизации. Это может 
+быть теневое сопровождение старшего члена команды, как это сделала Рашми с Мэттом в истории на 
+боковой панели. Команда может разработать несколько простых шаблонов для проведения различных встреч.
+В главе 7 <<Циклы и точки синхронизации>> есть некоторые детали, которые могут помочь
+здесь. Команда также может обеспечить конструктивную обратную связь и
+поощрения на этом пути. Поскольку команда должна участвовать во всех
+синхронизациях, это должно быть довольно легко сделать.
 
-Above all, it should never be forgotten that the team is only successful if
-everyone is able to pitch in and give their best.
+Прежде всего, никогда не следует забывать, что команда успешна только в том случае, если
+если каждый может внести свой вклад и отдать все силы.
 
-## Summary
+## Резюме
 
-Like the Service Engineering Lead, the Queue Master is a critical role for
-helping improve situational awareness across the delivery organization, and
-everyone in the team should rotate through the role. It ensures that the
-workflow works well, and helps the team learn and improve.
-
-
-
-
-
-
-
-
-
-
-
+Как и руководитель службы технической поддержки, Мастер Очереди играет важную роль для
+улучшения ситуационной осведомленности в организации доставки, и
+все члены команды должны чередовать эту роль. Это гарантирует, что
+что рабочий процесс работает хорошо, и помогает команде учиться и совершенствоваться.
 
 
 
